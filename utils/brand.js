@@ -1,0 +1,1 @@
+export const brands = ["/images/chanel.png", "/images/burberry.png", "/images/dior.png", "/images/fendi.png", "/images/gucci.png", "/images/vercase.png", "/images/fendi.png", "/images/armani.png"]
