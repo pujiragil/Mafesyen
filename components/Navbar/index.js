@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-black text-white">
+    <nav className="bg-black text-white lg:mb-8">
       <div className="container mx-auto">
         <div className="h-14 px-3.5 flex items-center md:justify-between">
           {/* NOTE hamburger */}

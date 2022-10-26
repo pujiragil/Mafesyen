@@ -4,8 +4,8 @@ export function Button({ children, mainButton }) {
 
 export function DetailButton() {
   return (
-    <div className="w-full">
-      <button className="uppercase text-xs font-medium text-[#3F3F3F] h-9 w-full flex justify-center items-center border-2 border-[#C4C4C4]">see more</button>
+    <div className="w-full md:flex justify-center">
+      <button className="uppercase text-xs font-medium text-[#3F3F3F] h-9 w-full md:w-32 flex justify-center items-center border-2 border-[#C4C4C4]">see more</button>
     </div>
   )
 }

@@ -78,6 +78,10 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .swiper-pagination {
+    justify-content: flex-start;
+  }
+
   .swiper > .swiper-button-prev {
     left: unset;
     right: 60px;
