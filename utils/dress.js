@@ -1,0 +1,1 @@
+export const dresses = ["/images/dress-1.png", "/images/dress-2.png", "/images/dress-3.png", "/images/dress-4.png", "/images/dress-5.png", "/images/dress-6.png", "/images/dress-7.png", "/images/dress-8.png"]

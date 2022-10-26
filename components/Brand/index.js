@@ -6,7 +6,7 @@ export default function Brand() {
       <h1 className="hidden lg:inline-block absolute -top-4 text-center right-[40%] bg-white w-1/5 uppercase text-xl font-normal">chose your brand</h1>
       {brands?.map((brand, index) => (
         <div key={index} className="w-full border-2 border-[#C4C4C4] lg:border-none">
-          <img className="w-full h-16 md:h-20 object-cover lg:h-auto" key={index} src={brand} />
+          <img className="w-full h-14 md:h-20 object-cover lg:h-auto" key={index} src={brand} />
         </div>
       ))}
     </div>

@@ -9,10 +9,20 @@
   font-family: 'Oswald', sans-serif;
 }
 
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination, .swiper-pagination-bullets {
+  bottom: 20px !important;
+}
+
 .swiper-pagination > .swiper-pagination-bullet {
   width: 1rem;
   height: 1rem;
-  border: 2px solid black;
+  border: 1px solid #828282;
   border-radius: 0px;
   background: transparent;
   opacity: 1;
@@ -20,6 +30,9 @@
 
 .swiper-pagination > .swiper-pagination-bullet-active {
   background: black;
+  width: 20px;
+  height: 20px;
+  border: unset;
 }
 
 .swiper > .swiper-button-next {
