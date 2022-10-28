@@ -1,5 +1,5 @@
 export function Button({ children, mainButton }) {
-  return <button className={`w-fit ${mainButton ? "py-2.5 px-7 font-medium text-sm" : "py-2 px-4 text-[10px] font-semibold md:font-medium"} md:text-lg border-2 border-black uppercase`}>{children}</button>
+  return <button className={`w-fit ${mainButton ? "py-2.5 px-7 font-medium text-sm" : "py-2 px-4 text-[10px] font-semibold md:font-medium"} md:text-sm lg:text-base border-2 border-black uppercase`}>{children}</button>
 }
 
 export function DetailButton() {
