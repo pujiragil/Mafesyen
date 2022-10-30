@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Head } from "../Global";
+import Subcription from "./Subscription";
 
 export default function MainFooter() {
   return (
@@ -16,11 +17,12 @@ export default function MainFooter() {
 
 function FooterWrap() {
   return (
-    <div className="w-full space-y-4">
+    <div className="w-full space-y-4 md:grid md:grid-cols-4">
       <FooterLink>features</FooterLink>
       <FooterLink>menu</FooterLink>
       <FooterLink>contact us</FooterLink>
       <FooterLink>follow us</FooterLink>
+      <Subcription />
     </div>
   );
 }
@@ -33,8 +35,8 @@ function FooterLink({ children }) {
   }
 
   return (
-    <div className="space-y-3">
-      <div className="flex justify-between items-start pb-3.5 border-b border-[#4F4F4F]">
+    <div className="space-y-3 pb-3.5 border-b border-[#4F4F4F]">
+      <div className="flex justify-between items-start">
         <p className="uppercase text-sm font-medium">{children}</p>
         <button onClick={showHandler} className="w-fit border-none outline-none">
           { showMenu ? <img className="w-[18px] h-[18px]" src="/min.svg" /> : <img src="/plus.svg" className="w-[18px] h-[18px]" />}
