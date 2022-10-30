@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 export default function CatalogSlider({ title }) {
   return (
     <div className="mx-3.5 mb-3.5 lg:mb-8 relative">
-      <h3 className="text-lg md:text-2xl mb-4">{title}</h3>
+      <h3 className="text-lg md:text-xl lg:text-2xl mb-4">{title}</h3>
       <Swiper
         className="catalog"
         modules={[Navigation]}

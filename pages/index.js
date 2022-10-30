@@ -1,4 +1,5 @@
 import Banner from "../components/Banner";
+import Blog from "../components/Blog";
 import Brand from "../components/Brand";
 import { Card, MainCard, SingleCard } from "../components/Card";
 import Catalog from "../components/Catalog/catalogContainer";
@@ -35,6 +36,7 @@ export default function Home() {
       <CatalogSlider title={"Featured Items:"} />
       <CatalogSlider title={"Most Popular:"} />
       <Banner />
+      <Blog />
     </BaseLayout>
   );
 }

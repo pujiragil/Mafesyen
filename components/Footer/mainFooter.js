@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Head } from "../Global";
 
 export default function MainFooter() {
@@ -25,10 +26,36 @@ function FooterWrap() {
 }
 
 function FooterLink({ children }) {
+  const [showMenu, setShowMenu] = useState(false)
+  
+  const showHandler = () => {
+    setShowMenu(prev => !prev)
+  }
+
   return (
-    <div className="flex justify-between items-start pb-3.5 border-b border-[#4F4F4F]">
-      <p className="uppercase text-sm font-medium">{children}</p>
-      <button className="w-fit border-none outline-none"><img className="w-[18px] h-[18px]" src="/plus.svg" /></button>
+    <div className="space-y-3">
+      <div className="flex justify-between items-start pb-3.5 border-b border-[#4F4F4F]">
+        <p className="uppercase text-sm font-medium">{children}</p>
+        <button onClick={showHandler} className="w-fit border-none outline-none">
+          { showMenu ? <img className="w-[18px] h-[18px]" src="/min.svg" /> : <img src="/plus.svg" className="w-[18px] h-[18px]" />}
+        </button>
+      </div>
+      { showMenu && <FooterMenu /> }
+    </div>
+  );
+}
+
+function FooterMenu() {
+  return (
+    <div className="uppercase text-xs text-[#828282] space-y-1.5">
+      <p>men</p>
+      <p>woman</p>
+      <p>boys</p>
+      <p>girls</p>
+      <p>new arrivals</p>
+      <p>shoes</p>
+      <p>clothes</p>
+      <p>accessories</p>
     </div>
   );
 }
