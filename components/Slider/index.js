@@ -18,7 +18,7 @@ export default function Slider() {
         navigation={true}
         autoplay={{ delay: 2000, disableOnInteraction: true }}
         modules={[Pagination, Navigation, Autoplay]}
-        className="mySwiper"
+        className="mainSlide"
       >
         <SwiperSlide>
           <div className="min-h-[400px] gap-y-5 pt-8 lg:px-8 pb-20 bg-[url('/images/swiper-bg.png')] bg-no-repeat bg-cover flex flex-col lg:flex-row justify-center items-center text-center">

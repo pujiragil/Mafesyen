@@ -1,11 +1,14 @@
+import Banner from "../components/Banner";
 import Brand from "../components/Brand";
 import { Card, MainCard, SingleCard } from "../components/Card";
 import Catalog from "../components/Catalog/catalogContainer";
+import CatalogSlider from "../components/Catalog/catalogSlider";
+import BaseLayout from "../components/Layout/baseLayout";
 import Slider from "../components/Slider";
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <BaseLayout title={"Mafesyen - Welcome back"}>
       <Slider />
       <Brand />
       <div className="mb-3.5 md:mx-3.5 lg:mb-8 md:grid grid-cols-2 grid-rows-2 h-auto md:h-[500px] md:gap-3.5 lg:gap-8">
@@ -29,6 +32,9 @@ export default function Home() {
       </div>
       <Catalog />
       <SingleCard />
-    </div>
+      <CatalogSlider title={"Featured Items:"} />
+      <CatalogSlider title={"Most Popular:"} />
+      <Banner />
+    </BaseLayout>
   );
 }

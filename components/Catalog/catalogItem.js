@@ -2,7 +2,7 @@ export default function CatalogItem({ imgLink }) {
   return (
     <section className="space-y-1.5">
       <div className="w-full overflow-hidden">
-        <img className="w-full h-52 md:h-64 lg:h-72 object-cover hover:scale-110 duration-200 ease-in-out cursor-pointer" src={imgLink} alt="dress" />
+        <img className="w-full h-56 md:h-64 lg:h-72 object-cover hover:scale-110 duration-200 ease-in-out cursor-pointer" src={imgLink} alt="dress" />
       </div>
       <div className="space-y-1.5">
         <p className="uppercase text-[#BDBDBD] text-[10px] md:text-xs font-semibold">top woman</p>

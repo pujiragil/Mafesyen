@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Head } from "../Global";
 
 export default function Navbar() {
   return (
@@ -12,9 +13,7 @@ export default function Navbar() {
             </div>
 
             <div className="w-2/4 md:w-auto lg:w-3/12 flex justify-center lg:justify-start">
-              <h1 className="uppercase p-1 border-2 border-white w-fit">
-                Mafesyen
-              </h1>
+              <Head />
             </div>
 
             <div className="w-1/4 flex gap-x-5 items-center justify-end md:hidden">
