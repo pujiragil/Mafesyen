@@ -29,11 +29,11 @@ export function MainCard() {
   );
 }
 
-export function SingleCard() {
+export function SingleCard({ bgLink, margin }) {
   return (
-    <div className="mx-3.5 bg-[url('/images/card-3.png')] bg-cover bg-no-repeat bg-center h-36 md:h-56 lg:h-60 px-7 py-4 flex flex-col justify-center gap-y-1 mb-3.5 lg:mb-8">
+    <div className={`${margin ? margin : "mx-3.5 mb-3.5" } lg:mb-8 bg-cover bg-no-repeat bg-center h-36 md:h-56 lg:h-60 px-7 py-4 flex flex-col justify-center gap-y-1 `} style={{ backgroundImage: `url(${bgLink})`}}>
       <h2 className="uppercase font-semibold md:text-2xl lg:text-3xl">shoping without limits.</h2>
-      <p className="lg:hidden font-roboto text-[10px] md:text-base w-3/4">Choose the best option for you, and it does not matter whether you are.</p>
+      <p className="lg:hidden font-roboto text-[10px] md:text-base w-3/5">Choose the best option for you, and it does not matter whether you are.</p>
       <p className="hidden lg:inline-block w-1/2 mt-1 mb-2 font-roboto text-lg">You can choose the best option for you, and it does not matter whether you are in Prague or San Francisco. We will deliver your purchase anywhere!</p> 
       <Button>shop now</Button>
     </div>

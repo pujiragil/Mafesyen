@@ -32,7 +32,7 @@ export default function Home() {
         />
       </div>
       <Catalog />
-      <SingleCard />
+      <SingleCard bgLink={"/images/card-3.png"} />
       <CatalogSlider title={"Featured Items:"} />
       <CatalogSlider title={"Most Popular:"} />
       <Banner />
