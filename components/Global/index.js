@@ -24,7 +24,7 @@ export function DetailButton() {
 
 export function Head() {
   return (
-    <h1 className="text-white uppercase p-1 border-2 border-white w-fit font-semibold">
+    <h1 className="text-white uppercase p-1 border-2 border-white w-fit h-fit font-semibold">
       Mafesyen
     </h1>
   );
