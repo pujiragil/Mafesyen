@@ -29,7 +29,7 @@ function Article() {
           Exactly What To Wear To Every Type Of Wedding This Summer
         </h4>
         <p className="font-roboto text-[10px] md:text-xs lg:text-sm">
-          A large part of the business here is building up the "experience".
+          A large part of the business here is building up the &quot;experience&quot;.
           Double-page spreads in magazines. Ads on TV. Product placement and
           sponsorship in golf tournaments, tennis matches and sailing
           competitions. All of this builds up your perception of the brand - and
