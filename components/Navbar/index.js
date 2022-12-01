@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Head } from "../Global";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => setIsOpen((prev) => !prev);
 
@@ -60,7 +60,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className={`${isOpen ? "translate-y-0" : "-translate-y-full"} duration-500 top-0 left-0 w-full bg-black absolute md:hidden`}>
+        <div className={`${isOpen ? "translate-y-0" : "-translate-y-full"} duration-500 top-0 left-0 w-full bg-black z-10 absolute md:hidden`}>
           <div className="p-3.5 h-14 flex items-center">
             <img onClick={handleOpen} className="w-fit cursor-pointer" src="/close.svg" alt="close" />
           </div>
