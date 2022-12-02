@@ -30,6 +30,7 @@ export default function Navbar() {
               <img src="/search.svg" alt="search-icon" />
               <span className="relative">
                 <img src="/cart.svg" alt="cart-icon" />
+                <span className="bg-[#EB5757] px-1 absolute -top-1.5 -right-1.5 text-[10px]">2</span>
               </span>
             </div>
 
