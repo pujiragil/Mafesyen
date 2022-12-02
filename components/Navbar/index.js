@@ -27,8 +27,10 @@ export default function Navbar() {
             </div>
 
             <div className="w-1/4 flex gap-x-5 items-center justify-end md:hidden">
-              <img src="/search.svg" />
-              <img src="/cart.svg" />
+              <img src="/search.svg" alt="search-icon" />
+              <span className="relative">
+                <img src="/cart.svg" alt="cart-icon" />
+              </span>
             </div>
 
             {/* NOTE medium size */}
