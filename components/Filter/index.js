@@ -14,6 +14,30 @@ export default function Filter() {
             <p className="text-xs">Brand</p>
             <img src="/min-dark.svg" alt="min-dark" />
           </div>
+
+          {/* brand checkbox wrapper */}
+          <div className="space-y-1.5 text-[10px] text-[#3F3F3F]">
+              <label className="flex items-center gap-2 cursor-pointer w-fit">
+                <input className="w-3" type="checkbox" />
+                STATE
+              </label>
+              <label className="flex items-center gap-2 cursor-pointer w-fit">
+                <input className="w-3" type="checkbox" />
+                BARDOT
+              </label>
+              <label className="flex items-center gap-2 cursor-pointer w-fit">
+                <input className="w-3" type="checkbox" />
+                ALFANI
+              </label>
+              <label className="flex items-center gap-2 cursor-pointer w-fit">
+                <input className="w-3" type="checkbox" />
+                CECE
+              </label>
+              <label className="flex items-center gap-2 cursor-pointer w-fit">
+                <input className="w-3" type="checkbox" />
+                DONNA RICCO
+              </label>
+          </div>
         </div>
       </div>
     </div>
