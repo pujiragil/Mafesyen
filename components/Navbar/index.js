@@ -67,7 +67,7 @@ export default function Navbar() {
           <div className="p-3.5 h-14 flex items-center">
             <img onClick={handleOpen} className="w-fit cursor-pointer" src="/close.svg" alt="close" />
           </div>
-          <div className="px-3.5 pt-3.5 pb-8 flex flex-col gap-6">
+          <div onClick={() => setIsOpen(false)} className="px-3.5 pt-3.5 pb-8 flex flex-col gap-6">
             <div className="bg-white h-10 flex">
               <input className="outline-none h-full w-full px-6 border-none font-roboto text-xs text-black" type="input" placeholder="Type something" />
               <button className="text-[#828282] hover:text-black duration-200 px-8 bg-[#F0F1F2] border-2 border-[#C4C4C4] outline-none">FIND</button>
@@ -77,10 +77,12 @@ export default function Navbar() {
                 <p>trending</p>
                 <img className="absolute right-0 top-1/4 h-1/2" src="arrow-right-menu.svg" alt="arrow-right" />
               </div>
-              <div className="relative text-center cursor-pointer">
-                <p>catalog</p>
-                <img className="absolute right-0 top-1/4 h-1/2" src="arrow-right-menu.svg" alt="arrow-right" />
-              </div>
+              <Link href={"/catalog"}>
+                <div className="relative text-center cursor-pointer">
+                  <p>catalog</p>
+                  <img className="absolute right-0 top-1/4 h-1/2" src="arrow-right-menu.svg" alt="arrow-right" />
+                </div>
+              </Link>
               <div className="relative text-center cursor-pointer">
                 <p>new</p>
                 <img className="absolute right-0 top-1/4 h-1/2" src="arrow-right-menu.svg" alt="arrow-right" />
