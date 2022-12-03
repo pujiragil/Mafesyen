@@ -23,14 +23,20 @@ export default function Navbar() {
             </div>
 
             <div className="w-2/4 md:w-auto lg:w-3/12 flex justify-center lg:justify-start">
-              <Head />
+              <Link href={"/"}>
+                <a>
+                  <Head />
+                </a>
+              </Link>
             </div>
 
             <div className="w-1/4 flex gap-x-5 items-center justify-end md:hidden">
               <img src="/search.svg" alt="search-icon" />
               <span className="relative">
                 <img src="/cart.svg" alt="cart-icon" />
-                <span className="bg-[#EB5757] px-1 absolute -top-1.5 -right-1.5 text-[10px]">2</span>
+                <span className="bg-[#EB5757] px-1 absolute -top-1.5 -right-1.5 text-[10px]">
+                  2
+                </span>
               </span>
             </div>
 
@@ -63,37 +69,75 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className={`${isOpen ? "translate-y-0" : "-translate-y-full"} duration-500 top-0 left-0 w-full bg-black z-10 absolute md:hidden`}>
+        <div
+          className={`${
+            isOpen ? "translate-y-0" : "-translate-y-full"
+          } duration-500 top-0 left-0 w-full bg-black z-10 absolute md:hidden`}
+        >
           <div className="p-3.5 h-14 flex items-center">
-            <img onClick={handleOpen} className="w-fit cursor-pointer" src="/close.svg" alt="close" />
+            <img
+              onClick={handleOpen}
+              className="w-fit cursor-pointer"
+              src="/close.svg"
+              alt="close"
+            />
           </div>
-          <div onClick={() => setIsOpen(false)} className="px-3.5 pt-3.5 pb-8 flex flex-col gap-6">
+          <div
+            onClick={() => setIsOpen(false)}
+            className="px-3.5 pt-3.5 pb-8 flex flex-col gap-6"
+          >
             <div className="bg-white h-10 flex">
-              <input className="outline-none h-full w-full px-6 border-none font-roboto text-xs text-black" type="input" placeholder="Type something" />
-              <button className="text-[#828282] hover:text-black duration-200 px-8 bg-[#F0F1F2] border-2 border-[#C4C4C4] outline-none">FIND</button>
+              <input
+                className="outline-none h-full w-full px-6 border-none font-roboto text-xs text-black"
+                type="input"
+                placeholder="Type something"
+              />
+              <button className="text-[#828282] hover:text-black duration-200 px-8 bg-[#F0F1F2] border-2 border-[#C4C4C4] outline-none">
+                FIND
+              </button>
             </div>
             <div className="flex flex-col gap-6 uppercase font-medium text-lg">
               <div className="relative text-center cursor-pointer">
                 <p>trending</p>
-                <img className="absolute right-0 top-1/4 h-1/2" src="arrow-right-menu.svg" alt="arrow-right" />
+                <img
+                  className="absolute right-0 top-1/4 h-1/2"
+                  src="arrow-right-menu.svg"
+                  alt="arrow-right"
+                />
               </div>
               <Link href={"/catalog"}>
                 <div className="relative text-center cursor-pointer">
                   <p>catalog</p>
-                  <img className="absolute right-0 top-1/4 h-1/2" src="arrow-right-menu.svg" alt="arrow-right" />
+                  <img
+                    className="absolute right-0 top-1/4 h-1/2"
+                    src="arrow-right-menu.svg"
+                    alt="arrow-right"
+                  />
                 </div>
               </Link>
               <div className="relative text-center cursor-pointer">
                 <p>new</p>
-                <img className="absolute right-0 top-1/4 h-1/2" src="arrow-right-menu.svg" alt="arrow-right" />
+                <img
+                  className="absolute right-0 top-1/4 h-1/2"
+                  src="arrow-right-menu.svg"
+                  alt="arrow-right"
+                />
               </div>
               <div className="relative text-center cursor-pointer">
                 <p>sale</p>
-                <img className="absolute right-0 top-1/4 h-1/2" src="arrow-right-menu.svg" alt="arrow-right" />
+                <img
+                  className="absolute right-0 top-1/4 h-1/2"
+                  src="arrow-right-menu.svg"
+                  alt="arrow-right"
+                />
               </div>
               <div className="relative text-center cursor-pointer">
                 <p>brands</p>
-                <img className="absolute right-0 top-1/4 h-1/2" src="arrow-right-menu.svg" alt="arrow-right" />
+                <img
+                  className="absolute right-0 top-1/4 h-1/2"
+                  src="arrow-right-menu.svg"
+                  alt="arrow-right"
+                />
               </div>
             </div>
           </div>
