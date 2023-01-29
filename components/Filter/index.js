@@ -1,12 +1,4 @@
 export default function Filter() {
-  const handleChecked = (e) => {
-    if(e.target.checked) {
-      e.target.parentElement.classList.add("text-black")
-    } else {
-      e.target.parentElement.classList.remove("text-black")
-    }
-  }
-
   return (
     <div className="mx-3.5 mb-3">
       <div className="relative border border-black bg-black text-white">
@@ -26,24 +18,24 @@ export default function Filter() {
           {/* brand checkbox wrapper */}
           <div className="space-y-1.5 text-[10px] text-[#3F3F3F]">
               <label className="flex items-center gap-2 cursor-pointer w-fit duration-200">
-                <input onChange={handleChecked} className="w-3 cursor-pointer" type="checkbox" />
-                STATE
+                <input className="w-3 cursor-pointer peer" type="checkbox" />
+                <p className="peer-checked:text-black">STATE</p>
               </label>
               <label className="flex items-center gap-2 cursor-pointer w-fit duration-200">
-                <input onChange={handleChecked} className="w-3 cursor-pointer" type="checkbox" />
-                BARDOT
+                <input className="w-3 cursor-pointer" type="checkbox" />
+                <p>BARDOT</p>
               </label>
               <label className="flex items-center gap-2 cursor-pointer w-fit duration-200">
-                <input onChange={handleChecked} className="w-3 cursor-pointer" type="checkbox" />
-                ALFANI
+                <input className="w-3 cursor-pointer" type="checkbox" />
+                <p>ALFANI</p>
               </label>
               <label className="flex items-center gap-2 cursor-pointer w-fit duration-200">
-                <input onChange={handleChecked} className="w-3 cursor-pointer" type="checkbox" />
-                CECE
+                <input className="w-3 cursor-pointer" type="checkbox" />
+                <p>CECE</p>
               </label>
               <label className="flex items-center gap-2 cursor-pointer w-fit duration-200">
-                <input onChange={handleChecked} className="w-3 cursor-pointer" type="checkbox" />
-                DONNA RICCO
+                <input className="w-3 cursor-pointer" type="checkbox" />
+                <p>DONNA RICCO</p>
               </label>
           </div>
         </div>
