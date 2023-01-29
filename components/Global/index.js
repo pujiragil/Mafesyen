@@ -14,9 +14,9 @@ export function Button({ children, mainButton }) {
 
 export function DetailButton() {
   return (
-    <div className="w-full md:flex justify-center">
+    <div className="font-oswald w-full md:flex justify-center">
       <button className="uppercase text-xs font-medium text-[#3F3F3F] h-9 w-full md:w-32 flex justify-center items-center border-2 border-[#C4C4C4]">
-        see more
+        load more
       </button>
     </div>
   );
@@ -24,7 +24,7 @@ export function DetailButton() {
 
 export function Head() {
   return (
-    <h1 className="text-white uppercase p-1 border-2 border-white w-fit h-fit font-semibold">
+    <h1 className="font-oswald text-white uppercase p-1 border-2 border-white w-fit h-fit font-semibold">
       Mafesyen
     </h1>
   );

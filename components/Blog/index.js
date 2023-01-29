@@ -1,7 +1,7 @@
 export default function Blog() {
   return (
     <div className="px-3.5 pb-3.5 lg:py-7 bg-[#F8F9FB]">
-      <h3 className="text-lg md:text-xl lg:text-2xl mb-3.5">Blog</h3>
+      <h3 className="text-lg md:text-xl lg:text-2xl mb-3.5 font-oswald">Blog</h3>
       <ArticleWrap />
     </div>
   );
@@ -20,7 +20,7 @@ function ArticleWrap() {
 
 function Article() {
   return (
-    <article className="h-56 md:h-72 lg:h-[350px]  p-3 flex flex-col justify-between bg-white">
+    <article className="h-56 md:h-72 lg:h-[350px]  p-3 flex flex-col justify-between bg-white font-oswald">
       <div>
         <p className="uppercase text-[#BDBDBD] text-[10px] md:text-xs font-semibold">
           top woman

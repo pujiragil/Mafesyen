@@ -6,7 +6,7 @@ import Subcription from "./Subscription";
 export default function MainFooter() {
   return (
     <div className="bg-black text-white">
-      <div className="container mx-auto">
+      <div className="container mx-auto font-">
         <div className="px-3.5 py-7 flex flex-col items-center">
           <FooterWrap />
         </div>
@@ -42,7 +42,7 @@ function FooterLink({ children, links, type }) {
       <div className="uppercase w-full md:w-1/4 lg:w-2/12 border-b border-[#4F4F4F] md:border-none md:flex justify-center lg:justify-start">
         <div className="space-y-3 pb-3.5 md:p-0 md:w-fit">
           <div className="flex justify-between items-start">
-            <p className="text-sm font-medium">{children}</p>
+            <p className="text-sm font-medium font-oswald">{children}</p>
             <button
               onClick={showHandler}
               className="md:hidden w-fit border-none outline-none"
@@ -110,7 +110,7 @@ function FooterLink({ children, links, type }) {
       <div className="uppercase w-full md:w-1/4 lg:w-2/12 border-b border-[#4F4F4F] md:border-none md:flex justify-center lg:justify-start">
         <div className="space-y-3 pb-3.5 md:p-0 md:w-fit">
           <div className="flex justify-between items-start">
-            <p className="text-sm font-medium">{children}</p>
+            <p className="text-sm font-medium font-oswald">{children}</p>
             <button
               onClick={showHandler}
               className="md:hidden w-fit border-none outline-none"
@@ -161,7 +161,7 @@ function FooterLink({ children, links, type }) {
     <div className="w-full md:w-1/4 lg:w-2/12 border-b border-[#4F4F4F] md:border-none md:flex justify-center lg:justify-start">
       <div className="space-y-3 pb-3.5 md:p-0 md:w-fit">
         <div className="flex justify-between items-start">
-          <p className="uppercase text-sm font-medium">{children}</p>
+          <p className="uppercase text-sm font-medium font-oswald">{children}</p>
           <button
             onClick={showHandler}
             className="md:hidden w-fit border-none outline-none"

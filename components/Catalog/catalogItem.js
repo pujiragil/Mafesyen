@@ -1,6 +1,6 @@
 export default function CatalogItem({ imgLink }) {
   return (
-    <section className="space-y-1.5">
+    <section className="space-y-1.5 font-oswald">
       <div className="w-full overflow-hidden">
         <img className="w-full h-56 md:h-64 object-cover hover:scale-110 duration-200 ease-in-out cursor-pointer" src={imgLink} alt="dress" />
       </div>

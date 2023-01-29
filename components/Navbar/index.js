@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black text-white lg:mb-8">
+    <nav className="bg-black text-white lg:mb-8 font-oswald">
       <div className="container mx-auto relative">
         <div className="px-3.5">
           <div className="h-14 flex items-center md:justify-between">

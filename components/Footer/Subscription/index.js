@@ -1,6 +1,6 @@
 export default function Subcription() {
   return (
-    <div className="w-full lg:w-2/12 md:flex justify-center">
+    <div className="w-full lg:w-2/12 md:flex justify-center font-oswald">
       <div className="md:w-[30%] lg:w-full">
         <p className="uppercase text-sm font-medium mb-3.5">join us</p>
         <p className="uppercase font-roboto text-[#828282] text-xs mb-2.5">
