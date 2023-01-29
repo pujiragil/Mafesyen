@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { useState } from "react";
+import { navLinks } from "../../utils/links";
 import { Head } from "../Global";
+import NavDropdown from "./navDropdown";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const handleOpen = () => setIsOpen((prev) => !prev);
 
   return (
     <nav className="bg-black text-white lg:mb-8">
@@ -15,7 +15,7 @@ export default function Navbar() {
             {/* NOTE hamburger */}
             <div className="w-1/4 md:hidden">
               <img
-                onClick={handleOpen}
+                onClick={() => setIsOpen(true)}
                 className="cursor-pointer"
                 src="/hamburger.svg"
                 alt="hamburger"
@@ -40,109 +40,36 @@ export default function Navbar() {
               </span>
             </div>
 
-            {/* NOTE medium size */}
-            <ul className="hidden md:flex lg:w-6/12 lg:justify-center gap-x-4 items-center uppercase">
-              <li>
-                <Link href={"/"}>home</Link>
-              </li>
-              <li>
-                <Link href={"/shop"}>shop</Link>
-              </li>
-              <li>
-                <Link href={""}>blog</Link>
-              </li>
-              <li>
-                <Link href={""}>sale</Link>
-              </li>
-              <li>
-                <Link href={""}>contact us</Link>
-              </li>
-              <li>
-                <Link href={""}>search</Link>
-              </li>
-            </ul>
-
-            <div className="hidden md:flex lg:w-3/12 lg:justify-end gap-x-4 items-center uppercase">
-              <Link href={""}>sign in</Link>
-              <Link href={""}>create an account</Link>
-            </div>
+            {/* NOTE nav menu items ( min md size ) */}
+            <NavLinks />
           </div>
         </div>
 
-        <div
-          className={`${
-            isOpen ? "translate-y-0" : "-translate-y-full"
-          } duration-500 top-0 left-0 w-full bg-black z-10 absolute md:hidden`}
-        >
-          <div className="p-3.5 h-14 flex items-center">
-            <img
-              onClick={handleOpen}
-              className="w-fit cursor-pointer"
-              src="/close.svg"
-              alt="close"
-            />
-          </div>
-          <div
-            onClick={() => setIsOpen(false)}
-            className="px-3.5 pt-3.5 pb-8 flex flex-col gap-6"
-          >
-            <div className="bg-white h-10 flex">
-              <input
-                className="outline-none h-full w-full px-6 border-none font-roboto text-xs text-black"
-                type="input"
-                placeholder="Type something"
-              />
-              <button className="text-[#828282] hover:text-black duration-200 px-8 bg-[#F0F1F2] border-2 border-[#C4C4C4] outline-none">
-                FIND
-              </button>
-            </div>
-            <div className="flex flex-col gap-6 uppercase font-medium text-lg">
-              <div className="relative text-center cursor-pointer">
-                <p>trending</p>
-                <img
-                  className="absolute right-0 top-1/4 h-1/2"
-                  src="arrow-right-menu.svg"
-                  alt="arrow-right"
-                />
-              </div>
-              <Link href={"/catalog"}>
-                <div className="relative text-center cursor-pointer">
-                  <p>catalog</p>
-                  <img
-                    className="absolute right-0 top-1/4 h-1/2"
-                    src="arrow-right-menu.svg"
-                    alt="arrow-right"
-                  />
-                </div>
-              </Link>
-              <div className="relative text-center cursor-pointer">
-                <p>new</p>
-                <img
-                  className="absolute right-0 top-1/4 h-1/2"
-                  src="arrow-right-menu.svg"
-                  alt="arrow-right"
-                />
-              </div>
-              <div className="relative text-center cursor-pointer">
-                <p>sale</p>
-                <img
-                  className="absolute right-0 top-1/4 h-1/2"
-                  src="arrow-right-menu.svg"
-                  alt="arrow-right"
-                />
-              </div>
-              <div className="relative text-center cursor-pointer">
-                <p>brands</p>
-                <img
-                  className="absolute right-0 top-1/4 h-1/2"
-                  src="arrow-right-menu.svg"
-                  alt="arrow-right"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* NOTE nav menu items dropdown ( mobile only ) */}
+        <NavDropdown isOpen={isOpen} handleOpen={setIsOpen} />
       </div>
     </nav>
   );
+}
+
+function NavLinks() {
+  return (
+    <>
+      <ul className="hidden md:flex lg:w-6/12 lg:justify-center gap-x-4 items-center uppercase">
+        {navLinks.map(link => (
+          <li key={link.to}>
+            <LinkItem to={link.to} name={link.name} />
+          </li>
+        ))}
+      </ul>
+      <div className="hidden md:flex lg:w-3/12 lg:justify-end gap-x-4 items-center uppercase">
+        <Link href={""}>sign in</Link>
+        <Link href={""}>create an account</Link>
+      </div>
+    </>
+  );
+}
+
+function LinkItem({ to, name }) {
+  return <Link href={to} children={name} />;
 }
