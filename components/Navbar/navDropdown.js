@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { navLinks } from "../../utils/links";
 
 export default function NavDropdown({ isOpen, handleOpen }) {
   return (
@@ -29,11 +30,9 @@ export default function NavDropdown({ isOpen, handleOpen }) {
           </button>
         </div>
         <div className="flex flex-col gap-6 uppercase font-medium text-lg">
-          <NavLink to="/" name="home"/>
-          <NavLink to="/catalog" name="catalog" />
-          <NavLink to="/new" name="new" />
-          <NavLink to="/sale" name="sale" />
-          <NavLink to="/brands" name="brands" />
+          {navLinks.map(link => (
+            <NavLink to={link.to} name={link.name} />
+          ))}
         </div>
       </div>
     </div>
