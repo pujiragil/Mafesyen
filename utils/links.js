@@ -4,24 +4,24 @@ const navLinks = [
     name: "home",
   },
   {
-    to: "/shop",
-    name: "shop",
+    to: "/catalog",
+    name: "catalog",
   },
   {
     to: "/blog",
     name: "blog",
   },
   {
+    to: "/new",
+    name: "new",
+  },
+  {
     to: "/sale",
     name: "sale",
   },
   {
-    to: "/contact",
-    name: "contact us",
-  },
-  {
-    to: "/search",
-    name: "search",
+    to: "/brands",
+    name: "brands",
   },
 ];
 
