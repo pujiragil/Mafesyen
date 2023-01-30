@@ -71,5 +71,5 @@ function NavLinks() {
 }
 
 function LinkItem({ to, name }) {
-  return <Link href={to} children={name} />;
+  return <Link href={to}>{name}</Link>;
 }
