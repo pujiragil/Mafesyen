@@ -63,8 +63,8 @@ function NavLinks() {
         ))}
       </ul>
       <div className="hidden md:flex lg:w-3/12 lg:justify-end gap-x-4 items-center uppercase">
-        <Link href={""}>sign in</Link>
-        <Link href={""}>create an account</Link>
+        <LinkItem to="" name="sign in"/>
+        <LinkItem to="" name="create an account"/>
       </div>
     </>
   );
