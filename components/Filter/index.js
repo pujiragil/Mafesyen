@@ -1,4 +1,5 @@
 import FilterBrand from "./filterBrand";
+import FilterSize from "./filterSize";
 
 export default function Filter() {
   return (
@@ -12,6 +13,8 @@ export default function Filter() {
       <div className="p-3 flex flex-col gap-3 border border-black">
         {/* brand menu */}
         <FilterBrand />
+        {/* size menu */}
+        <FilterSize />
       </div>
     </div>
   )
