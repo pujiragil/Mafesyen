@@ -26,7 +26,7 @@ export default function NavDropdown({ isOpen, handleOpen }) {
         {/* NOTE Nav links */}
         <div className="flex flex-col gap-6 uppercase font-medium text-lg">
           {navLinks.map(link => (
-            <NavLink to={link.to} name={link.name} />
+            <NavLink key={link.name} to={link.to} name={link.name} />
           ))}
         </div>
       </div>
