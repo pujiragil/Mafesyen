@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FilterBrand from "./filterBrand";
 import FilterColor from "./filterColor";
+import FilterRange from "./filterRange";
 import FilterSize from "./filterSize";
 
 export default function Filter() {
@@ -25,6 +26,8 @@ export default function Filter() {
             <FilterSize />
             {/* color menu */}
             <FilterColor />
+            {/* price range menu */}
+            <FilterRange />
           </div>
 
         ) : null}
