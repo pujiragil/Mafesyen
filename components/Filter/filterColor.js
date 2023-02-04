@@ -16,7 +16,7 @@ export default function FilterColor() {
       </div>
 
       {/* Button Colors */}
-      <ButtonColors />
+      {isShow ? <ButtonColors /> : null}
     </div>
   )
 }
