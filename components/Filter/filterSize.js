@@ -23,9 +23,9 @@ function ButtonSizes() {
   const buttonSizes = ["osfa", "w26", "w27", "w28", "w29", "w30", "w31", "w32", "w33", "w34", "w35", "w36", "w37", "w38", "w39", "w40", "w41", "w42", "w43", "w44"]
 
   return (
-    <div className="w-fit grid grid-cols-5 gap-2 text-xs text-[#828282]">
+    <div className="w-10/12 grid grid-cols-5 gap-y-2 text-xs text-[#828282]">
       {buttonSizes.map(button => (
-        <button key={button} className="w-[38px] h-[38px] flex justify-center items-center border border-[#E5E7EB] outline-none">{button}</button>
+        <button key={button} className="focus:border-black focus:ring-1 focus:ring-black focus:text-black w-[38px] h-[38px] flex justify-center items-center border border-[#E5E7EB] outline-nonec">{button}</button>
       ))}
     </div>
   )
