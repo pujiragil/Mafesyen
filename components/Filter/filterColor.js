@@ -11,7 +11,7 @@ export default function FilterColor() {
         onClick={handleShow}
         className="flex justify-between items-center cursor-pointer"
       >
-        <p className="text-xs font-oswald">Brand</p>
+        <p className="text-xs font-oswald">Color</p>
         <img src="/min-dark.svg" alt="min-dark" />
       </div>
 
