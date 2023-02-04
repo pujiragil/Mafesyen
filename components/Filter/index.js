@@ -1,4 +1,5 @@
 import FilterBrand from "./filterBrand";
+import FilterColor from "./filterColor";
 import FilterSize from "./filterSize";
 
 export default function Filter() {
@@ -15,6 +16,8 @@ export default function Filter() {
         <FilterBrand />
         {/* size menu */}
         <FilterSize />
+        {/* color menu */}
+        <FilterColor />
       </div>
     </div>
   )
