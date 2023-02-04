@@ -14,6 +14,20 @@ export default function FilterRange() {
         <p className="text-xs font-oswald">Brand</p>
         <img src="/min-dark.svg" alt="min-dark" />
       </div>
+
+      <PriceRange />
     </div>
   );
+}
+
+function PriceRange() {
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="flex items-center justify-between font-roboto text-[10px] text-black font-medium">
+        <p>0.00 EUR</p>
+        <p>250.00 EUR</p>
+      </div>
+      <input type="range" min="0" max="250" />
+    </div>
+  )
 }
