@@ -24,9 +24,7 @@ export default function Navbar() {
 
             <div className="w-2/4 md:w-auto lg:w-3/12 flex justify-center lg:justify-start">
               <Link href={"/"}>
-                <a>
-                  <Head />
-                </a>
+                <Head />
               </Link>
             </div>
 
@@ -56,15 +54,15 @@ function NavLinks() {
   return (
     <>
       <ul className="hidden md:flex lg:w-6/12 lg:justify-center gap-x-4 items-center uppercase">
-        {navLinks.map(link => (
+        {navLinks.map((link) => (
           <li key={link.to}>
             <LinkItem to={link.to} name={link.name} />
           </li>
         ))}
       </ul>
       <div className="hidden md:flex lg:w-3/12 lg:justify-end gap-x-4 items-center uppercase">
-        <LinkItem to="" name="sign in"/>
-        <LinkItem to="" name="create an account"/>
+        <LinkItem to="" name="sign in" />
+        <LinkItem to="" name="create an account" />
       </div>
     </>
   );
