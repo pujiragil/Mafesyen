@@ -29,3 +29,13 @@ export function Head() {
     </h1>
   );
 }
+
+const SIZES_VARIANT = {
+  base: "text-[10px] md:text-xs",
+  lg: "text-[10px] md:text-base",
+};
+
+export function Highlight({ text, sizes = "base" }) {
+  const className = `${SIZES_VARIANT[sizes]} text-[#BDBDBD] font-oswald font-semibold`;
+  return <p className={className}>{text}</p>;
+}
