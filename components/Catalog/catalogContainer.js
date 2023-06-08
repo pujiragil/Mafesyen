@@ -1,6 +1,6 @@
 import { DetailButton } from "../Global";
 import { CatalogSidebar } from "./catalogSidebar";
-import CatalogItem from "./catalogItem";
+import CatalogCard from "./catalogCard";
 
 export default function Catalog() {
   return (
@@ -13,14 +13,14 @@ export default function Catalog() {
 
       <div className="w-full lg:pb-[18px]">
         <div className="mb-[18px] lg:mb-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3.5 lg:gap-6">
-          <CatalogItem imgLink={"/images/dress-1.png"} />
-          <CatalogItem imgLink={"/images/dress-2.png"} />
-          <CatalogItem imgLink={"/images/dress-3.png"} />
-          <CatalogItem imgLink={"/images/dress-4.png"} />
-          <CatalogItem imgLink={"/images/dress-5.png"} />
-          <CatalogItem imgLink={"/images/dress-6.png"} />
-          <CatalogItem imgLink={"/images/dress-7.png"} />
-          <CatalogItem imgLink={"/images/dress-8.png"} />
+          <CatalogCard imgLink={"/images/dress-1.png"} />
+          <CatalogCard imgLink={"/images/dress-2.png"} />
+          <CatalogCard imgLink={"/images/dress-3.png"} />
+          <CatalogCard imgLink={"/images/dress-4.png"} />
+          <CatalogCard imgLink={"/images/dress-5.png"} />
+          <CatalogCard imgLink={"/images/dress-6.png"} />
+          <CatalogCard imgLink={"/images/dress-7.png"} />
+          <CatalogCard imgLink={"/images/dress-8.png"} />
         </div>
         <DetailButton />
       </div>

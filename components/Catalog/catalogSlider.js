@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
-import CatalogItem from "./catalogItem";
+import CatalogCard from "./catalogCard";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -8,7 +8,9 @@ import "swiper/css/navigation";
 export default function CatalogSlider({ title }) {
   return (
     <div className="mx-3.5 mb-3.5 lg:mb-8 relative">
-      <h3 className="text-lg md:text-xl lg:text-2xl mb-4 font-oswald">{title}</h3>
+      <h3 className="text-lg md:text-xl lg:text-2xl mb-4 font-oswald">
+        {title}
+      </h3>
       <Swiper
         className="catalog"
         modules={[Navigation]}
@@ -22,28 +24,28 @@ export default function CatalogSlider({ title }) {
         }}
       >
         <SwiperSlide>
-          <CatalogItem imgLink={"/images/dress-1.png"} />
+          <CatalogCard imgLink={"/images/dress-1.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <CatalogItem imgLink={"/images/dress-2.png"} />
+          <CatalogCard imgLink={"/images/dress-2.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <CatalogItem imgLink={"/images/dress-3.png"} />
+          <CatalogCard imgLink={"/images/dress-3.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <CatalogItem imgLink={"/images/dress-4.png"} />
+          <CatalogCard imgLink={"/images/dress-4.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <CatalogItem imgLink={"/images/dress-5.png"} />
+          <CatalogCard imgLink={"/images/dress-5.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <CatalogItem imgLink={"/images/dress-6.png"} />
+          <CatalogCard imgLink={"/images/dress-6.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <CatalogItem imgLink={"/images/dress-7.png"} />
+          <CatalogCard imgLink={"/images/dress-7.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <CatalogItem imgLink={"/images/dress-8.png"} />
+          <CatalogCard imgLink={"/images/dress-8.png"} />
         </SwiperSlide>
       </Swiper>
     </div>

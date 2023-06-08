@@ -1,4 +1,4 @@
-export default function CatalogItem({ imgLink }) {
+export default function CatalogCard({ imgLink }) {
   return (
     <section className="space-y-1.5 font-oswald">
       <div className="w-full overflow-hidden">
