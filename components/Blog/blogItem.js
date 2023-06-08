@@ -1,10 +1,10 @@
+import { Highlight } from "../Global";
+
 export default function BlogItem() {
   return (
     <article className="h-56 md:h-72 lg:h-[350px]  p-3 flex flex-col justify-between bg-white font-oswald">
       <div>
-        <p className="uppercase text-[#BDBDBD] text-[10px] md:text-xs font-semibold">
-          top woman
-        </p>
+        <Highlight sizes="lg" text="TOP WOMAN" />
         <h4 className="text-sm md:text-base lg:text-lg mt-1 mb-3.5">
           Exactly What To Wear To Every Type Of Wedding This Summer
         </h4>
