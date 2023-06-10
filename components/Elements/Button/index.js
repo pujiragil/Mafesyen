@@ -20,6 +20,11 @@ const button = cva(["font-oswald", "font-medium", "uppercase"], {
       size: "lg",
       className: "w-[115px] h-10",
     },
+    {
+      intent: "primary",
+      size: "base",
+      className: "font-semibold",
+    },
   ],
   defaultVariants: {
     intent: "primary",
