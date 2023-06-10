@@ -1,4 +1,4 @@
-import { Button } from "../Global";
+import Button from "../Elements/Button";
 
 export default function SliderItem() {
   return (
@@ -13,8 +13,10 @@ export default function SliderItem() {
         <h1 className="w-8/12 text-3xl md:text-4xl lg:text-6xl font-semibold uppercase">
           SUMMER SALE GEt 30% OFF On all dress.
         </h1>
-        <Button mainButton={true}>shop now</Button>
+        <Button intent="primary" size="lg">
+          shop now
+        </Button>
       </div>
     </div>
-  )
+  );
 }
