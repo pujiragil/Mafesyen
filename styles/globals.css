@@ -9,6 +9,11 @@
   font-family: inherit;
 }
 
+.hero-slide {
+  background-image: url("/images/swiper-bg.png");
+  @apply min-h-[500px] w-full relative bg-bottom;
+}
+
 /* NOTE Main Slide */
 .mainSlide > .swiper-pagination {
   display: flex;
