@@ -13,7 +13,7 @@ const button = cva(
         lg: "text-sm md:text-lg",
       },
       width: {
-        base: "w-[85px] h-8 md:w-44 md:h-14",
+        base: "h-8 w-[85px] md:h-14 md:w-40",
         full: "w-full",
       },
     },
@@ -21,7 +21,7 @@ const button = cva(
       {
         intent: "primary",
         size: "lg",
-        className: "w-[115px] h-10 border-2",
+        className: "h-10 w-[115px] border-2",
       },
       {
         intent: "primary",
