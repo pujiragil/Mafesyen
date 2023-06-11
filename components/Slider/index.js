@@ -1,8 +1,8 @@
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { SlideItem, SlideWrapper } from "./sliderItem";
 
 import "swiper/css";
-import { SlideWrapper } from "./sliderItem";
 
 export default function Slider() {
   return (
@@ -10,11 +10,11 @@ export default function Slider() {
       <Swiper
         autoplay={{ delay: 2000, disableOnInteraction: true }}
         modules={[Autoplay]}
-        className="relative"
+        className="hero-slide"
       >
-        <SwiperSlide>makan bang</SwiperSlide>
-        <SwiperSlide>makan bang</SwiperSlide>
-        <SwiperSlide>makan bang</SwiperSlide>
+        <SwiperSlide><SlideItem/></SwiperSlide>
+        <SwiperSlide><SlideItem/></SwiperSlide>
+        <SwiperSlide><SlideItem/></SwiperSlide>
         <SlideWrapper />
       </Swiper>
     </div>

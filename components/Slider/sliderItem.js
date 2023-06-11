@@ -1,33 +1,34 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useSwiper } from "swiper/react";
 import Button from "../Elements/Button";
 
-const SlideItem = () => {
+const SlideItem = memo(() => {
   return (
-    <div className="min-h-[400px] gap-y-5 pt-8 lg:px-8 pb-20 bg-[url('/images/swiper-bg.png')] bg-no-repeat bg-cover flex flex-col lg:flex-row justify-center items-center text-center">
-      <div className="lg:order-2 w-full flex justify-center items-center">
+    <div className="flex flex-col gap-5 px-3.5 pt-8 pb-20 md:grid md:h-[500px] md:grid-cols-2 md:place-items-center md:gap-0 md:px-10">
+      <div className="flex justify-center md:order-2">
         <img
-          className="h-[200px] w-[205px] md:h-[300px] md:w-[305px] lg:w-[450px] lg:h-auto object-cover"
+          className="h-auto w-3/4 object-center md:w-full md:w-4/5"
           src="/images/swiper-1.png"
+          alt="swiper-model"
         />
       </div>
-      <div className="lg:order-1 space-y-3.5 md:space-y-12">
-        <h1 className="w-8/12 text-3xl md:text-4xl lg:text-6xl font-semibold uppercase">
-          SUMMER SALE GEt 30% OFF On all dress.
+      <div className="flex flex-col items-center gap-3.5 text-center md:order-1 md:items-start md:text-left">
+        <h1 className="w-9/12 font-oswald text-[2rem] font-semibold uppercase leading-9 text-black lg:text-[4.5rem] lg:leading-none">
+          summer sale get 30% off on all dress.
         </h1>
-        <Button intent="primary" size="lg">
+        <Button intent="primary" size="lg" width="base">
           shop now
         </Button>
       </div>
     </div>
   );
-};
+});
 
 const SlideWrapper = () => {
   const swiper = useSwiper();
-  const [isSlideBegin, setIsSlideBegin] = useState(false);
+  const [isSlideBegin, setIsSlideBegin] = useState(true);
   const [isSlideEnd, setIsSlideEnd] = useState(false);
- 
+
   useEffect(() => {
     const handleSlideChange = () => {
       setIsSlideBegin(swiper.isBeginning);
@@ -42,7 +43,7 @@ const SlideWrapper = () => {
   }, [swiper]);
 
   return (
-    <div className="flex gap-6">
+    <div className="absolute bottom-0 left-0 z-10 flex w-full justify-between p-3.5">
       <SlideButtonIcon
         key="prev-button"
         isAllowed={isSlideBegin}
@@ -64,11 +65,11 @@ const SlideButtonIcon = ({ isAllowed, onSlide, iconLink }) => {
     <button
       onClick={onSlide}
       className={`${
-        isAllowed ? "opacity-40 cursor-default" : "opacity-100"
-      } w-10 h-10 bg-black flex items-center justify-center transition-opacity duration-300 ease-in-out`}
+        isAllowed ? "cursor-default opacity-40" : "opacity-100"
+      } flex h-10 w-10 items-center justify-center bg-black transition-opacity duration-300 ease-in-out`}
     >
       <img
-        className="w-2 h-auto object-contain"
+        className="h-auto w-2 object-contain"
         src={iconLink}
         alt="slide-button-icon"
       />
