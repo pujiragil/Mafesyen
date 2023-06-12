@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from "react";
+import { memo, useEffect, useMemo, useState } from "react";
 import { useSwiper } from "swiper/react";
 import Button from "../Elements/Button";
 
@@ -50,6 +50,10 @@ const SlideWrapper = () => {
         onSlide={() => swiper.slidePrev()}
         iconLink="/arrow-left.svg"
       />
+      <SlidePagination
+        totalSlides={swiper.slides}
+        activeSlide={swiper.activeIndex}
+      />
       <SlideButtonIcon
         key="next-button"
         isAllowed={isSlideEnd}
@@ -78,5 +82,22 @@ const SlideButtonIcon = ({ isAllowed, onSlide, iconLink }) => {
 };
 
 SlideItem.displayName = "SlideItem";
+
+const SlidePagination = ({ totalSlides, activeSlide }) => {
+  const paginationBullets = useMemo(() =>
+    totalSlides?.map((slide, idx) => (
+      <span
+        key={idx}
+        className={`${
+          idx === activeSlide
+            ? "h-5 w-5 border border-black bg-black"
+            : "h-4 w-4 border border-[#828282] bg-transparent"
+        } transition-all duration-300 ease-in-out`}
+      ></span>
+    ))
+  );
+
+  return <div className="flex items-center gap-2">{paginationBullets}</div>;
+};
 
 export { SlideButtonIcon, SlideWrapper, SlideItem };
