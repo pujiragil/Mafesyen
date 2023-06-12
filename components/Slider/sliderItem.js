@@ -1,12 +1,17 @@
+import Image from "next/image";
 import { memo, useEffect, useMemo, useState } from "react";
 import { useSwiper } from "swiper/react";
 import Button from "../Elements/Button";
+import { ArrowNavigationLeft, ArrowNavigationRight } from "../Assets/arrow";
 
 const SlideItem = memo(() => {
   return (
     <div className="flex flex-col gap-5 px-3.5 pt-8 pb-20 md:grid md:min-h-[500px] md:grid-cols-2 md:place-items-center md:px-8 lg:px-20">
       <div className="flex justify-center md:order-2 md:justify-end">
-        <img
+        <Image
+          width={852}
+          height={757}
+          priority={true}
           className="h-auto w-3/4 object-center md:w-full md:w-full lg:w-4/5"
           src="/images/swiper-1.png"
           alt="swiper-model"
@@ -49,7 +54,9 @@ const SlideWrapper = () => {
           key="prev-button"
           isAllowed={isSlideBegin}
           onSlide={() => swiper.slidePrev()}
-          iconLink="/arrow-left.svg"
+          navIcon={
+            <ArrowNavigationLeft className="h-auto w-2 object-contain md:w-2.5" />
+          }
         />
         <SlidePagination
           totalSlides={swiper.slides}
@@ -59,14 +66,16 @@ const SlideWrapper = () => {
           key="next-button"
           isAllowed={isSlideEnd}
           onSlide={() => swiper.slideNext()}
-          iconLink="/arrow-right.svg"
+          navIcon={
+            <ArrowNavigationRight className="h-auto w-2 object-contain md:w-2.5" />
+          }
         />
       </div>
     </div>
   );
 };
 
-const SlideButtonIcon = ({ isAllowed, onSlide, iconLink }) => {
+const SlideButtonIcon = ({ isAllowed, onSlide, navIcon }) => {
   return (
     <button
       onClick={onSlide}
@@ -74,11 +83,7 @@ const SlideButtonIcon = ({ isAllowed, onSlide, iconLink }) => {
         isAllowed ? "cursor-default opacity-40" : "opacity-100"
       } flex h-10 w-10 items-center justify-center bg-black transition-opacity duration-300 ease-in-out md:h-[50px] md:w-[50px]`}
     >
-      <img
-        className="h-auto w-2 object-contain md:w-2.5"
-        src={iconLink}
-        alt="slide-button-icon"
-      />
+      {navIcon}
     </button>
   );
 };
