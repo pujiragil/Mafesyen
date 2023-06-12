@@ -49,7 +49,7 @@ const SlideWrapper = () => {
 
   return (
     <div className="absolute bottom-0 left-0 z-10 w-full p-3.5 md:pb-0 md:pr-0">
-      <div className="relative flex w-full justify-between md:justify-end md:gap-2  ">
+      <div className="relative flex w-full justify-between items-center md:justify-end md:gap-2">
         <SlideButtonIcon
           key="prev-button"
           isAllowed={isSlideBegin}
@@ -99,7 +99,7 @@ const SlidePagination = ({ totalSlides, activeSlide }) => {
           idx === activeSlide
             ? "h-5 w-5 border border-black bg-black md:h-6 md:w-6"
             : "h-4 w-4 border border-[#828282] bg-transparent md:h-5 md:w-5"
-        } transition-all duration-300 ease-in-out`}
+        } transition-all duration-200 ease-in-out`}
       ></span>
     ))
   );
