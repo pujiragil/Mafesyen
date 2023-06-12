@@ -77,4 +77,6 @@ const SlideButtonIcon = ({ isAllowed, onSlide, iconLink }) => {
   );
 };
 
+SlideItem.displayName = "SlideItem";
+
 export { SlideButtonIcon, SlideWrapper, SlideItem };
