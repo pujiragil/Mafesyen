@@ -10,8 +10,8 @@
 }
 
 .hero-slide {
-  background-image: url("/images/swiper-bg.webp");
-  @apply min-h-[500px] w-full relative bg-bottom bg-no-repeat bg-cover;
+  /* background-image: url("/images/swiper-bg.webp"); */
+  @apply min-h-[500px] w-full relative;
 }
 
 /* NOTE Catalog Slide */

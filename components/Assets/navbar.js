@@ -31,12 +31,12 @@ export const SearchIcon = () => {
         cy="7.30769"
         r="6.10769"
         stroke="white"
-        stroke-width="2.4"
+        strokeWidth="2.4"
       />
       <path
         d="M13.6406 13.6409L18.9996 18.9998"
         stroke="white"
-        stroke-width="2.4"
+        strokeWidth="2.4"
       />
     </svg>
   );
