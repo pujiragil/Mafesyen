@@ -1,14 +1,26 @@
-import { brands } from "../../utils/brand"
+import Image from "next/image";
+import { brands } from "../../utils/brand";
 
 export default function Brand() {
   return (
-    <div className="font-oswald my-3.5 lg:my-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3.5 mx-3.5 lg:p-4 lg:border-2 border-[#C4C4C4] relative">
-      <h1 className="hidden lg:inline-block absolute -top-4 text-center right-[40%] bg-white w-1/5 uppercase text-xl font-normal">chose your brand</h1>
-      {brands?.map((brand, index) => (
-        <div key={index} className="w-full border-2 border-[#C4C4C4] lg:border-none">
-          <img className="w-full h-14 md:h-20 object-cover lg:h-auto" key={index} src={brand} />
+    <div className="relative my-3.5 mx-3.5 grid grid-cols-2 gap-3.5 border-[#C4C4C4] font-oswald sm:grid-cols-3 md:grid-cols-4 lg:my-8 lg:grid-cols-8 lg:border-2 lg:p-4">
+      <h1 className="absolute -top-4 right-[40%] hidden w-1/5 bg-white text-center text-xl font-normal uppercase lg:inline-block">
+        chose your brand
+      </h1>
+      {brands?.map((brand) => (
+        <div
+          key={brand.id}
+          className="w-full border-2 border-[#C4C4C4] lg:border-none"
+        >
+          <Image
+            src={brand.link}
+            width={470}
+            height={282}
+            alt={brand.alt}
+            className="h-16 w-full object-cover md:h-20 lg:h-auto"
+          />
         </div>
       ))}
     </div>
-  )
+  );
 }
