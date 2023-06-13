@@ -1,6 +1,6 @@
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { SlideItem, SlideWrapper } from "./sliderItem";
+import { SlideBackground, SlideItem, SlideWrapper } from "./sliderItem";
 
 import "swiper/css";
 
@@ -10,12 +10,19 @@ export default function Slider() {
       <Swiper
         autoplay={{ delay: 2000, disableOnInteraction: true }}
         modules={[Autoplay]}
-        className="hero-slide"
+        className="hero-slide overflow-hidden"
       >
-        <SwiperSlide><SlideItem/></SwiperSlide>
-        <SwiperSlide><SlideItem/></SwiperSlide>
-        <SwiperSlide><SlideItem/></SwiperSlide>
+        <SwiperSlide>
+          <SlideItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <SlideItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <SlideItem />
+        </SwiperSlide>
         <SlideWrapper />
+        <SlideBackground />
       </Swiper>
     </div>
   );

@@ -49,7 +49,7 @@ const SlideWrapper = () => {
 
   return (
     <div className="absolute bottom-0 left-0 z-10 w-full p-3.5 md:pb-0 md:pr-0">
-      <div className="relative flex w-full justify-between items-center md:justify-end md:gap-2">
+      <div className="relative flex w-full items-center justify-between md:justify-end md:gap-2">
         <SlideButtonIcon
           key="prev-button"
           isAllowed={isSlideBegin}
@@ -88,8 +88,6 @@ const SlideButtonIcon = ({ isAllowed, onSlide, navIcon }) => {
   );
 };
 
-SlideItem.displayName = "SlideItem";
-
 const SlidePagination = ({ totalSlides, activeSlide }) => {
   const paginationBullets = useMemo(() =>
     totalSlides?.map((slide, idx) => (
@@ -111,4 +109,19 @@ const SlidePagination = ({ totalSlides, activeSlide }) => {
   );
 };
 
-export { SlideButtonIcon, SlideWrapper, SlideItem };
+const SlideBackground = () => {
+  return (
+    <Image
+      width={1410}
+      height={601}
+      priority={true}
+      className="w-[110%] h-full absolute z-0 top-0 left-0"
+      src="/images/swiper-bg.webp"
+      alt="swiper-background"
+    />
+  );
+};
+
+SlideItem.displayName = "SlideItem";
+
+export { SlideButtonIcon, SlideWrapper, SlideItem, SlideBackground };
