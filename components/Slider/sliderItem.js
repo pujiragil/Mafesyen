@@ -13,7 +13,7 @@ const SlideItem = memo(() => {
           height={757}
           priority={true}
           className="h-auto w-3/4 object-center md:w-full md:w-full lg:w-4/5"
-          src="/images/swiper-1.png"
+          src="/images/swiper-1.webp"
           alt="swiper-model"
         />
       </div>
