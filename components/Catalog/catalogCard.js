@@ -1,21 +1,24 @@
+import Image from "next/image";
 import { Highlight } from "../Global";
 
-export default function CatalogCard({ imgLink }) {
+export default function CatalogCard({ imgLink, imgAlt }) {
   return (
     <section className="space-y-1.5 font-oswald">
       <div className="w-full overflow-hidden">
-        <img
-          className="w-full h-56 md:h-64 object-cover hover:scale-110 duration-200 ease-in-out cursor-pointer"
+        <Image
+          width={344}
+          height={450}
           src={imgLink}
-          alt="dress"
+          alt={imgAlt}
+          className="h-56 w-full cursor-pointer object-cover duration-200 ease-in-out hover:scale-110 md:h-64"
         />
       </div>
       <div className="space-y-1.5">
         <Highlight text="TOP WOMAN" />
-        <h4 className="text-xs md:text-base lg:text-lg font-light">
+        <h4 className="text-xs font-light md:text-base lg:text-lg">
           Angels malu zip jeans slim black used
         </h4>
-        <p className="font-medium text-sm md:text-lg lg:text-2xl">139,00 EUR</p>
+        <p className="text-sm font-medium md:text-lg lg:text-2xl">139,00 EUR</p>
       </div>
     </section>
   );

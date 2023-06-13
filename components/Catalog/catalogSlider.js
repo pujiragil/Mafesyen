@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
+import { dresses } from "../../utils/dress";
 import CatalogCard from "./catalogCard";
 
 import "swiper/css";
@@ -7,8 +8,8 @@ import "swiper/css/navigation";
 
 export default function CatalogSlider({ title }) {
   return (
-    <div className="mx-3.5 mb-3.5 lg:mb-8 relative">
-      <h3 className="text-lg md:text-xl lg:text-2xl mb-4 font-oswald">
+    <div className="relative mx-3.5 mb-3.5 lg:mb-8">
+      <h3 className="mb-4 font-oswald text-lg md:text-xl lg:text-2xl">
         {title}
       </h3>
       <Swiper
@@ -23,30 +24,11 @@ export default function CatalogSlider({ title }) {
           1024: { slidesPerView: 5, spaceBetween: 24 },
         }}
       >
-        <SwiperSlide>
-          <CatalogCard imgLink={"/images/dress-1.png"} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CatalogCard imgLink={"/images/dress-2.png"} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CatalogCard imgLink={"/images/dress-3.png"} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CatalogCard imgLink={"/images/dress-4.png"} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CatalogCard imgLink={"/images/dress-5.png"} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CatalogCard imgLink={"/images/dress-6.png"} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CatalogCard imgLink={"/images/dress-7.png"} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CatalogCard imgLink={"/images/dress-8.png"} />
-        </SwiperSlide>
+        {dresses.map((dress) => (
+          <SwiperSlide key={dress.id}>
+            <CatalogCard imgLink={dress.link} imgAlt={dress.alt} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
