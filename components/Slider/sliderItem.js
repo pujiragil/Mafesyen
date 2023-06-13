@@ -115,7 +115,7 @@ const SlideBackground = () => {
       width={1410}
       height={601}
       priority={true}
-      className="w-[110%] h-full absolute z-0 top-0 left-0"
+      className="absolute top-0 left-0 z-0 h-[110%]"
       src="/images/swiper-bg.webp"
       alt="swiper-background"
     />
