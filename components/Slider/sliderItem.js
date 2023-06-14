@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { memo, useEffect, useMemo, useState } from "react";
 import { useSwiper } from "swiper/react";
-import Button from "../Elements/Button";
+import { Button } from "../Elements/";
 import { ArrowNavigationLeft, ArrowNavigationRight } from "../Assets/arrow";
 
 const SlideItem = memo(() => {
