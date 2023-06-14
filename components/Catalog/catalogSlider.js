@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { dresses } from "../../utils/dress";
-import CatalogCard from "./catalogCard";
+import ProductCard from "../Card/productCard";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -26,7 +26,12 @@ export default function CatalogSlider({ title }) {
       >
         {dresses.map((dress) => (
           <SwiperSlide key={dress.id}>
-            <CatalogCard imgLink={dress.link} imgAlt={dress.alt} />
+            <ProductCard
+              data={dress}
+              image={<ProductCard.Image />}
+              info={<ProductCard.Info />}
+              price={<ProductCard.Price />}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

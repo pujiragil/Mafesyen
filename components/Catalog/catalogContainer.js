@@ -2,6 +2,7 @@ import { dresses } from "../../utils/dress";
 import { DetailButton } from "../Global";
 import { CatalogSidebar } from "./catalogSidebar";
 import CatalogCard from "./catalogCard";
+import ProductCard from "../Card/productCard";
 
 export default function Catalog() {
   return (
@@ -15,10 +16,12 @@ export default function Catalog() {
       <div className="w-full lg:pb-[18px]">
         <div className="mb-[18px] grid grid-cols-2 gap-3.5 sm:grid-cols-3 md:grid-cols-4 lg:mb-12 lg:gap-6">
           {dresses.map((dress) => (
-            <CatalogCard
+            <ProductCard
               key={dress.id}
-              imgLink={dress.link}
-              imgAlt={dress.alt}
+              data={dress}
+              image={<ProductCard.Image />}
+              info={<ProductCard.Info />}
+              price={<ProductCard.Price />}
             />
           ))}
         </div>
