@@ -4,15 +4,15 @@ import { cn } from "../../utils/utils";
 const category = cva("font-oswald font-semibold uppercase text-[#BDBDBD]", {
   variants: {
     intent: {
-      sm: "text-[10px] md:text-sm",
-      base: "text-[10px] md:text-base",
+      primary: "text-[10px] md:text-sm",
+      secondary: "text-[10px] md:text-base",
     },
   },
   defaultVariants: {
-    intent: "sm",
+    intent: "primary",
   },
 });
 
-export default function Category({ text, intent, className }) {
-  return <p className={cn(category({ intent, className }))}>{text}</p>;
+export default function Category({ value, intent, className }) {
+  return <p className={cn(category({ intent, className }))}>{value}</p>;
 }
