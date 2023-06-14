@@ -13,9 +13,9 @@ export default function Brand() {
           className="w-full border-2 border-[#C4C4C4] lg:border-none"
         >
           <Image
-            src={brand.link}
             width={470}
             height={282}
+            src={brand.link}
             alt={brand.alt}
             className="h-16 w-full object-cover md:h-20 lg:h-auto"
           />
