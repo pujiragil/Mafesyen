@@ -1,42 +1,58 @@
 export const dresses = [
   {
     id: 1,
-    alt: "dress",
-    link: "/images/dress-1.webp",
+    imgAlt: "dress",
+    imgLink: "/images/dress-1.webp",
+    category: "top woman",
+    name: "Angels malu zip jeans slim black used"
   },
   {
     id: 2,
-    alt: "dress",
-    link: "/images/dress-2.webp",
+    imgAlt: "dress",
+    imgLink: "/images/dress-2.webp",
+    category: "top woman",
+    name: "Angels malu zip jeans slim black used"
   },
   {
     id: 3,
-    alt: "dress",
-    link: "/images/dress-3.webp",
+    imgAlt: "dress",
+    imgLink: "/images/dress-3.webp",
+    category: "top woman",
+    name: "Angels malu zip jeans slim black used"
   },
   {
     id: 4,
-    alt: "dress",
-    link: "/images/dress-4.webp",
+    imgAlt: "dress",
+    imgLink: "/images/dress-4.webp",
+    category: "top woman",
+    name: "Angels malu zip jeans slim black used"
   },
   {
     id: 5,
-    alt: "dress",
-    link: "/images/dress-5.webp",
+    imgAlt: "dress",
+    imgLink: "/images/dress-5.webp",
+    category: "top woman",
+    name: "Angels malu zip jeans slim black used"
   },
   {
     id: 6,
-    alt: "dress",
-    link: "/images/dress-6.webp",
+    imgAlt: "dress",
+    imgLink: "/images/dress-6.webp",
+    category: "top woman",
+    name: "Angels malu zip jeans slim black used"
   },
   {
     id: 7,
-    alt: "dress",
-    link: "/images/dress-7.webp",
+    imgAlt: "dress",
+    imgLink: "/images/dress-7.webp",
+    category: "top woman",
+    name: "Angels malu zip jeans slim black used"
   },
   {
     id: 8,
-    alt: "dress",
-    link: "/images/dress-8.webp",
+    imgAlt: "dress",
+    imgLink: "/images/dress-8.webp",
+    category: "top woman",
+    name: "Angels malu zip jeans slim black used"
   },
 ];
