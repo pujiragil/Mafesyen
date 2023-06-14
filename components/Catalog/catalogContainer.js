@@ -1,7 +1,6 @@
 import { dresses } from "../../utils/dress";
 import { DetailButton } from "../Global";
 import { CatalogSidebar } from "./catalogSidebar";
-import CatalogCard from "./catalogCard";
 import ProductCard from "../Card/productCard";
 
 export default function Catalog() {
