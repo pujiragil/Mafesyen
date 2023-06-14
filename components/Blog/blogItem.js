@@ -1,11 +1,11 @@
-import { Highlight } from "../Global";
+import { Category } from "../Elements";
 
 export default function BlogItem({ highlight, title, description, date }) {
   return (
-    <article className="h-56 md:h-72 lg:h-[350px]  p-3 flex flex-col justify-between bg-white font-oswald">
+    <article className="flex h-56 flex-col  justify-between bg-white p-3 font-oswald md:h-72 lg:h-[350px]">
       <div>
-        <Highlight sizes="lg" text={highlight} />
-        <h4 className="text-sm md:text-base lg:text-lg mt-1 mb-3.5">{title}</h4>
+        <Category intent="base" text={highlight} />
+        <h4 className="mt-1 mb-3.5 text-sm md:text-base lg:text-lg">{title}</h4>
         <p className="font-roboto text-[10px] md:text-xs lg:text-sm">
           {description}
         </p>

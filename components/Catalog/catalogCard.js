@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Highlight } from "../Global";
+import { Category } from "../Elements";
 
 export default function CatalogCard({ imgLink, imgAlt }) {
   return (
@@ -14,7 +14,7 @@ export default function CatalogCard({ imgLink, imgAlt }) {
         />
       </div>
       <div className="space-y-1.5">
-        <Highlight text="TOP WOMAN" />
+        <Category intent="sm" text="top woman" />
         <h4 className="text-xs font-light md:text-base lg:text-lg">
           Angels malu zip jeans slim black used
         </h4>
