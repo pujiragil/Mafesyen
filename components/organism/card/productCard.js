@@ -2,9 +2,9 @@ import Image from "next/image";
 import {
   ProductCardContext,
   useProductCardContext,
-} from "../../contexts/productContext";
-import { Category } from "../atoms";
-import { Text } from "../Elements";
+} from "../../../contexts/productContext";
+import { Category } from "../../atoms/";
+import { Text } from "../../Elements";
 
 export const ProductCard = ({ image, info, price, color, data }) => {
   return (
@@ -42,8 +42,8 @@ export const ProductInfo = () => {
 
   return (
     <div className="space-y-1">
-      <Category intent="primary" value={data.category} />
-      <Text intent="product-card" value={data.name} />
+      <Category intent="primary" value={data?.category} />
+      <Text intent="product-card" value={data?.name} />
     </div>
   );
 };
@@ -51,13 +51,7 @@ export const ProductInfo = () => {
 export const ProductPrice = () => {
   const data = useProductCardContext();
 
-  return <Text intent="price" value={data.price} />;
+  return <Text intent="price" value={data?.price} />;
 };
 
-const ProductColor = () => {};
-
-// ProductCard.Image = ProductImage;
-// ProductCard.Info = ProductInfo;
-// ProductCard.Price = ProductPrice;
-// ProductCard.Color = ProductColor;
-// export default ProductCard;
+export const ProductColor = () => {};
