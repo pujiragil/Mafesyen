@@ -3,16 +3,16 @@ import Blog from "../components/Blog";
 import Brand from "../components/Brand";
 import { Card, MainCard, SingleCard } from "../components/Card";
 import Catalog from "../components/Catalog/catalogContainer";
-import CatalogSlider from "../components/Catalog/catalogSlider";
 import BaseLayout from "../components/Layout/baseLayout";
 import Slider from "../components/Slider";
+import { ProductCardSlider } from "../components/templates";
 
 export default function Home() {
   return (
     <BaseLayout title={"Mafesyen - Welcome back"}>
       <Slider />
       <Brand />
-      <div className="mb-3.5 md:mx-3.5 lg:mb-8 md:grid grid-cols-2 grid-rows-2 h-auto md:h-[500px] md:gap-3.5 lg:gap-8">
+      <div className="mb-3.5 h-auto grid-cols-2 grid-rows-2 md:mx-3.5 md:grid md:h-[500px] md:gap-3.5 lg:mb-8 lg:gap-8">
         <Card
           order={"order-1"}
           primary={true}
@@ -33,8 +33,8 @@ export default function Home() {
       </div>
       <Catalog />
       <SingleCard bgLink={"/images/card-3.png"} />
-      <CatalogSlider title={"Featured Items:"} />
-      <CatalogSlider title={"Most Popular:"} />
+      <ProductCardSlider title="Featured Items:" />
+      <ProductCardSlider title="Most Popular:" />
       <Banner />
       <Blog />
     </BaseLayout>
