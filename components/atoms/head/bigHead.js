@@ -24,11 +24,14 @@ const bigHead = cva("font-oswald uppercase text-black", {
 });
 
 const BigHead = ({ type, variant, className, children, ...props }) => {
-  return React.createElement(type, {
-    className: cn(bigHead({ variant, className })),
-    children,
-    ...props,
-  });
+  return React.createElement(
+    type,
+    {
+      className: cn(bigHead({ variant, className })),
+      ...props,
+    },
+    children
+  );
 };
 
 export default BigHead;
