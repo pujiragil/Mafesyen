@@ -3,9 +3,10 @@ import {
   ProductCardContext,
   useProductCardContext,
 } from "../../contexts/productContext";
-import { Category, Text } from "../Elements";
+import { Category } from "../atoms";
+import { Text } from "../Elements";
 
-const ProductCard = ({ image, info, price, color, data }) => {
+export const ProductCard = ({ image, info, price, color, data }) => {
   return (
     <ProductCardContext.Provider value={data}>
       <div className="space-y-2">
@@ -20,7 +21,7 @@ const ProductCard = ({ image, info, price, color, data }) => {
   );
 };
 
-const ProductImage = () => {
+export const ProductImage = () => {
   const data = useProductCardContext();
 
   return (
@@ -36,7 +37,7 @@ const ProductImage = () => {
   );
 };
 
-const ProductInfo = () => {
+export const ProductInfo = () => {
   const data = useProductCardContext();
 
   return (
@@ -47,7 +48,7 @@ const ProductInfo = () => {
   );
 };
 
-const ProductPrice = () => {
+export const ProductPrice = () => {
   const data = useProductCardContext();
 
   return <Text intent="price" value={data.price} />;
@@ -55,8 +56,8 @@ const ProductPrice = () => {
 
 const ProductColor = () => {};
 
-ProductCard.Image = ProductImage;
-ProductCard.Info = ProductInfo;
-ProductCard.Price = ProductPrice;
-ProductCard.Color = ProductColor;
-export default ProductCard;
+// ProductCard.Image = ProductImage;
+// ProductCard.Info = ProductInfo;
+// ProductCard.Price = ProductPrice;
+// ProductCard.Color = ProductColor;
+// export default ProductCard;

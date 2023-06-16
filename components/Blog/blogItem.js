@@ -1,4 +1,4 @@
-import { Category } from "../Elements";
+import { Category } from "../atoms";
 
 export default function BlogItem({ highlight, title, description, date }) {
   return (

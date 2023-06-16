@@ -1,5 +1,5 @@
 import { cva } from "class-variance-authority";
-import { cn } from "../../utils/utils";
+import { cn } from "../../../utils/utils";
 
 const category = cva("font-oswald font-semibold uppercase text-[#BDBDBD]", {
   variants: {
@@ -13,6 +13,8 @@ const category = cva("font-oswald font-semibold uppercase text-[#BDBDBD]", {
   },
 });
 
-export default function Category({ value, intent, className }) {
+const Category = ({ value, intent, className }) => {
   return <p className={cn(category({ intent, className }))}>{value}</p>;
-}
+};
+
+export default Category;
