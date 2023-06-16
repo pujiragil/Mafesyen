@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { memo, useEffect, useMemo, useState } from "react";
 import { useSwiper } from "swiper/react";
-import { Button } from "../Elements/";
 import { ArrowNavigationLeft, ArrowNavigationRight } from "../Assets/arrow";
+import { BigHead, ButtonLink } from "../atoms";
 
 const SlideItem = memo(() => {
   return (
@@ -18,12 +18,16 @@ const SlideItem = memo(() => {
         />
       </div>
       <div className="flex flex-col items-center gap-3.5 text-center md:order-1 md:items-start md:gap-8 md:text-left lg:gap-10">
-        <h1 className="w-9/12 font-oswald text-[2rem] font-semibold uppercase leading-9 text-black md:w-full md:text-[3.5rem] md:leading-none lg:w-10/12 lg:text-[4.5rem]">
+        <BigHead
+          type="h1"
+          variant="hero"
+          className="w-9/12 leading-9 md:w-full md:leading-none lg:w-10/12"
+        >
           summer sale get 30% off on all dress.
-        </h1>
-        <Button intent="primary" size="lg" width="base">
+        </BigHead>
+        <ButtonLink href="/catalog" variant="primary" size="lg">
           shop now
-        </Button>
+        </ButtonLink>
       </div>
     </div>
   );

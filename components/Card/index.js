@@ -1,17 +1,23 @@
-import { Button } from "../Global";
+import { ButtonLink } from "../atoms";
 
 export function Card({ primary, imgLink, tagline, desc, textButton, order }) {
   return (
     <div
-      className={`font-oswald md:w-full md:h-full mx-3.5 mb-3.5 md:m-0 h-36 flex items-center bg-cover bg-no-repeat px-7 py-4 md:py-7 ${
-        primary ? "justify-end md:justify-start md:items-end lg:justify-end" : "justify-start md:items-end"
+      className={`mx-3.5 mb-3.5 flex h-36 items-center bg-cover bg-no-repeat px-7 py-4 font-oswald md:m-0 md:h-full md:w-full md:py-7 ${
+        primary
+          ? "justify-end md:items-end md:justify-start lg:justify-end"
+          : "justify-start md:items-end"
       } ${order}`}
       style={{ backgroundImage: `url(${imgLink})` }}
     >
       <div className="">
-        <h2 className="uppercase font-semibold md:text-2xl lg:text-3xl md:w-3/4">{tagline}</h2>
-        <p className="font-roboto text-[10px] md:text-base lg:text-lg mt-1 mb-2">{desc}</p>
-        <Button>{textButton}</Button>
+        <h2 className="font-semibold uppercase md:w-3/4 md:text-2xl lg:text-3xl">
+          {tagline}
+        </h2>
+        <p className="mt-1 mb-2 font-roboto text-[10px] md:text-base lg:text-lg">
+          {desc}
+        </p>
+        <ButtonLink href="/catalog">{textButton}</ButtonLink>
       </div>
     </div>
   );
@@ -19,23 +25,38 @@ export function Card({ primary, imgLink, tagline, desc, textButton, order }) {
 
 export function MainCard() {
   return (
-    <div className="font-oswald order-2 row-span-2 mx-3.5 mb-3.5 md:m-0 p-7 h-72 md:h-full flex flex-col justify-end md:justify-center bg-[url('/images/main-card.png')] bg-no-repeat md:bg-center lg:bg-right-top bg-cover">
-      <h2 className="uppercase font-semibold text-[26px] md:text-4xl lg:text-6xl w-2/5 md:w-3/5 lg:w-2/5">up to 40% off</h2>
-      <p className="font-roboto text-[10px] md:text-base lg:text-lg mt-1 mb-2">
+    <div className="order-2 row-span-2 mx-3.5 mb-3.5 flex h-72 flex-col justify-end bg-[url('/images/main-card.png')] bg-cover bg-no-repeat p-7 font-oswald md:m-0 md:h-full md:justify-center md:bg-center lg:bg-right-top">
+      <h2 className="w-2/5 text-[26px] font-semibold uppercase md:w-3/5 md:text-4xl lg:w-2/5 lg:text-6xl">
+        up to 40% off
+      </h2>
+      <p className="mt-1 mb-2 font-roboto text-[10px] md:text-base lg:text-lg">
         Special offers and great deals
       </p>
-      <Button>shop now</Button>
+      <ButtonLink href="/catalog">shop now</ButtonLink>
     </div>
   );
 }
 
 export function SingleCard({ bgLink, margin }) {
   return (
-    <div className={`${margin ? margin : "mx-3.5 mb-3.5" } lg:mb-8 bg-cover bg-no-repeat bg-center h-36 md:h-56 lg:h-60 px-7 py-4 flex flex-col justify-center gap-y-1 font-oswald`} style={{ backgroundImage: `url(${bgLink})`}}>
-      <h2 className="uppercase font-semibold md:text-2xl lg:text-3xl">shoping without limits.</h2>
-      <p className="lg:hidden font-roboto text-[10px] md:text-base w-3/5">Choose the best option for you, and it does not matter whether you are.</p>
-      <p className="hidden lg:inline-block w-1/2 mt-1 mb-2 font-roboto text-lg">You can choose the best option for you, and it does not matter whether you are in Prague or San Francisco. We will deliver your purchase anywhere!</p> 
-      <Button>shop now</Button>
+    <div
+      className={`${
+        margin ? margin : "mx-3.5 mb-3.5"
+      } flex h-36 flex-col justify-center gap-y-1 bg-cover bg-center bg-no-repeat px-7 py-4 font-oswald md:h-56 lg:mb-8 lg:h-60`}
+      style={{ backgroundImage: `url(${bgLink})` }}
+    >
+      <h2 className="font-semibold uppercase md:text-2xl lg:text-3xl">
+        shoping without limits.
+      </h2>
+      <p className="w-3/5 font-roboto text-[10px] md:text-base lg:hidden">
+        Choose the best option for you, and it does not matter whether you are.
+      </p>
+      <p className="mt-1 mb-2 hidden w-1/2 font-roboto text-lg lg:inline-block">
+        You can choose the best option for you, and it does not matter whether
+        you are in Prague or San Francisco. We will deliver your purchase
+        anywhere!
+      </p>
+      <ButtonLink href="/catalog">shop now</ButtonLink>
     </div>
-  )
+  );
 }
