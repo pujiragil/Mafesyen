@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/utils/utils";
 
 const button = cva(
-  "font-oswald font-medium uppercase md:h-14 md:w-40 md:py-3 md:text-lg",
+  "font-oswald font-medium uppercase md:h-14 md:w-36 md:py-3 md:text-lg",
   {
     variants: {
       variant: {
