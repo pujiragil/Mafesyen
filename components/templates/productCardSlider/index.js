@@ -1,12 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
-import { dresses } from "../../../utils/dress";
+import { dresses } from "@/utils/dress";
 import {
   ProductCard,
   ProductImage,
   ProductInfo,
   ProductPrice,
-} from "../../organism/card/productCard";
+} from "@/components/molecules";
 
 import "swiper/css";
 import "swiper/css/navigation";

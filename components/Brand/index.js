@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { brands } from "../../utils/brand";
+import { brands } from "@/utils/utils";
 
 export default function Brand() {
   return (

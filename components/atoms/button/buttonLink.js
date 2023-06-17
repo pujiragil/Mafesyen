@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { cva } from "class-variance-authority";
-import { cn } from "../../../utils/utils";
+import { cn } from "@/utils/utils";
 
 const button = cva(
   "py-2 font-oswald font-medium uppercase md:h-14 md:w-40 md:py-3.5",

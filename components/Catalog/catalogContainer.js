@@ -1,11 +1,11 @@
 import dynamic from "next/dynamic";
-import { dresses } from "../../utils/dress";
+import { dresses } from "@/utils/dress";
 import { DetailButton } from "../Global";
 import { CatalogSidebar } from "./catalogSidebar";
-import { ProductCard } from "../organism/card/productCard";
+import { ProductCard } from "@/components/molecules";
 
 const ProductImage = dynamic(
-  () => import("../organism/card/productCard").then((mod) => mod.ProductImage),
+  () => import("@/components/molecules").then((mod) => mod.ProductImage),
   {
     ssr: false,
     loading: () => (
@@ -15,7 +15,7 @@ const ProductImage = dynamic(
 );
 
 const ProductInfo = dynamic(
-  () => import("../organism/card/productCard").then((mod) => mod.ProductInfo),
+  () => import("@/components/molecules").then((mod) => mod.ProductInfo),
   {
     ssr: false,
     loading: () => (
@@ -25,7 +25,7 @@ const ProductInfo = dynamic(
 );
 
 const ProductPrice = dynamic(
-  () => import("../organism/card/productCard").then((mod) => mod.ProductPrice),
+  () => import("@/components/molecules").then((mod) => mod.ProductPrice),
   {
     ssr: false,
     loading: () => (

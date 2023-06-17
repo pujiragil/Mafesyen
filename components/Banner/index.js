@@ -1,4 +1,4 @@
-import { ButtonLink } from "../atoms";
+import { ButtonLink } from "@/components/atoms/";
 
 export default function Banner() {
   return (
@@ -15,9 +15,7 @@ export default function Banner() {
           You can choose the best option for you, and it does not matter whether
           you are in Prague or San Francisco.
         </p>
-        <ButtonLink href="/catalog">
-          shop now
-        </ButtonLink>
+        <ButtonLink href="/catalog">shop now</ButtonLink>
       </div>
     </section>
   );

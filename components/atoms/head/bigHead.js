@@ -1,6 +1,6 @@
 import React from "react";
 import { cva } from "class-variance-authority";
-import { cn } from "../../../utils/utils";
+import { cn } from "@/utils/utils";
 
 const bigHead = cva("font-oswald uppercase text-black", {
   variants: {

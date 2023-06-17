@@ -1,5 +1,5 @@
 import { cva } from "class-variance-authority";
-import { cn } from "../../utils/utils";
+import { cn } from "@/utils/utils";
 
 const text = cva(["font-light", "text-black"], {
   variants: {

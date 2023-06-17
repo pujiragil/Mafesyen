@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { features, menu } from "../../utils/footer-links";
+import { features, menu } from "@/utils/footer-links";
 import { Head } from "../Global";
 import Subcription from "./Subscription";
 
 export default function MainFooter() {
   return (
     <div className="bg-black text-white">
-      <div className="container mx-auto font-">
-        <div className="px-3.5 py-7 flex flex-col items-center">
+      <div className="font- container mx-auto">
+        <div className="flex flex-col items-center px-3.5 py-7">
           <FooterWrap />
         </div>
       </div>
@@ -17,8 +17,8 @@ export default function MainFooter() {
 
 function FooterWrap() {
   return (
-    <div className="w-full h-full space-y-4 md:space-y-0 md:flex flex-wrap gap-y-7">
-      <div className="mb-7 md:m-0 w-full lg:w-2/12 flex justify-center lg:justify-start">
+    <div className="h-full w-full flex-wrap gap-y-7 space-y-4 md:flex md:space-y-0">
+      <div className="mb-7 flex w-full justify-center md:m-0 lg:w-2/12 lg:justify-start">
         <Head />
       </div>
       <FooterLink links={features}>features</FooterLink>
@@ -39,23 +39,23 @@ function FooterLink({ children, links, type }) {
 
   if (type === "contact") {
     return (
-      <div className="uppercase w-full md:w-1/4 lg:w-2/12 border-b border-[#4F4F4F] md:border-none md:flex justify-center lg:justify-start">
-        <div className="space-y-3 pb-3.5 md:p-0 md:w-fit">
-          <div className="flex justify-between items-start">
-            <p className="text-sm font-medium font-oswald">{children}</p>
+      <div className="w-full justify-center border-b border-[#4F4F4F] uppercase md:flex md:w-1/4 md:border-none lg:w-2/12 lg:justify-start">
+        <div className="space-y-3 pb-3.5 md:w-fit md:p-0">
+          <div className="flex items-start justify-between">
+            <p className="font-oswald text-sm font-medium">{children}</p>
             <button
               onClick={showHandler}
-              className="md:hidden w-fit border-none outline-none"
+              className="w-fit border-none outline-none md:hidden"
             >
               {showMenu ? (
-                <img src="/min.svg" className="w-[18px] h-[18px]" />
+                <img src="/min.svg" className="h-[18px] w-[18px]" />
               ) : (
-                <img src="/plus.svg" className="w-[18px] h-[18px]" />
+                <img src="/plus.svg" className="h-[18px] w-[18px]" />
               )}
             </button>
           </div>
           {showMenu && (
-            <div className="text-xs space-y-2">
+            <div className="space-y-2 text-xs">
               <div className="space-y-1">
                 <p className="font-medium">address:</p>
                 <p className="font-roboto text-[#828282]">
@@ -78,7 +78,7 @@ function FooterLink({ children, links, type }) {
               </div>
             </div>
           )}
-          <div className="hidden md:block text-xs space-y-2">
+          <div className="hidden space-y-2 text-xs md:block">
             <div className="space-y-1">
               <p className="font-medium">address:</p>
               <p className="font-roboto text-[#828282]">
@@ -107,23 +107,23 @@ function FooterLink({ children, links, type }) {
 
   if (type === "social media") {
     return (
-      <div className="uppercase w-full md:w-1/4 lg:w-2/12 border-b border-[#4F4F4F] md:border-none md:flex justify-center lg:justify-start">
-        <div className="space-y-3 pb-3.5 md:p-0 md:w-fit">
-          <div className="flex justify-between items-start">
-            <p className="text-sm font-medium font-oswald">{children}</p>
+      <div className="w-full justify-center border-b border-[#4F4F4F] uppercase md:flex md:w-1/4 md:border-none lg:w-2/12 lg:justify-start">
+        <div className="space-y-3 pb-3.5 md:w-fit md:p-0">
+          <div className="flex items-start justify-between">
+            <p className="font-oswald text-sm font-medium">{children}</p>
             <button
               onClick={showHandler}
-              className="md:hidden w-fit border-none outline-none"
+              className="w-fit border-none outline-none md:hidden"
             >
               {showMenu ? (
-                <img src="/min.svg" className="w-[18px] h-[18px]" />
+                <img src="/min.svg" className="h-[18px] w-[18px]" />
               ) : (
-                <img src="/plus.svg" className="w-[18px] h-[18px]" />
+                <img src="/plus.svg" className="h-[18px] w-[18px]" />
               )}
             </button>
           </div>
           {showMenu && (
-            <div className="font-roboto text-xs text-[#828282] uppercase space-y-5">
+            <div className="space-y-5 font-roboto text-xs uppercase text-[#828282]">
               <div className="flex items-center gap-x-4">
                 <img src="/facebook.svg" className="h-5 w-5" />
                 <p>facebook</p>
@@ -138,7 +138,7 @@ function FooterLink({ children, links, type }) {
               </div>
             </div>
           )}
-          <div className="hidden md:block font-roboto text-xs text-[#828282] uppercase space-y-5">
+          <div className="hidden space-y-5 font-roboto text-xs uppercase text-[#828282] md:block">
             <div className="flex items-center gap-x-4">
               <img src="/facebook.svg" className="h-5 w-5" />
               <p>facebook</p>
@@ -158,23 +158,25 @@ function FooterLink({ children, links, type }) {
   }
 
   return (
-    <div className="w-full md:w-1/4 lg:w-2/12 border-b border-[#4F4F4F] md:border-none md:flex justify-center lg:justify-start">
-      <div className="space-y-3 pb-3.5 md:p-0 md:w-fit">
-        <div className="flex justify-between items-start">
-          <p className="uppercase text-sm font-medium font-oswald">{children}</p>
+    <div className="w-full justify-center border-b border-[#4F4F4F] md:flex md:w-1/4 md:border-none lg:w-2/12 lg:justify-start">
+      <div className="space-y-3 pb-3.5 md:w-fit md:p-0">
+        <div className="flex items-start justify-between">
+          <p className="font-oswald text-sm font-medium uppercase">
+            {children}
+          </p>
           <button
             onClick={showHandler}
-            className="md:hidden w-fit border-none outline-none"
+            className="w-fit border-none outline-none md:hidden"
           >
             {showMenu ? (
-              <img className="w-[18px] h-[18px]" src="/min.svg" />
+              <img className="h-[18px] w-[18px]" src="/min.svg" />
             ) : (
-              <img src="/plus.svg" className="w-[18px] h-[18px]" />
+              <img src="/plus.svg" className="h-[18px] w-[18px]" />
             )}
           </button>
         </div>
         {showMenu && <FooterMenu />}
-        <div className="hidden md:block uppercase text-xs text-[#828282] space-y-1.5">
+        <div className="hidden space-y-1.5 text-xs uppercase text-[#828282] md:block">
           {links ? (
             links.map((link) => (
               <p key={link} className="font-roboto">
@@ -192,7 +194,7 @@ function FooterLink({ children, links, type }) {
 
 function FooterMenu() {
   return (
-    <div className="uppercase font-roboto text-xs text-[#828282] space-y-1.5">
+    <div className="space-y-1.5 font-roboto text-xs uppercase text-[#828282]">
       <p>men</p>
       <p>woman</p>
       <p>boys</p>

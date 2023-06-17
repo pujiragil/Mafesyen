@@ -2,7 +2,7 @@ import Image from "next/image";
 import { memo, useEffect, useMemo, useState } from "react";
 import { useSwiper } from "swiper/react";
 import { ArrowNavigationLeft, ArrowNavigationRight } from "../Assets/arrow";
-import { BigHead, ButtonLink } from "../atoms";
+import { BigHead, ButtonLink } from "@/components/atoms";
 
 const SlideItem = memo(() => {
   return (

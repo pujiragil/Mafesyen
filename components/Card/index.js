@@ -1,4 +1,4 @@
-import { ButtonLink } from "../atoms";
+import { ButtonLink } from "@/components/atoms";
 
 export function Card({ primary, imgLink, tagline, desc, textButton, order }) {
   return (

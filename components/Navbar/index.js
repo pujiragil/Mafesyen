@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import { navLinks } from "../../utils/links";
+import { navLinks } from "@/utils/links";
 import { Head } from "../Global";
 import NavDropdown from "./navDropdown";
 import { HamburgerIcon, SearchIcon } from "../Assets/navbar";
