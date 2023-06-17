@@ -1,4 +1,4 @@
-import { ButtonLink } from "@/components/atoms";
+import { ButtonLink, Text } from "@/components/atoms";
 
 export function Card({ primary, imgLink, tagline, desc, textButton, order }) {
   return (
@@ -10,13 +10,13 @@ export function Card({ primary, imgLink, tagline, desc, textButton, order }) {
       } ${order}`}
       style={{ backgroundImage: `url(${imgLink})` }}
     >
-      <div className="">
+      <div className="space-y-2">
         <h2 className="font-semibold uppercase md:w-3/4 md:text-2xl lg:text-3xl">
           {tagline}
         </h2>
-        <p className="mt-1 mb-2 font-roboto text-[10px] md:text-base lg:text-lg">
+        <Text family="roboto" size="xs/lg">
           {desc}
-        </p>
+        </Text>
         <ButtonLink href="/catalog">{textButton}</ButtonLink>
       </div>
     </div>
@@ -25,13 +25,13 @@ export function Card({ primary, imgLink, tagline, desc, textButton, order }) {
 
 export function MainCard() {
   return (
-    <div className="order-2 row-span-2 mx-3.5 mb-3.5 flex h-72 flex-col justify-end bg-[url('/images/main-card.png')] bg-cover bg-no-repeat p-7 font-oswald md:m-0 md:h-full md:justify-center md:bg-center lg:bg-right-top">
+    <div className="order-2 row-span-2 mx-3.5 mb-3.5 flex h-72 flex-col justify-end space-y-2 bg-[url('/images/main-card.png')] bg-cover bg-no-repeat p-7 font-oswald md:m-0 md:h-full md:justify-center md:bg-center lg:bg-right-top">
       <h2 className="w-2/5 text-[26px] font-semibold uppercase md:w-3/5 md:text-4xl lg:w-2/5 lg:text-6xl">
         up to 40% off
       </h2>
-      <p className="mt-1 mb-2 font-roboto text-[10px] md:text-base lg:text-lg">
+      <Text family="roboto" size="xs/lg">
         Special offers and great deals
-      </p>
+      </Text>
       <ButtonLink href="/catalog">shop now</ButtonLink>
     </div>
   );
