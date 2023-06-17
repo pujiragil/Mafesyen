@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
 import Blog from "../components/Blog";
-import Brand from "../components/Brand";
+import { Brand } from "@/components/molecules";
 import { Card, MainCard, SingleCard } from "../components/Card";
 import Catalog from "../components/Catalog/catalogContainer";
 import BaseLayout from "../components/Layout/baseLayout";

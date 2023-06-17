@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { brands } from "@/utils/brand";
+import { BrandImage } from "@/components/atoms";
 
 export default function Brand() {
   return (
@@ -8,18 +8,13 @@ export default function Brand() {
         chose your brand
       </h1>
       {brands?.map((brand) => (
-        <div
+        <BrandImage
           key={brand.id}
-          className="w-full border-2 border-[#C4C4C4] lg:border-none"
-        >
-          <Image
-            width={470}
-            height={282}
-            src={brand.link}
-            alt={brand.alt}
-            className="h-16 w-full object-cover md:h-20 lg:h-auto"
-          />
-        </div>
+          src={brand.link}
+          alt={brand.alt}
+          width={470}
+          height={282}
+        />
       ))}
     </div>
   );
