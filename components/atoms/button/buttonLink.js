@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/utils/utils";
 
 const button = cva(
-  "py-2 font-oswald font-medium uppercase md:h-14 md:w-40 md:py-3.5",
+  "font-oswald font-medium uppercase md:h-14 md:w-40 md:py-3 md:text-lg",
   {
     variants: {
       variant: {
@@ -11,8 +11,8 @@ const button = cva(
         secondary: "border-[1.5px] border-white text-white md:border-2",
       },
       size: {
-        base: "h-8 w-[85px]",
-        lg: "h-10 w-[115px]",
+        base: "w-[85px] py-2 text-xs",
+        lg: "w-[115px] py-2.5 text-sm",
       },
     },
     defaultVariants: {
@@ -24,7 +24,7 @@ const button = cva(
 
 const ButtonLink = ({ variant, size, className, href, children, ...props }) => {
   return (
-    <Link href={href}>
+    <Link className="block" href={href}>
       <button className={cn(button({ variant, size, className }))} {...props}>
         {children}
       </button>
