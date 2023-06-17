@@ -3,8 +3,7 @@ import {
   ProductCardContext,
   useProductCardContext,
 } from "../../../contexts/productContext";
-import { Category } from "../../atoms/";
-import { Text } from "../../Elements";
+import { Category, Text } from "@/components/atoms";
 
 export const ProductCard = ({ image, info, price, color, data }) => {
   return (
@@ -43,7 +42,9 @@ export const ProductInfo = () => {
   return (
     <div className="space-y-1">
       <Category intent="primary" value={data?.category} />
-      <Text intent="product-card" value={data?.name} />
+      <Text family="oswald" size="xs/lg">
+        {data?.name}
+      </Text>
     </div>
   );
 };
@@ -51,7 +52,11 @@ export const ProductInfo = () => {
 export const ProductPrice = () => {
   const data = useProductCardContext();
 
-  return <Text intent="price" value={data?.price} />;
+  return (
+    <Text family="oswald" size="sm/2xl">
+      {data?.price}
+    </Text>
+  );
 };
 
 export const ProductColor = () => {};

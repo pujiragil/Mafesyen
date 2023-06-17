@@ -6,12 +6,20 @@ const text = cva("font-light text-black", {
     size: {
       "xs/lg": "text-xs md:text-lg",
       "xs/2xl": "text-xs md:text-2xl",
+      "sm/2xl": "text-sm md:text-2xl",
     },
     family: {
       oswald: "font-oswald",
       roboto: "font-roboto",
     },
   },
+  compoundVariants: [
+    {
+      size: "sm/2xl",
+      family: "oswald",
+      className: "font-medium"
+    }
+  ]
 });
 
 const Text = ({ family, size, className, children }) => {
