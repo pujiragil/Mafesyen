@@ -4,3 +4,6 @@ export { default as Button } from "./button";
 export { default as BrandImage } from "./brandImage";
 export { default as Category } from "./category";
 export { default as Text } from "./text";
+export { default as SlideButton } from "./slider/sliderButton";
+export { default as SlidePagination } from "./slider/sliderPagination";
+export { default as SlideBackground } from "./slider/sliderBackground";
