@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import { dresses } from "@/utils/dress";
-import { DetailButton } from "../Global";
+import { Button } from "@/components/atoms";
 import { CatalogSidebar } from "./catalogSidebar";
 import { ProductCard } from "@/components/molecules";
 
@@ -54,7 +54,12 @@ export default function Catalog() {
             />
           ))}
         </div>
-        <DetailButton />
+
+        <div className="flex justify-center">
+          <Button variant="secondary" width="medium">
+            show more
+          </Button>
+        </div>
       </div>
     </div>
   );

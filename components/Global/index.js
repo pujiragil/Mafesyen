@@ -1,5 +1,3 @@
-import { cva } from "class-variance-authority";
-
 export function Button({ children, mainButton }) {
   return (
     <button
@@ -11,16 +9,6 @@ export function Button({ children, mainButton }) {
     >
       {children}
     </button>
-  );
-}
-
-export function DetailButton() {
-  return (
-    <div className="w-full justify-center font-oswald md:flex">
-      <button className="flex h-9 w-full items-center justify-center border-2 border-[#C4C4C4] text-xs font-medium uppercase text-[#3F3F3F] md:w-32">
-        load more
-      </button>
-    </div>
   );
 }
 
