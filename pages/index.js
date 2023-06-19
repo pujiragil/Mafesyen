@@ -4,13 +4,13 @@ import { Brand } from "@/components/molecules";
 import { Card, MainCard, SingleCard } from "../components/Card";
 import Catalog from "../components/Catalog/catalogContainer";
 import BaseLayout from "../components/Layout/baseLayout";
-import Slider from "../components/Slider";
 import { ProductCardSlider } from "../components/templates";
+import { HeroSlider } from "@/components/organism";
 
 export default function Home() {
   return (
     <BaseLayout title={"Mafesyen - Welcome back"}>
-      <Slider />
+      <HeroSlider />
       <Brand />
       <div className="mb-3.5 h-auto grid-cols-2 grid-rows-2 md:mx-3.5 md:grid md:h-[500px] md:gap-3.5 lg:mb-8 lg:gap-8">
         <Card
