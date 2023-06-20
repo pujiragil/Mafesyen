@@ -25,7 +25,7 @@ export function Card({ primary, imgLink, tagline, desc, textButton, order }) {
 
 export function MainCard() {
   return (
-    <div className="order-2 row-span-2 mx-3.5 mb-3.5 flex h-72 flex-col justify-end space-y-2 bg-[url('/images/main-card.png')] bg-cover bg-no-repeat p-7 font-oswald md:m-0 md:h-full md:justify-center md:bg-center lg:bg-right-top">
+    <div className="order-2 row-span-2 mx-3.5 mb-3.5 flex h-72 flex-col justify-end space-y-2 bg-[url('/images/main-card.webp')] bg-cover bg-no-repeat p-7 font-oswald md:m-0 md:h-full md:justify-center md:bg-center lg:bg-right-top">
       <h2 className="w-2/5 text-[26px] font-semibold uppercase md:w-3/5 md:text-4xl lg:w-2/5 lg:text-6xl">
         up to 40% off
       </h2>
