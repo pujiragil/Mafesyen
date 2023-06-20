@@ -8,7 +8,11 @@ const BrandImage = ({ src, alt, width, height, className }) => {
       alt={alt}
       width={width}
       height={height}
-      className={cn("h-16 w-full object-cover md:h-20 lg:h-auto", className)}
+      className={cn(
+        "h-16 w-full object-cover md:h-20 lg:h-auto ",
+        "border-2 border-[#C4C4C4] lg:border-none",
+        className
+      )}
     />
   );
 };
