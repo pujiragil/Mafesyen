@@ -24,7 +24,7 @@ const button = cva(
 
 const ButtonLink = ({ variant, size, className, href, children, ...props }) => {
   return (
-    <Link className="block" href={href}>
+    <Link className="block w-fit" href={href}>
       <button className={cn(button({ variant, size, className }))} {...props}>
         {children}
       </button>
