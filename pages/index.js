@@ -1,7 +1,7 @@
 import Banner from "../components/Banner";
 import Blog from "../components/Blog";
 import { Brand } from "@/components/molecules";
-import { Card, MainCard, SingleCard } from "../components/Card";
+import { SingleCard } from "../components/Card";
 import Catalog from "../components/Catalog/catalogContainer";
 import BaseLayout from "../components/Layout/baseLayout";
 import { ProductCardSlider } from "../components/templates";
@@ -48,7 +48,7 @@ export default function Home() {
           }}
         />
       </div>
-      <div className="mb-3.5 h-auto grid-cols-2 grid-rows-2 md:mx-3.5 md:grid md:h-[500px] md:gap-3.5 lg:mb-8 lg:gap-8">
+      {/* <div className="mb-3.5 h-auto grid-cols-2 grid-rows-2 md:mx-3.5 md:grid md:h-[500px] md:gap-3.5 lg:mb-8 lg:gap-8">
         <Card
           order={"order-1"}
           primary={true}
@@ -66,7 +66,7 @@ export default function Home() {
           desc={"Popular clothing brands"}
           textButton={"see offers"}
         />
-      </div>
+      </div> */}
       <Catalog />
       <SingleCard bgLink={"/images/card-3.png"} />
       <ProductCardSlider title="Featured Items:" />
