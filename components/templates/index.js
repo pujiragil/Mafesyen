@@ -1,1 +1,1 @@
-export { default as ProductCardSlider } from "./productCardSlider";
+export { default as CatalogSliderSection } from "./catalog";
