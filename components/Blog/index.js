@@ -1,19 +1,22 @@
+import SectionLayout from "../Layout/sectionLayout";
 import BlogItem from "./blogItem";
 
-export default function Blog() {
+const BlogSection = () => {
   return (
-    <div className="px-3.5 pb-3.5 lg:py-7 bg-[#F8F9FB]">
-      <h3 className="text-lg md:text-xl lg:text-2xl mb-3.5 font-oswald">
-        Blog
-      </h3>
-      <BlogWrapper />
-    </div>
+    <SectionLayout background="bg-[#F8F9FB]">
+      <div className="px-3.5 pb-3.5 lg:py-7">
+        <h3 className="mb-3.5 font-oswald text-lg md:text-xl lg:text-2xl">
+          Blog
+        </h3>
+        <BlogWrapper />
+      </div>
+    </SectionLayout>
   );
-}
+};
 
-function BlogWrapper() {
+const BlogWrapper = () => {
   return (
-    <section className="grid gap-3.5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <section className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       <BlogItem
         date="20 May 2023"
         highlight="ARTICLE"
@@ -40,6 +43,18 @@ function BlogWrapper() {
           and sailing competitions. All of this builds up your perception of the
           brand - and additionally, it costs money.'
       />
+      <BlogItem
+        date="16 September 2023"
+        highlight="ARTICLE"
+        title="Exactly What To Wear To Every Type Of Wedding This Summer"
+        description='A large part of the business here is building up the
+          "experience". Double-page spreads in magazines. Ads on TV.
+          Product placement and sponsorship in golf tournaments, tennis matches
+          and sailing competitions. All of this builds up your perception of the
+          brand - and additionally, it costs money.'
+      />
     </section>
   );
-}
+};
+
+export default BlogSection;

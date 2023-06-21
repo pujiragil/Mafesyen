@@ -1,4 +1,5 @@
 import { ButtonLink, Text } from "@/components/atoms";
+import SectionLayout from "../Layout/sectionLayout";
 
 export function Card({ primary, imgLink, tagline, desc, textButton, order }) {
   return (
@@ -39,24 +40,27 @@ export function MainCard() {
 
 export function SingleCard({ bgLink, margin }) {
   return (
-    <div
-      className={`${
-        margin ? margin : "mx-3.5 mb-3.5"
-      } flex h-36 flex-col justify-center gap-y-1 bg-cover bg-center bg-no-repeat px-7 py-4 font-oswald md:h-56 lg:mb-8 lg:h-60`}
-      style={{ backgroundImage: `url(${bgLink})` }}
-    >
-      <h2 className="font-semibold uppercase md:text-2xl lg:text-3xl">
-        shoping without limits.
-      </h2>
-      <p className="w-3/5 font-roboto text-[10px] md:text-base lg:hidden">
-        Choose the best option for you, and it does not matter whether you are.
-      </p>
-      <p className="mt-1 mb-2 hidden w-1/2 font-roboto text-lg lg:inline-block">
-        You can choose the best option for you, and it does not matter whether
-        you are in Prague or San Francisco. We will deliver your purchase
-        anywhere!
-      </p>
-      <ButtonLink href="/catalog">shop now</ButtonLink>
-    </div>
+    <SectionLayout>
+      <div
+        className={`${
+          margin ? margin : "mx-3.5 mb-3.5"
+        } flex h-36 flex-col justify-center gap-y-1 bg-cover bg-center bg-no-repeat px-7 py-4 font-oswald md:h-56 lg:mb-8 lg:h-60`}
+        style={{ backgroundImage: `url(${bgLink})` }}
+      >
+        <h2 className="font-semibold uppercase md:text-2xl lg:text-3xl">
+          shoping without limits.
+        </h2>
+        <p className="w-3/5 font-roboto text-[10px] md:text-base lg:hidden">
+          Choose the best option for you, and it does not matter whether you
+          are.
+        </p>
+        <p className="mt-1 mb-2 hidden w-1/2 font-roboto text-lg lg:inline-block">
+          You can choose the best option for you, and it does not matter whether
+          you are in Prague or San Francisco. We will deliver your purchase
+          anywhere!
+        </p>
+        <ButtonLink href="/catalog">shop now</ButtonLink>
+      </div>
+    </SectionLayout>
   );
 }
