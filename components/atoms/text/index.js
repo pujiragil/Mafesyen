@@ -4,7 +4,7 @@ import { cva } from "class-variance-authority";
 const text = cva("font-light text-black", {
   variants: {
     size: {
-      "xs/lg": "text-xs md:text-lg",
+      "xs/lg": "text-xs md:text-base md:text-lg",
       "xs/2xl": "text-xs md:text-2xl",
       "sm/2xl": "text-sm md:text-2xl",
     },
@@ -17,9 +17,9 @@ const text = cva("font-light text-black", {
     {
       size: "sm/2xl",
       family: "oswald",
-      className: "font-medium"
-    }
-  ]
+      className: "font-medium",
+    },
+  ],
 });
 
 const Text = ({ family, size, className, children }) => {
