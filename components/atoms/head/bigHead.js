@@ -6,8 +6,8 @@ const bigHead = cva("font-oswald uppercase text-black", {
   variants: {
     variant: {
       hero: "text-[2rem] md:text-[3.5rem] lg:text-[4.5rem]",
-      "primary-card": "text-2xl md:text-[3.5rem]",
-      "secondary-card": "text-base md:text-[2rem]",
+      "primary-card": "text-2xl md:text-[3rem] lg:text-[4rem]",
+      "secondary-card": "text-base md:text-[2rem] lg:text-[2.5rem]",
       banner: "text-sm md:text-[3rem]",
     },
   },
