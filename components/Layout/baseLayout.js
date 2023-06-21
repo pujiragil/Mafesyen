@@ -1,12 +1,14 @@
 import Head from "next/head";
 
-export default function BaseLayout({ title, children }) {
+const BaseLayout = ({ title, children }) => {
   return (
-    <div className="container mx-auto">
+    <>
       <Head>
         <title>{title || "MAFESYEN"}</title>
       </Head>
-      {children}
-    </div>
-  )
-}
+      <div className="space-y-8">{children}</div>
+    </>
+  );
+};
+
+export default BaseLayout;
