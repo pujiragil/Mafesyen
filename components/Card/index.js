@@ -44,7 +44,7 @@ export function SingleCard({ bgLink, margin }) {
       <div
         className={`${
           margin ? margin : "mx-3.5 mb-3.5"
-        } flex h-36 flex-col justify-center gap-y-1 bg-cover bg-center bg-no-repeat px-7 py-4 font-oswald md:h-56 lg:mb-8 lg:h-60`}
+        } flex h-36 flex-col justify-center gap-y-1 bg-cover bg-center bg-no-repeat px-7 py-4 font-oswald md:h-56 lg:mb-8 lg:h-72`}
         style={{ backgroundImage: `url(${bgLink})` }}
       >
         <h2 className="font-semibold uppercase md:text-2xl lg:text-3xl">
