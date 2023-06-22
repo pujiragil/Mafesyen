@@ -14,8 +14,8 @@ const SliderWrapper = () => {
   const isBegin = useMemo(() => isSlideBegin, [isSlideBegin]);
   const isEnd = useMemo(() => isSlideEnd, [isSlideEnd]);
 
-  const handlePrevSlide = useCallback(() => swiper.slidePrev(), []);
-  const handleNextSlide = useCallback(() => swiper.slideNext(), []);
+  const handlePrevSlide = useCallback(() => swiper.slidePrev(), [swiper]);
+  const handleNextSlide = useCallback(() => swiper.slideNext(), [swiper]);
 
   useEffect(() => {
     const handleSlideChange = () => {
