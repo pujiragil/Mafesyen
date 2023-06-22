@@ -26,7 +26,7 @@ const BannerCardSection = ({ imageBg }) => {
           width={1878}
           height={467}
           alt="banner"
-          className="absolute top-0 left-0 -z-10 h-full w-full object-cover"
+          className="absolute top-0 left-0 -z-10 h-full w-full object-cover object-center"
         />
       </div>
     </SectionLayout>
