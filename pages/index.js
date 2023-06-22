@@ -1,7 +1,6 @@
 import BannerSection from "../components/Banner";
 import Blog from "../components/Blog";
-import { BrandSection } from "@/components/molecules";
-import { SingleCard as SingleCardSection } from "../components/Card";
+import { BannerCardSection, BrandSection } from "@/components/molecules";
 import CatalogSection from "../components/Catalog/catalogContainer";
 import BaseLayout from "../components/Layout/baseLayout";
 import { CatalogSliderSection } from "@/components/templates";
@@ -14,7 +13,7 @@ export default function Home() {
       <BrandSection />
       <OfferCardSection />
       <CatalogSection />
-      <SingleCardSection bgLink={"/images/card-3.png"} />
+      <BannerCardSection imageBg="/images/card-3.webp" />
       <CatalogSliderSection title="Featured Items:" />
       <CatalogSliderSection title="Most Popular:" />
       <BannerSection />
