@@ -4,7 +4,8 @@ import { cva } from "class-variance-authority";
 const text = cva("font-light text-black", {
   variants: {
     size: {
-      "xs/lg": "text-xs md:text-base md:text-lg",
+      "xxs/base": "text-[10px] md:text-sm lg:text-base",
+      "xs/lg": "text-xs md:text-lg",
       "xs/2xl": "text-xs md:text-2xl",
       "sm/2xl": "text-sm md:text-2xl",
     },
