@@ -13,7 +13,13 @@ export default function Home() {
       <BrandSection />
       <OfferCardSection />
       <CatalogSection />
-      <BannerCardSection imageBg="/images/card-3.webp" />
+      <BannerCardSection
+        title="shoping without limits."
+        desc="You can choose the best option for you, and it does not matter whether you are in Prague or San Francisco. We will deliver your purchase anywhere!"
+        btnHref="/catalog"
+        btnText="see offers"
+        imgBg="/images/card-3.webp"
+      />
       <CatalogSliderSection title="Featured Items:" />
       <CatalogSliderSection title="Most Popular:" />
       <BannerSection />
