@@ -12,6 +12,10 @@ const text = cva("font-light text-black", {
       oswald: "font-oswald",
       roboto: "font-roboto",
     },
+    color: {
+      black: "text-black",
+      white: "text-white",
+    },
   },
   compoundVariants: [
     {
@@ -22,8 +26,10 @@ const text = cva("font-light text-black", {
   ],
 });
 
-const Text = ({ family, size, className, children }) => {
-  return <p className={cn(text({ size, family, className }))}>{children}</p>;
+const Text = ({ family, size, color, className, children }) => {
+  return (
+    <p className={cn(text({ size, family, color, className }))}>{children}</p>
+  );
 };
 
 export default Text;

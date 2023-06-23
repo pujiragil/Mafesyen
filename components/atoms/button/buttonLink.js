@@ -7,25 +7,41 @@ const button = cva(
   {
     variants: {
       variant: {
-        primary: "border-2 border-black text-black",
-        secondary: "border-[1.5px] border-white text-white md:border-2",
+        primary: "border-2",
+        secondary: "border-[1.5px] md:border-2",
       },
       size: {
         base: "w-[85px] py-2 text-xs",
         lg: "w-[115px] py-2.5 text-sm",
       },
+      color: {
+        black: "border-black text-black",
+        white: "border-white text-white",
+      },
     },
     defaultVariants: {
       variant: "primary",
       size: "base",
+      color: "black",
     },
   }
 );
 
-const ButtonLink = ({ variant, size, className, href, children, ...props }) => {
+const ButtonLink = ({
+  variant,
+  size,
+  color,
+  className,
+  href,
+  children,
+  ...props
+}) => {
   return (
     <Link className="block w-fit" href={href}>
-      <button className={cn(button({ variant, size, className }))} {...props}>
+      <button
+        className={cn(button({ variant, size, color, className }))}
+        {...props}
+      >
         {children}
       </button>
     </Link>
