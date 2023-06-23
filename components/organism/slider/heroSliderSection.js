@@ -11,8 +11,9 @@ const HeroSlider = () => {
     <SectionLayout>
       <div className="lg:mx-3.5">
         <Swiper
-          autoplay={{ delay: 2000, disableOnInteraction: true }}
+          speed={600}
           modules={[Autoplay]}
+          autoplay={{ delay: 2000, disableOnInteraction: true }}
           className="hero-slide overflow-hidden"
         >
           <SwiperSlide>
