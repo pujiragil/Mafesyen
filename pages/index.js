@@ -19,10 +19,10 @@ const CatalogSliderSection = dynamic(
 export default function Home() {
   return (
     <BaseLayout title={"Mafesyen - Welcome back"}>
-      {/* <HeroSliderSection /> */}
+      <HeroSliderSection />
       <BrandSection />
       <OfferCardSection />
-      {/* <CatalogSection /> */}
+      <CatalogSection />
       <BannerCardSection
         title="shoping without limits."
         desc="You can choose the best option for you, and it does not matter whether you are in Prague or San Francisco. We will deliver your purchase anywhere!"
