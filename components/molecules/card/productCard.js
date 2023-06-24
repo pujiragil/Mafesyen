@@ -10,11 +10,9 @@ export const ProductCard = ({ image, info, price, color, data }) => {
     <ProductCardContext.Provider value={data}>
       <div className="space-y-2">
         {image}
-        <div className="space-y-2">
-          {info}
-          {price}
-          {color}
-        </div>
+        {info}
+        {price}
+        {color}
       </div>
     </ProductCardContext.Provider>
   );
