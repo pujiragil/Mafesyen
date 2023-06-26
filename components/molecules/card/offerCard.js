@@ -39,7 +39,9 @@ const OfferCard = ({ variant, order, className, data }) => {
         width={924}
         height={434}
         src={data.imageBg}
+        blurDataURL={data.blurDataUrl}
         alt="offer-card"
+        placeholder="blur"
         className={cn(
           "absolute top-0 left-0 -z-10",
           "h-full w-full",

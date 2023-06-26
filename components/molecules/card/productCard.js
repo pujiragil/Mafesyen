@@ -35,7 +35,7 @@ export const ProductImage = () => {
         className={cn(
           "h-56 w-full md:h-64 lg:h-72",
           "cursor-pointer object-cover",
-          "transition-transform duration-200 ease-in-out"
+          "transition-transform duration-200 ease-in-out hover:scale-110"
         )}
       />
     </div>

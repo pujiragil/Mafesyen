@@ -9,6 +9,7 @@ const BannerCardSection = ({
   desc,
   btnText,
   btnHref,
+  blurDataUrl,
 }) => {
   return (
     <SectionLayout>
@@ -28,6 +29,8 @@ const BannerCardSection = ({
           src={imgBg}
           width={1878}
           height={467}
+          blurDataURL={blurDataUrl}
+          placeholder="blur"
           alt="banner"
           className="absolute top-0 left-0 -z-10 h-full w-full object-cover object-center"
         />
