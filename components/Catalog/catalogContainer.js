@@ -2,36 +2,19 @@ import dynamic from "next/dynamic";
 import { dresses } from "@/utils/dress";
 import { Button } from "@/components/atoms";
 import { CatalogSidebar } from "./catalogSidebar";
-import { ProductCard } from "@/components/molecules";
+import {
+  ProductCardSkeleton,
+  ProductImage,
+  ProductInfo,
+  ProductPrice,
+} from "@/components/molecules";
 import SectionLayout from "../Layout/sectionLayout";
 
-const ProductImage = dynamic(
-  () => import("@/components/molecules").then((mod) => mod.ProductImage),
+const ProductCard = dynamic(
+  () => import("@/components/molecules").then((mod) => mod.ProductCard),
   {
     ssr: false,
-    loading: () => (
-      <p className="w-full bg-red-500 text-black">Loading Image...</p>
-    ),
-  }
-);
-
-const ProductInfo = dynamic(
-  () => import("@/components/molecules").then((mod) => mod.ProductInfo),
-  {
-    ssr: false,
-    loading: () => (
-      <p className="w-full bg-blue-500 text-black">Loading Info...</p>
-    ),
-  }
-);
-
-const ProductPrice = dynamic(
-  () => import("@/components/molecules").then((mod) => mod.ProductPrice),
-  {
-    ssr: false,
-    loading: () => (
-      <p className="w-full bg-green-500 text-black">Loading Price...</p>
-    ),
+    loading: () => <ProductCardSkeleton />,
   }
 );
 
