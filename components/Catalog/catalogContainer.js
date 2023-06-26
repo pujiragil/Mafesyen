@@ -14,7 +14,12 @@ const ProductCard = dynamic(
   () => import("@/components/molecules").then((mod) => mod.ProductCard),
   {
     ssr: false,
-    loading: () => <ProductCardSkeleton />,
+    loading: () => (
+      <ProductCardSkeleton
+        image={<ProductCardSkeleton.Image />}
+        info={<ProductCardSkeleton.Info />}
+      />
+    ),
   }
 );
 
