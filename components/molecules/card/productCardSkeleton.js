@@ -12,7 +12,7 @@ const ProductCardSkeleton = ({ className }) => {
       ])}
     >
       <div className="animate-pulse">
-        <div className="rounded-top flex h-52 w-full items-center justify-center bg-gray-200 md:h-64">
+        <div className="rounded-top flex h-52 w-full items-center justify-center bg-gray-200 md:h-64 lg:h-72">
           <svg
             className="h-12 w-12 text-gray-400"
             xmlns="http://www.w3.org/2000/svg"
