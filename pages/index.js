@@ -7,6 +7,8 @@ import { HeroSliderSection, OfferCardSection } from "@/components/organism";
 import dynamic from "next/dynamic";
 import { CatalogSliderSkeleton } from "@/components/templates";
 
+import { banners } from "@/utils/banner";
+
 const CatalogSliderSection = dynamic(
   () =>
     import("@/components/templates").then((mod) => mod.CatalogSliderSection),
@@ -17,19 +19,14 @@ const CatalogSliderSection = dynamic(
 );
 
 export default function Home() {
+  const { first } = banners;
   return (
     <BaseLayout title={"Mafesyen - Welcome back"}>
       <HeroSliderSection />
       <BrandSection />
       <OfferCardSection />
       <CatalogSection />
-      <BannerCardSection
-        title="shoping without limits."
-        desc="You can choose the best option for you, and it does not matter whether you are in Prague or San Francisco. We will deliver your purchase anywhere!"
-        btnHref="/catalog"
-        btnText="see offers"
-        imgBg="/images/card-3.webp"
-      />
+      <BannerCardSection {...first} />
       <CatalogSliderSection title="Featured Items:" />
       <CatalogSliderSection title="Most Popular:" />
       <BannerSection />
