@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useState } from "react";
 
 import {
   ProductCardContext,
@@ -23,7 +22,6 @@ export const ProductCard = ({ image, info, price, color, data }) => {
 
 export const ProductImage = () => {
   const data = useProductCardContext();
-  const [isLoading, setIsLoading] = useState(true);
 
   return (
     <div className="w-full overflow-hidden">
@@ -32,13 +30,9 @@ export const ProductImage = () => {
         height={450}
         src={data?.imgLink}
         alt={data?.imgAlt}
-        onLoadingComplete={() => {
-          setIsLoading(false);
-        }}
+        blurDataURL={data?.blurDataUrl}
+        placeholder="blur"
         className={cn(
-          isLoading
-            ? "blur-2xl grayscale"
-            : "blur-0 grayscale-0 hover:scale-110",
           "h-56 w-full md:h-64 lg:h-72",
           "cursor-pointer object-cover",
           "transition-transform duration-200 ease-in-out"
