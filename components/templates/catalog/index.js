@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
-import { dresses } from "@/utils/dress";
 import {
   ProductCard,
   ProductImage,
@@ -8,11 +7,14 @@ import {
   ProductPrice,
 } from "@/components/molecules";
 import SectionLayout from "@/components/Layout/sectionLayout";
+import data from "@/utils/data.json";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
 const CatalogSliderSection = ({ title }) => {
+  const products = data.products;
+
   return (
     <SectionLayout>
       <div className="relative mx-3.5 mb-3.5 lg:mb-8">
@@ -31,10 +33,10 @@ const CatalogSliderSection = ({ title }) => {
             1024: { slidesPerView: 5, spaceBetween: 24 },
           }}
         >
-          {dresses.map((dress) => (
-            <SwiperSlide key={dress.id}>
+          {products.map((product) => (
+            <SwiperSlide key={product.id}>
               <ProductCard
-                data={dress}
+                data={product}
                 image={<ProductImage />}
                 info={<ProductInfo />}
                 price={<ProductPrice />}

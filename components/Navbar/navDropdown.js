@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { navLinks } from "@/utils/links";
+import data from "@/utils/data.json";
 import NavSearchInput from "./navSearchInput";
 
 export default function NavDropdown({ isOpen, handleOpen }) {
+  const links = data.navbar.links;
+
   return (
     <div
       className={`${
@@ -26,7 +28,7 @@ export default function NavDropdown({ isOpen, handleOpen }) {
 
         {/* NOTE Nav links */}
         <div className="flex flex-col gap-6 text-lg font-medium uppercase">
-          {navLinks.map((link) => (
+          {links.map((link) => (
             <NavLink key={link.name} to={link.to} name={link.name} />
           ))}
         </div>

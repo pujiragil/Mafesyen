@@ -1,8 +1,10 @@
-import { brands } from "@/utils/brand";
+import data from "@/utils/data.json";
 import { BrandImage } from "@/components/atoms";
 import SectionLayout from "@/components/Layout/sectionLayout";
 
 const BrandSection = () => {
+  const brands = data.brands;
+
   return (
     <SectionLayout>
       <div className="relative mx-3.5 grid grid-cols-2 gap-3.5 border-[#C4C4C4] font-oswald sm:grid-cols-3 md:grid-cols-4 lg:my-8 lg:grid-cols-8 lg:border-2 lg:p-4">

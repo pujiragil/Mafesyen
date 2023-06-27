@@ -1,9 +1,9 @@
 import SectionLayout from "@/components/Layout/sectionLayout";
 import { OfferCard } from "@/components/molecules";
-import { offers } from "@/utils/offer";
+import data from "@/utils/data.json";
 
 const OfferCardSection = () => {
-  const { first, second, third } = offers;
+  const { first, second, third } = data.offers;
 
   return (
     <SectionLayout>

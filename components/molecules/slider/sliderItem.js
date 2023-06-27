@@ -3,7 +3,11 @@ import { memo } from "react";
 import { BigHead, ButtonLink } from "@/components/atoms";
 import { cn } from "@/utils/utils";
 
+import data from "@/utils/data.json";
+
 const SliderItem = () => {
+  const heroSlider = data.heroSlider;
+
   return (
     <div
       className={cn(
@@ -17,8 +21,8 @@ const SliderItem = () => {
           width={852}
           height={757}
           priority={true}
+          src={heroSlider.productImageLink}
           className="h-auto w-3/4 object-center md:w-full md:w-full lg:w-4/5"
-          src="/images/swiper-1.webp"
           alt="swiper-model"
         />
       </div>
@@ -28,10 +32,10 @@ const SliderItem = () => {
           variant="hero"
           className="w-9/12 leading-9 md:w-full md:leading-none lg:w-10/12"
         >
-          summer sale get 30% off on all dress.
+          {heroSlider.title}
         </BigHead>
         <ButtonLink href="/catalog" variant="primary" size="lg">
-          shop now
+          {heroSlider["button-text"]}
         </ButtonLink>
       </div>
     </div>
