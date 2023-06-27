@@ -28,7 +28,7 @@ const OfferCard = ({ variant, order, className, data }) => {
             {data.title}
           </BigHead>
           <Text family="roboto" size="xs/lg" className="md:leading-snug">
-            {data.description}
+            {data.desc}
           </Text>
         </div>
         <ButtonLink href={data.linkTo} variant="primary" size="base">
