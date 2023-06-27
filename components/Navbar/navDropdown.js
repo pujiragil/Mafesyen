@@ -1,6 +1,7 @@
 import Link from "next/link";
 import data from "@/utils/data.json";
 import NavSearchInput from "./navSearchInput";
+import { CloseIcon } from "../Assets/navbar";
 
 export default function NavDropdown({ isOpen, handleOpen }) {
   const links = data.navbar.links;
@@ -12,11 +13,9 @@ export default function NavDropdown({ isOpen, handleOpen }) {
       } absolute top-0 left-0 z-10 w-full bg-black duration-500 md:hidden`}
     >
       <div className="flex h-14 items-center p-3.5">
-        <img
+        <CloseIcon
           onClick={() => handleOpen(false)}
-          className="w-fit cursor-pointer"
-          src="/close.svg"
-          alt="close"
+          className="h-5 w-5 cursor-pointer"
         />
       </div>
       <div
