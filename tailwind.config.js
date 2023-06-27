@@ -11,14 +11,14 @@ module.exports = {
         md: "100%",
         lg: "100%",
         xl: "1324px",
-        "2xl": "1536px"
-      }
+        "2xl": "1536px",
+      },
     },
     fontFamily: {
-      'roboto': ["Roboto", "sans-serif"],
-      'oswald': ["Oswald", "sans-serif"]
+      roboto: ["var(--font-roboto)"],
+      oswald: ["var(--font-oswald)"],
     },
     extend: {},
   },
   plugins: [],
-}
+};
