@@ -1,4 +1,3 @@
-import Blog from "../components/Blog";
 import {
   BannerCardSection,
   BrandSection,
@@ -6,7 +5,7 @@ import {
 } from "@/components/molecules";
 import CatalogSection from "../components/Catalog/catalogContainer";
 import BaseLayout from "../components/Layout/baseLayout";
-import { HeroSliderSection, OfferCardSection } from "@/components/organism";
+import { BlogSection, HeroSliderSection, OfferCardSection } from "@/components/organism";
 import dynamic from "next/dynamic";
 import { CatalogSliderSkeleton } from "@/components/templates";
 
@@ -34,7 +33,7 @@ export default function Home() {
       <CatalogSliderSection title="Featured Items:" />
       <CatalogSliderSection title="Most Popular:" />
       <EventCardSection />
-      <Blog />
+      <BlogSection />
     </BaseLayout>
   );
 }
