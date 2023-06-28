@@ -4,14 +4,14 @@ import { useRef, useState } from "react";
 import data from "@/utils/data.json";
 import { cn } from "@/utils/utils";
 
-import { Mafesyen } from "@/components/Assets/mafesyen";
-import { ArrowNavigationRight } from "@/components/Assets/arrow";
 import {
+  Mafesyen,
+  ArrowNavigationRight,
   CartIcon,
   CloseIcon,
   HamburgerIcon,
   SearchIcon,
-} from "@/components/Assets/navbar";
+} from "@/components/assets";
 
 const NavMobile = () => {
   const searchInputRef = useRef(null);

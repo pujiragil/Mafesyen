@@ -16,9 +16,10 @@ export const HamburgerIcon = ({ onClick, className }) => {
   );
 };
 
-export const SearchIcon = ({ className }) => {
+export const SearchIcon = ({ className, onClick }) => {
   return (
     <svg
+      onClick={onClick}
       className={className}
       width="20"
       height="20"

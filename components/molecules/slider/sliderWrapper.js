@@ -1,10 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useSwiper } from "swiper/react";
 import { SlideButton, SlidePagination } from "@/components/atoms";
-import {
-  ArrowNavigationLeft,
-  ArrowNavigationRight,
-} from "@/components/Assets/arrow";
+import { ArrowNavigationLeft, ArrowNavigationRight } from "@/components/assets";
 
 const SliderWrapper = () => {
   const swiper = useSwiper();

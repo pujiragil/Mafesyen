@@ -2,8 +2,7 @@ import Link from "next/link";
 
 import data from "@/utils/data.json";
 
-import { Mafesyen } from "@/components/Assets/mafesyen";
-import { SearchIcon } from "@/components/Assets/navbar";
+import { Mafesyen, SearchIcon } from "@/components/assets"
 import { NavMobile } from "@/components/molecules";
 
 const Navbar = () => {
