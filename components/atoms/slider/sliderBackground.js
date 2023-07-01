@@ -8,11 +8,10 @@ const SlideBackground = () => {
 
   return (
     <Image
-      width={1410}
-      height={601}
+      fill={true}
       priority={true}
       src={heroSlider.bgImg}
-      className="absolute top-0 left-0 z-0 h-[110%] w-full"
+      sizes="100vw"
       alt="swiper-background"
     />
   );
