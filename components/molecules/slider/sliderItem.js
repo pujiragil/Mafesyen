@@ -11,7 +11,7 @@ const SliderItem = () => {
   return (
     <div
       className={cn(
-        "md:min-h-[500px]",
+        "md:min-h-[500px] lg:min-h-[550px]",
         "gap-5 px-3.5 pt-8  pb-20 md:px-8 lg:px-20",
         "flex flex-col md:grid md:grid-cols-2 md:place-items-center"
       )}

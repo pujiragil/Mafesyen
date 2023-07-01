@@ -11,7 +11,7 @@
 
 .hero-slide {
   /* background-image: url("/images/swiper-bg.webp"); */
-  @apply min-h-[500px] w-full relative;
+  @apply min-h-[500px] w-full relative lg:min-h-[550px];
 }
 
 /* NOTE Catalog Slide */
