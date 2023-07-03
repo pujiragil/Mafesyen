@@ -1,4 +1,6 @@
 export * from "./card/productCard";
+export { default as BrandCheckboxItem } from "./checkbox/brandCheckboxItem";
+export { default as BrandFilter } from "./filter/brandFilter";
 export { default as BrandSection } from "./brand";
 export { default as BannerCardSection } from "./card/bannerCard";
 export { default as BlogItem } from "./blog/blogItem";
