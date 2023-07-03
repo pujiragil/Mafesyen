@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import data from "@/utils/data.json";
 
-import { Mafesyen, SearchIcon } from "@/components/assets"
+import { Mafesyen, SearchIcon } from "@/components/assets";
 import { NavMobile } from "@/components/molecules";
 
 const Navbar = () => {
@@ -50,7 +50,7 @@ const Navbar = () => {
 const NavLinkItem = ({ to, children }) => {
   return (
     <Link href={to} className="w-fit">
-      <p className="font-oswald text-sm font-semibold uppercase lg:text-base">
+      <p className="font-oswald text-sm font-semibold uppercase lg:text-base lg:font-medium">
         {children}
       </p>
     </Link>

@@ -32,7 +32,7 @@ export default function FilterBrand() {
 function FilterCheckboxItem({ children }) {
   return (
     <label className="flex items-center gap-2 cursor-pointer w-fit duration-200">
-      <input className="w-3 cursor-pointer peer" type="checkbox" />
+      <input className="w-3 cursor-pointer peer border-none border-0" type="checkbox" />
       <p className="peer-checked:text-black">{children}</p>
     </label>
   );
