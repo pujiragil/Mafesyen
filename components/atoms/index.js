@@ -1,3 +1,4 @@
+export { default as BaseCheckbox } from "./checkbox/baseCheckbox";
 export { default as BigHead } from "./head/bigHead";
 export { default as ButtonLink } from "./button/buttonLink";
 export { default as Button } from "./button";
