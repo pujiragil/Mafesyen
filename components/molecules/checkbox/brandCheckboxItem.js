@@ -5,12 +5,14 @@ const BrandCheckboxItem = ({ children }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <label className="block space-x-2">
+    <label htmlFor="item" className="block space-x-2">
       <BaseCheckbox
         checked={isChecked}
         onChecked={() => setIsChecked((prevCheck) => !prevCheck)}
       />
-      <span className="text-roboto text-xs uppercase">{children}</span>
+      <span id="item" className="text-roboto text-[10px] uppercase">
+        {children}
+      </span>
     </label>
   );
 };
