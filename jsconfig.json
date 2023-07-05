@@ -4,7 +4,7 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/utils/*": ["utils/*"],
-      "@/hooks": ["hooks"]
+      "@hooks": ["hooks/index.js"]
     }
   }
 }
