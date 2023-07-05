@@ -1,4 +1,5 @@
 import { cn } from "@/utils/utils";
+import { memo } from "react";
 
 const DropdownWrapper = ({ isOpen, children, className }) => {
   return (
@@ -14,4 +15,4 @@ const DropdownWrapper = ({ isOpen, children, className }) => {
   );
 };
 
-export default DropdownWrapper;
+export default memo(DropdownWrapper);

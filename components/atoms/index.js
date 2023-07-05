@@ -9,6 +9,7 @@ export { default as BrandImage } from "./brandImage";
 
 export { default as Category } from "./category";
 
+export { default as DropdownTrigger } from "./dropdown/dropdownTrigger";
 export { default as DropdownWrapper } from "./dropdown/dropdownWrapper";
 
 export { default as Text } from "./text";
