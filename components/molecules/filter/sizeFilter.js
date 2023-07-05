@@ -1,5 +1,5 @@
 import { cn } from "@/utils/utils";
-import { useDropdown } from "@/hooks";
+import { useDropdown } from "@hooks";
 
 import { DropdownTrigger, DropdownWrapper } from "@/components/atoms";
 import { SizesCheckbox } from "@/components/molecules";

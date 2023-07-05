@@ -1,8 +1,8 @@
 import { memo } from "react";
 import { cn } from "@/utils/utils";
+import { useDropdown } from "@hooks";
 import { DressCheckboxItem } from "@/components/molecules";
 import { DropdownTrigger, DropdownWrapper } from "@/components/atoms";
-import useDropdown from "@/hooks/useDropdown";
 
 const DressFilter = ({ data }) => {
   const [isOpen, setIsOpen] = useDropdown();

@@ -1,8 +1,8 @@
 import { memo } from "react";
 import { cn } from "@/utils/utils";
+import { useDropdown } from "@hooks";
 import { BrandCheckboxItem } from "@/components/molecules";
 import { DropdownWrapper, DropdownTrigger } from "@/components/atoms";
-import useDropdown from "@/hooks/useDropdown";
 
 const BrandFilter = ({ data }) => {
   const [isOpen, setIsOpen] = useDropdown();

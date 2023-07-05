@@ -1,5 +1,5 @@
 import { cn } from "@/utils/utils";
-import { useDropdown } from "@/hooks";
+import { useDropdown } from "@hooks";
 
 import { BrandFilter, DressFilter, SizeFilter } from "@/components/molecules";
 import SectionLayout from "@/components/Layout/sectionLayout";
