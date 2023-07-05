@@ -1,5 +1,5 @@
+import { memo, useState } from "react";
 import { BaseCheckbox } from "@/components/atoms";
-import { useState } from "react";
 
 const DressCheckboxItem = ({ children }) => {
   const [isChecked, setIsChecked] = useState(false);
@@ -17,4 +17,4 @@ const DressCheckboxItem = ({ children }) => {
   );
 };
 
-export default DressCheckboxItem;
+export default memo(DressCheckboxItem);

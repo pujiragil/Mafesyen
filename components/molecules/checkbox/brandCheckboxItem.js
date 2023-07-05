@@ -1,5 +1,5 @@
 import { BaseCheckbox } from "@/components/atoms";
-import { useState } from "react";
+import { memo, useState } from "react";
 
 const BrandCheckboxItem = ({ children }) => {
   const [isChecked, setIsChecked] = useState(false);
@@ -17,4 +17,4 @@ const BrandCheckboxItem = ({ children }) => {
   );
 };
 
-export default BrandCheckboxItem;
+export default memo(BrandCheckboxItem);
