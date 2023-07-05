@@ -8,18 +8,16 @@ const DressFilter = ({ data }) => {
   const [isOpen, setIsOpen] = useDropdown();
 
   return (
-    <div className="flex flex-col">
-      <div className={cn(isOpen && "space-y-3", "py-3")}>
-        <DropdownTrigger open={isOpen} onOpen={setIsOpen}>
-          Dress
-        </DropdownTrigger>
+    <div className={cn(isOpen && "space-y-3", "py-3")}>
+      <DropdownTrigger open={isOpen} onOpen={setIsOpen}>
+        Dress
+      </DropdownTrigger>
 
-        <DropdownWrapper isOpen={isOpen} className="space-y-2">
-          {data.map((brand) => (
-            <DressCheckboxItem key={brand}>{brand}</DressCheckboxItem>
-          ))}
-        </DropdownWrapper>
-      </div>
+      <DropdownWrapper isOpen={isOpen} className="space-y-2">
+        {data.map((brand) => (
+          <DressCheckboxItem key={brand}>{brand}</DressCheckboxItem>
+        ))}
+      </DropdownWrapper>
     </div>
   );
 };
