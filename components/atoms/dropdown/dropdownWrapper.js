@@ -6,7 +6,7 @@ const DropdownWrapper = ({ isOpen, children, className }) => {
     <div
       className={cn(
         "grid",
-        "transition-all duration-300 ease-in-out",
+        "transition-all duration-300 ease-out",
         isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
       )}
     >
