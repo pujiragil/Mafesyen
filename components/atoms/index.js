@@ -13,6 +13,13 @@ export { default as Category } from "./category";
 export { default as DropdownTrigger } from "./dropdown/dropdownTrigger";
 export { default as DropdownWrapper } from "./dropdown/dropdownWrapper";
 
+export { default as FooterContact } from "./footer/footerContact";
+export { default as FooterDropdownWrapper } from "./footer/footerDropdownWrapper";
+export { default as FooterDropdownTrigger } from "./footer/footerDropdownTrigger";
+export { default as FooterLink } from "./footer/footerLink";
+export { default as FooterSubmenu } from "./footer/footerSubmenu";
+export { default as FooterSocial } from "./footer/footerSocial";
+
 export { default as Text } from "./text";
 
 export { default as SlideButton } from "./slider/sliderButton";

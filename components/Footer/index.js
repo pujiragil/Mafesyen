@@ -5,7 +5,7 @@ export default function Footer() {
   return(
     <footer>
       <HeadlineFooter />
-      <MainFooter />
+      {/* <MainFooter /> */}
     </footer>
   )
 }
