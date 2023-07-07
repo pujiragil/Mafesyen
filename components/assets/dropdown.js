@@ -1,6 +1,8 @@
+import { cn } from "@/utils/utils";
+
 export const DropdownClose = ({ className }) => (
   <svg
-    className={`w-3 cursor-pointer ${className}`}
+    className={cn("w-3", "cursor-pointer", className)}
     width="12"
     height="2"
     viewBox="0 0 12 2"
@@ -13,7 +15,7 @@ export const DropdownClose = ({ className }) => (
 
 export const DropdownOpen = ({ className }) => (
   <svg
-    className={`w-3 cursor-pointer ${className}`}
+    className={cn("w-3", "cursor-pointer", className)}
     width="12"
     height="12"
     viewBox="0 0 12 12"
