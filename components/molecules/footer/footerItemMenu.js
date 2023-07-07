@@ -5,7 +5,9 @@ const menuTypes = (type, data) => {
   switch (type) {
     case "link": {
       return data.map((menu) => (
-        <FooterLink to={`/${menu}`}>{menu}</FooterLink>
+        <FooterLink key={menu} to={`/${menu}`}>
+          {menu}
+        </FooterLink>
       ));
     }
 
