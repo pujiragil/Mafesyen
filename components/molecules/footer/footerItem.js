@@ -10,7 +10,7 @@ const FooterItem = ({ title, className, children }) => {
   const [isOpen, setIsOpen] = useDropdown();
 
   return (
-    <div className={cn(isOpen && "space-y-3", "py-3")}>
+    <div className={cn(isOpen && "space-y-3", "py-3", "border-b border-[#4F4F4F]")}>
       <FooterDropdownTrigger open={isOpen} onOpen={setIsOpen}>
         <FooterSubmenu>{title}</FooterSubmenu>
       </FooterDropdownTrigger>
