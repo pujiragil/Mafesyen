@@ -14,6 +14,7 @@ export { default as DropdownTrigger } from "./dropdown/dropdownTrigger";
 export { default as DropdownWrapper } from "./dropdown/dropdownWrapper";
 
 export { default as FooterContact } from "./footer/footerContact";
+export { default as FooterCopyright } from "./footer/footerCopyright";
 export { default as FooterDropdownWrapper } from "./footer/footerDropdownWrapper";
 export { default as FooterDropdownTrigger } from "./footer/footerDropdownTrigger";
 export { default as FooterLink } from "./footer/footerLink";
