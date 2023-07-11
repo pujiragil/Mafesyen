@@ -1,6 +1,11 @@
 import HeadlineFooter from "@/components/Footer/headlineFooter";
 import { Facebook, Instagram, Mafesyen, Twitter } from "@/components/assets";
-import { FooterItem, FooterItemMenu } from "@/components/molecules";
+import { FooterCopyright } from "@/components/atoms";
+import {
+  FooterItem,
+  FooterItemMenu,
+  FooterSubscription,
+} from "@/components/molecules";
 
 const features = [
   "men",
@@ -67,7 +72,24 @@ const socials = [
   },
 ];
 
+const footerItems = [
+  <FooterItem key="features" title="features">
+    <FooterItemMenu type="link" data={features} />
+  </FooterItem>,
+  <FooterItem key="menu" title="menu">
+    <FooterItemMenu type="link" data={menus} />
+  </FooterItem>,
+  <FooterItem key="contact us" title="contact us">
+    <FooterItemMenu type="contact" data={contacts} />
+  </FooterItem>,
+  <FooterItem key="follow us" title="follow us">
+    <FooterItemMenu type="social" data={socials} />
+  </FooterItem>,
+];
+
 const Footer = () => {
+  const footerItemComponents = footerItems.map((value) => value);
+
   return (
     <>
       <HeadlineFooter />
@@ -81,24 +103,13 @@ const Footer = () => {
               </div>
 
               {/* menu */}
-              <div className="divide-y divide-[#4F4F4F]">
-                <FooterItem title="features">
-                  <FooterItemMenu type="link" data={features} />
-                </FooterItem>
+              <div>{footerItemComponents}</div>
 
-                <FooterItem title="menu">
-                  <FooterItemMenu type="link" data={menus} />
-                </FooterItem>
-
-                <FooterItem title="contact us">
-                  <FooterItemMenu type="contact" data={contacts} />
-                </FooterItem>
-
-                <FooterItem title="follow us" className="space-y-3">
-                  <FooterItemMenu type="social" data={socials} />
-                </FooterItem>
-              </div>
+              {/* subscription */}
+              <FooterSubscription />
             </div>
+
+            <FooterCopyright />
           </div>
         </div>
       </footer>
