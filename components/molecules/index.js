@@ -18,6 +18,7 @@ export { default as ProductCardSkeleton } from "./card/productCardSkeleton";
 
 export { default as FooterItem } from "./footer/footerItem";
 export { default as FooterItemMenu } from "./footer/footerItemMenu";
+export { default as FooterSubscription } from "./footer/footerSubscription";
 
 export { default as Navbar } from "./navbar/";
 export { default as NavMobile } from "./navbar/navMobile";
