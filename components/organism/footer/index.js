@@ -3,7 +3,6 @@ import { Facebook, Instagram, Mafesyen, Twitter } from "@/components/assets";
 import { FooterCopyright } from "@/components/atoms";
 import {
   FooterItem,
-  FooterItemMenu,
   FooterSubscription,
 } from "@/components/molecules";
 
@@ -73,18 +72,21 @@ const socials = [
 ];
 
 const footerItems = [
-  <FooterItem key="features" title="features">
-    <FooterItemMenu type="link" data={features} />
-  </FooterItem>,
-  <FooterItem key="menu" title="menu">
-    <FooterItemMenu type="link" data={menus} />
-  </FooterItem>,
-  <FooterItem key="contact us" title="contact us">
-    <FooterItemMenu type="contact" data={contacts} />
-  </FooterItem>,
-  <FooterItem key="follow us" title="follow us">
-    <FooterItemMenu type="social" data={socials} />
-  </FooterItem>,
+  <FooterItem key="features" type="link" title="features" data={features} />,
+  <FooterItem key="menu" type="link" title="menu" data={menus} />,
+  <FooterItem
+    key="contact us"
+    type="contact"
+    title="contact us"
+    data={contacts}
+  />,
+  <FooterItem
+    key="follow us"
+    type="social"
+    title="follow us"
+    className=""
+    data={socials}
+  />,
 ];
 
 const Footer = () => {
@@ -96,17 +98,21 @@ const Footer = () => {
       <footer className="bg-black">
         <div className="container mx-auto">
           <div className="mx-3.5 space-y-10 py-8">
-            <div className="grid gap-6">
+            <div className="grid gap-6 lg:grid-cols-6 lg:gap-0">
               {/* icon */}
-              <div className="flex justify-center">
+              <div className="flex justify-center lg:col-span-1 lg:justify-start">
                 <Mafesyen className="h-10 w-auto" />
               </div>
 
               {/* menu */}
-              <div>{footerItemComponents}</div>
+              <div className="md:grid md:grid-cols-4 lg:col-span-4">
+                {footerItemComponents}
+              </div>
 
               {/* subscription */}
-              <FooterSubscription />
+              <div className="flex justify-center lg:col-span-1">
+                <FooterSubscription />
+              </div>
             </div>
 
             <FooterCopyright />
