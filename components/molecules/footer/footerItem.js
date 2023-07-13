@@ -1,26 +1,42 @@
 import { cn } from "@/utils/utils";
 import { useDropdown } from "@hooks";
+import { FooterItemMenu } from "@/components/molecules";
 import {
   FooterDropdownTrigger,
   FooterDropdownWrapper,
   FooterSubmenu,
 } from "@/components/atoms";
 
-const FooterItem = ({ title, className, children }) => {
+const FooterItem = (props) => {
   const [isOpen, setIsOpen] = useDropdown();
 
   return (
-    <div className={cn(isOpen && "space-y-3", "py-3", "border-b border-[#4F4F4F]")}>
-      <FooterDropdownTrigger open={isOpen} onOpen={setIsOpen}>
-        <FooterSubmenu>{title}</FooterSubmenu>
+    <div
+      className={cn(
+        isOpen && "space-y-3",
+        "py-3 lg:p-0",
+        "border-b border-[#4F4F4F] md:border-hidden"
+      )}
+    >
+      <FooterDropdownTrigger
+        className="md:hidden"
+        open={isOpen}
+        onOpen={setIsOpen}
+      >
+        <FooterSubmenu>{props.title}</FooterSubmenu>
       </FooterDropdownTrigger>
 
       <FooterDropdownWrapper
         open={isOpen}
-        className={cn("space-y-2", className)}
+        className={cn("space-y-2 md:hidden", props.className)}
       >
-        {children}
+        <FooterItemMenu type={props.type} data={props.data} />
       </FooterDropdownWrapper>
+
+      <div className={cn("hidden md:block md:space-y-2", props.className)}>
+        <FooterSubmenu>{props.title}</FooterSubmenu>
+        <FooterItemMenu type={props.type} data={props.data} />
+      </div>
     </div>
   );
 };
