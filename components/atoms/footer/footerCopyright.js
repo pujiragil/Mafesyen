@@ -1,6 +1,6 @@
 const FooterCopyright = () => {
   return (
-    <p className="font-roboto text-xs font-bold uppercase text-white text-center">
+    <p className="text-center font-roboto text-xs font-bold uppercase text-white">
       © 2023. Crisp Developed by Puji Ragil
     </p>
   );

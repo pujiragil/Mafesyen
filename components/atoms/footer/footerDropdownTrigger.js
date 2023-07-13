@@ -1,7 +1,8 @@
-import { FooterDropdownClose, FooterDropdownOpen } from "@/components/assets";
 import { memo } from "react";
+import { cn } from "@/utils/utils";
+import { FooterDropdownClose, FooterDropdownOpen } from "@/components/assets";
 
-const FooterDropdownTrigger = ({ open, onOpen, children }) => {
+const FooterDropdownTrigger = ({ open, onOpen, className, children }) => {
   const triggerButton = open ? (
     <FooterDropdownClose className="w-5" />
   ) : (
@@ -11,7 +12,10 @@ const FooterDropdownTrigger = ({ open, onOpen, children }) => {
   return (
     <div
       onClick={onOpen}
-      className="flex cursor-pointer items-center justify-between"
+      className={cn(
+        "flex cursor-pointer items-center justify-between",
+        className
+      )}
     >
       {children}
       {triggerButton}
