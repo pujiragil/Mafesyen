@@ -3,7 +3,7 @@ import { FooterSubmenu } from "@/components/atoms";
 
 const FooterSubscription = () => {
   return (
-    <div className="w-full space-y-3 md:w-1/3 lg:w-full">
+    <div className="w-full space-y-3 md:w-1/2 lg:w-full lg:space-y-2">
       <FooterSubmenu>join us</FooterSubmenu>
 
       <div className="space-y-2">

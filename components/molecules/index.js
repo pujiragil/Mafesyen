@@ -16,6 +16,8 @@ export { default as EventCardSection } from "./card/eventCard";
 export { default as OfferCard } from "./card/offerCard";
 export { default as ProductCardSkeleton } from "./card/productCardSkeleton";
 
+export { default as FooterHighlight } from "./footer/footerHighlight";
+export { default as FooterHighlightItem } from "./footer/footerHighlightItem";
 export { default as FooterItem } from "./footer/footerItem";
 export { default as FooterItemMenu } from "./footer/footerItemMenu";
 export { default as FooterSubscription } from "./footer/footerSubscription";
