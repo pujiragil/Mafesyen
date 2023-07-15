@@ -33,7 +33,7 @@ const FooterItem = (props) => {
         <FooterItemMenu type={props.type} data={props.data} />
       </FooterDropdownWrapper>
 
-      <div className={cn("hidden md:block md:space-y-2", props.className)}>
+      <div className={cn("hidden space-y-2 md:block", props.className)}>
         <FooterSubmenu>{props.title}</FooterSubmenu>
         <FooterItemMenu type={props.type} data={props.data} />
       </div>
