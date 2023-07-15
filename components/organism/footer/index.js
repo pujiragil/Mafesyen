@@ -1,10 +1,6 @@
-import HeadlineFooter from "@/components/Footer/headlineFooter";
 import { Facebook, Instagram, Mafesyen, Twitter } from "@/components/assets";
 import { FooterCopyright } from "@/components/atoms";
-import {
-  FooterItem,
-  FooterSubscription,
-} from "@/components/molecules";
+import { FooterHighlight, FooterItem, FooterSubscription } from "@/components/molecules";
 
 const features = [
   "men",
@@ -84,7 +80,7 @@ const footerItems = [
     key="follow us"
     type="social"
     title="follow us"
-    className=""
+    className="space-y-3 md:space-y-3"
     data={socials}
   />,
 ];
@@ -94,7 +90,7 @@ const Footer = () => {
 
   return (
     <>
-      <HeadlineFooter />
+      <FooterHighlight />
       <footer className="bg-black">
         <div className="container mx-auto">
           <div className="mx-3.5 space-y-10 py-8">
