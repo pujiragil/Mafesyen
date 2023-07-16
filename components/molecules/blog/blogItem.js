@@ -1,4 +1,4 @@
-import { Category } from "@/components/atoms";
+import { Category, Text } from "@/components/atoms";
 
 const BlogItem = ({ title, desc, date, highlight }) => {
   return (
@@ -6,12 +6,14 @@ const BlogItem = ({ title, desc, date, highlight }) => {
       <div>
         <Category intent="secondary" value={highlight} />
         <h4 className="mt-1 mb-3.5 text-sm md:text-base lg:text-lg">{title}</h4>
-        <p className="font-roboto text-[10px] md:text-xs lg:text-sm">{desc}</p>
+        <Text weight={300} color="black" size="xs/sm" family="roboto">
+          {desc}
+        </Text>
       </div>
       <div className="border-t-2 border-black py-1">
-        <p className="font-roboto text-[10px] md:text-xs lg:text-sm">
+        <Text weight={400} color="black" size="xs/sm" family="roboto">
           {date} by Puji Ragil
-        </p>
+        </Text>
       </div>
     </article>
   );

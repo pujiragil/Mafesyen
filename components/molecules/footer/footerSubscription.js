@@ -1,5 +1,13 @@
 import { cn } from "@/utils/utils";
-import { FooterSubmenu } from "@/components/atoms";
+import { FooterSubmenu, Text } from "@/components/atoms";
+
+const textType = {
+  weight: 300,
+  size: "xs",
+  color: "gray",
+  family: "roboto",
+  className: "uppercase",
+};
 
 const FooterSubscription = () => {
   return (
@@ -7,9 +15,7 @@ const FooterSubscription = () => {
       <FooterSubmenu>join us</FooterSubmenu>
 
       <div className="space-y-2">
-        <p className="font-roboto text-xs font-normal uppercase text-[#C4C4C4]">
-          subscribe to our news letters
-        </p>
+        <Text {...textType}>subscribe to our news letters</Text>
 
         <input
           type="email"
