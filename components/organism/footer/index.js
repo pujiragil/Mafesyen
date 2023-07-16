@@ -1,6 +1,10 @@
 import { Facebook, Instagram, Mafesyen, Twitter } from "@/components/assets";
 import { FooterCopyright } from "@/components/atoms";
-import { FooterHighlight, FooterItem, FooterSubscription } from "@/components/molecules";
+import {
+  FooterHighlight,
+  FooterItem,
+  FooterSubscription,
+} from "@/components/molecules";
 
 const features = [
   "men",
@@ -93,15 +97,15 @@ const Footer = () => {
       <FooterHighlight />
       <footer className="bg-black">
         <div className="container mx-auto">
-          <div className="mx-3.5 space-y-10 py-8">
-            <div className="grid gap-6 lg:grid-cols-6 lg:gap-0">
+          <div className="mx-3.5 space-y-10 py-8 lg:space-y-4">
+            <div className="grid gap-6 lg:h-80 lg:grid-cols-6 lg:gap-0 lg:border-b lg:border-[#4F4F4F]">
               {/* icon */}
               <div className="flex justify-center lg:col-span-1 lg:justify-start">
                 <Mafesyen className="h-10 w-auto" />
               </div>
 
               {/* menu */}
-              <div className="md:grid md:grid-cols-4 lg:col-span-4">
+              <div className="grid md:grid-cols-4 md:gap-2 lg:col-span-4 lg:gap-0">
                 {footerItemComponents}
               </div>
 

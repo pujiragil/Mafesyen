@@ -18,6 +18,7 @@ const FooterItem = (props) => {
         "border-b border-[#4F4F4F] md:border-hidden"
       )}
     >
+      {/* mobile dropdown trigger */}
       <FooterDropdownTrigger
         className="md:hidden"
         open={isOpen}
@@ -26,6 +27,7 @@ const FooterItem = (props) => {
         <FooterSubmenu>{props.title}</FooterSubmenu>
       </FooterDropdownTrigger>
 
+      {/* mobile dropdown wrapper */}
       <FooterDropdownWrapper
         open={isOpen}
         className={cn("space-y-2 md:hidden", props.className)}
@@ -33,6 +35,7 @@ const FooterItem = (props) => {
         <FooterItemMenu type={props.type} data={props.data} />
       </FooterDropdownWrapper>
 
+      {/* tablet & desktop */}
       <div className={cn("hidden space-y-2 md:block", props.className)}>
         <FooterSubmenu>{props.title}</FooterSubmenu>
         <FooterItemMenu type={props.type} data={props.data} />
