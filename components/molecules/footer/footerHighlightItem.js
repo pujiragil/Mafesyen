@@ -9,7 +9,7 @@ const FooterHighlightItem = ({ children }) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M8 14.6L13.25 20L22 11" stroke="black" stroke-width="2" />
+        <path d="M8 14.6L13.25 20L22 11" stroke="black" strokeWidth="2" />
       </svg>
       <p className="font-oswald text-sm text-black lg:text-base">{children}</p>
     </div>
