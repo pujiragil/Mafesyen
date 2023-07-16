@@ -1,11 +1,18 @@
+import { Text } from "@/components/atoms";
 import Link from "next/link";
+
+const textType = {
+  weight: 300,
+  size: "xs",
+  color: "gray",
+  family: "roboto",
+  className: "uppercase",
+};
 
 const FooterLink = ({ children, to, ...props }) => {
   return (
-    <Link className="w-fit block" href={to} {...props}>
-      <p className="font-roboto text-xs font-normal uppercase text-[#C4C4C4]">
-        {children}
-      </p>
+    <Link className="block w-fit" href={to} {...props}>
+      <Text {...textType}>{children}</Text>
     </Link>
   );
 };

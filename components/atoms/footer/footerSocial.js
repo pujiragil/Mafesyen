@@ -1,11 +1,19 @@
+import { Text } from "@/components/atoms";
+
+const textType = {
+  weight: 300,
+  size: "xs",
+  color: "gray",
+  family: "roboto",
+  className: "uppercase",
+};
+
 const FooterSocial = ({ icon, name, to }) => {
   return (
     <a className="block w-fit" href={to} target="_blank">
       <div className="flex items-center gap-4">
         {icon}
-        <p className="font-roboto text-xs font-normal uppercase text-[#C4C4C4]">
-          {name}
-        </p>
+        <Text {...textType}>{name}</Text>
       </div>
     </a>
   );

@@ -1,8 +1,24 @@
+import { Text } from "@/components/atoms";
+
+const titleType = {
+  weight: 500,
+  size: "xs",
+  color: "white",
+  family: "oswald",
+};
+
+const descType = {
+  weight: 300,
+  size: "xs",
+  color: "gray",
+  family: "roboto",
+};
+
 const FooterContact = ({ title, desc }) => {
   return (
     <div className="space-y-1 uppercase">
-      <p className="font-oswald text-xs font-medium text-white">{title}</p>
-      <p className="font-roboto text-xs font-normal text-[#C4C4C4]">{desc}</p>
+      <Text {...titleType}>{title}</Text>
+      <Text {...descType}>{desc}</Text>
     </div>
   );
 };
