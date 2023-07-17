@@ -27,7 +27,12 @@ const OfferCard = ({ variant, order, className, data }) => {
           <BigHead type="h2" variant={headVariant}>
             {data.title}
           </BigHead>
-          <Text family="roboto" size="xs/lg" className="md:leading-snug">
+          <Text
+            weight={300}
+            family="roboto"
+            size="xs/sm/base"
+            className="md:leading-snug"
+          >
             {data.desc}
           </Text>
         </div>
