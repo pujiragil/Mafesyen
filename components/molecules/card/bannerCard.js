@@ -18,7 +18,13 @@ const BannerCardSection = ({
           <BigHead color={color} variant="banner" type="h2">
             {title}
           </BigHead>
-          <Text color={color} size="xxs/base" className="md:w-9/12">
+          <Text
+            weight={300}
+            color={color}
+            family="roboto"
+            size="xxs/sm/base"
+            className="md:w-9/12"
+          >
             {desc}
           </Text>
           <ButtonLink color={color} href={btnHref}>
