@@ -19,7 +19,9 @@ const EventCardSection = () => {
             >
               {second.title}
             </BigHead>
-            <Text size="xxs/base">{second.desc}</Text>
+            <Text weight={300} family="roboto" size="xs/sm/base">
+              {second.desc}
+            </Text>
           </div>
           <ButtonLink href={second.btnHref} variant="secondary">
             {second.btnText}
