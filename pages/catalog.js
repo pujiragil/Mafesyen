@@ -32,9 +32,9 @@ const CatalogSection = () => {
 
   return (
     <SectionLayout>
-      <div className="mx-3.5 grid gap-3.5 lg:grid-cols-[1fr_4fr]">
+      <div className="mx-3.5 grid gap-3.5 lg:grid-cols-[1fr_4fr] lg:gap-6">
         <FilterTab />
-        <div className="grid grid-cols-2 gap-3.5 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3.5 sm:grid-cols-3 md:grid-cols-4 lg:gap-6 lg:border-l lg:pl-6">
           {products.map((product) => (
             <ProductCard
               key={product.id}
