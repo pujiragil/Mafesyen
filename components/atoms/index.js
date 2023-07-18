@@ -1,4 +1,5 @@
 export { default as BaseCheckbox } from "./checkbox/baseCheckbox";
+export { default as ColorCheckbox } from "./checkbox/colorCheckbox";
 export { default as SizeCheckbox } from "./checkbox/sizeCheckbox";
 
 export { default as BigHead } from "./head/bigHead";
