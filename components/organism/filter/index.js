@@ -1,12 +1,30 @@
 import { cn } from "@/utils/utils";
 import { useDropdown } from "@hooks";
 
-import { BrandFilter, DressFilter, SizeFilter } from "@/components/molecules";
-import SectionLayout from "@/components/Layout/sectionLayout";
+import {
+  BrandFilter,
+  ColorFilter,
+  DressFilter,
+  SizeFilter,
+} from "@/components/molecules";
 import { DropdownWrapper } from "@/components/atoms";
 
 const brands = ["state", "cooper", "bardot", "alfani", "cece", "donna ricco"];
 const dresses = ["short", "knee length", "high low", "long", "mid"];
+const colors = [
+  "bg-[#292A2D]",
+  "bg-[#F3ECE2]",
+  "bg-[#24426A]",
+  "bg-[#18574A]",
+  "bg-[#666689]",
+  "bg-[#C2BEB6]",
+  "bg-[#AAABA7]",
+  "bg-[#971E34]",
+  "bg-[#CBA13E]",
+  "bg-[#73513C]",
+  "bg-[#DAB1B1]",
+  "bg-[#2B9FA7]",
+];
 const sizes = [
   "osfa",
   "w26",
@@ -42,7 +60,7 @@ const FilterTab = () => {
   return (
     <div
       className={cn(
-        "w-full border",
+        "w-full border lg:border-none",
         isOpen ? "border-black" : "border-[#C4C4C4]"
       )}
     >
@@ -50,6 +68,7 @@ const FilterTab = () => {
         onClick={setIsOpen}
         className={cn(
           "p-3",
+          "lg:hidden",
           "cursor-pointer",
           "flex items-center justify-between",
           "transition-colors duration-300 ease-out",
@@ -74,7 +93,8 @@ const FilterTab = () => {
         </svg>
       </div>
 
-      <div className="divide-y divide-[#F0F1F2] px-3">
+      {/* mobile & tab */}
+      <div className="divide-y divide-[#F0F1F2] px-3 lg:hidden">
         <DropdownWrapper isOpen={isOpen}>
           <BrandFilter data={brands} />
         </DropdownWrapper>
@@ -86,6 +106,18 @@ const FilterTab = () => {
         <DropdownWrapper isOpen={isOpen}>
           <SizeFilter data={sizes} />
         </DropdownWrapper>
+
+        <DropdownWrapper isOpen={isOpen}>
+          <ColorFilter data={colors} />
+        </DropdownWrapper>
+      </div>
+
+      {/* desktop */}
+      <div className="hidden divide-y divide-[#F0F1F2] lg:block">
+        <BrandFilter data={brands} />
+        <DressFilter data={dresses} />
+        <SizeFilter data={sizes} />
+        <ColorFilter data={colors} />
       </div>
     </div>
   );
