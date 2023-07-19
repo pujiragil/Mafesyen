@@ -10,12 +10,13 @@ const ColorCheckbox = ({ color }) => {
       className={cn(
         "block",
         "p-1",
+        "h-10 w-10",
         "cursor-pointer",
-        "border md:border-2",
+        "border-2",
         isChecked ? "border-black " : "border-transparent"
       )}
     >
-      <span className={cn("block h-6 w-6", color)}></span>
+      <span className={cn("block h-full w-full", color)}></span>
     </span>
   );
 };
