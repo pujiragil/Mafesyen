@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { cn } from "@/utils/utils";
 import { useDropdown } from "@hooks";
-import { DressCheckboxItem } from "@/components/molecules";
+import { DressesCheckbox } from "@/components/molecules";
 import { DropdownTrigger, DropdownWrapper } from "@/components/atoms";
 
 const DressFilter = ({ data }) => {
@@ -13,10 +13,8 @@ const DressFilter = ({ data }) => {
         Dress
       </DropdownTrigger>
 
-      <DropdownWrapper isOpen={isOpen} className="space-y-2">
-        {data.map((brand) => (
-          <DressCheckboxItem key={brand}>{brand}</DressCheckboxItem>
-        ))}
+      <DropdownWrapper isOpen={isOpen}>
+        <DressesCheckbox data={data} />
       </DropdownWrapper>
     </div>
   );
