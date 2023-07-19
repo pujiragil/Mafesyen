@@ -1,8 +1,8 @@
 export * from "./card/productCard";
 
-export { default as BrandCheckboxItem } from "./checkbox/brandCheckboxItem";
+export { default as BrandsCheckbox } from "./checkbox/brandsCheckbox";
 export { default as ColorsCheckbox } from "./checkbox/colorsCheckbox";
-export { default as DressCheckboxItem } from "./checkbox/dressCheckboxItem";
+export { default as DressesCheckbox } from "./checkbox/dressesCheckbox";
 export { default as SizesCheckbox } from "./checkbox/sizesCheckbox";
 
 export { default as BrandFilter } from "./filter/brandFilter";
