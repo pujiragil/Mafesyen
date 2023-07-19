@@ -75,16 +75,14 @@ const FilterTab = () => {
           isOpen ? "bg-black text-white" : "bg-white text-black"
         )}
       >
-        <p className="font-oswald text-sm uppercase">filter</p>
+        <p className="font-oswald text-sm uppercase md:text-lg">filter</p>
         <svg
           className={cn(
-            "w-3",
+            "w-3 md:w-4",
             "cursor-pointer",
             "transition-transform duration-300 ease-out",
             isOpen ? "rotate-180 stroke-white" : "rotate-0 stroke-black"
           )}
-          width="10"
-          height="6"
           viewBox="0 0 10 6"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
