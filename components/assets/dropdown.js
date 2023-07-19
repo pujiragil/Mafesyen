@@ -2,9 +2,7 @@ import { cn } from "@/utils/utils";
 
 export const DropdownClose = ({ className }) => (
   <svg
-    className={cn("w-3", "cursor-pointer", className)}
-    width="12"
-    height="2"
+    className={cn("w-3 md:w-4", "cursor-pointer", className)}
     viewBox="0 0 12 2"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -15,9 +13,7 @@ export const DropdownClose = ({ className }) => (
 
 export const DropdownOpen = ({ className }) => (
   <svg
-    className={cn("w-3", "cursor-pointer", className)}
-    width="12"
-    height="12"
+    className={cn("w-3 md:w-4", "cursor-pointer", className)}
     viewBox="0 0 12 12"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
