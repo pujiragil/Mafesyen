@@ -8,6 +8,7 @@ export { default as SizesCheckbox } from "./checkbox/sizesCheckbox";
 export { default as BrandFilter } from "./filter/brandFilter";
 export { default as ColorFilter } from "./filter/colorFilter";
 export { default as DressFilter } from "./filter/dressFilter";
+export { default as PriceFilter } from "./filter/priceFilter";
 export { default as SizeFilter } from "./filter/sizeFilter";
 
 export { default as BrandSection } from "./brand";
@@ -26,6 +27,8 @@ export { default as FooterSubscription } from "./footer/footerSubscription";
 
 export { default as Navbar } from "./navbar/";
 export { default as NavMobile } from "./navbar/navMobile";
+
+export { default as PriceRange } from "./range/priceRange";
 
 export { default as SliderItem } from "./slider/sliderItem";
 export { default as SliderWrapper } from "./slider/sliderWrapper";
