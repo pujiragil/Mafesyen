@@ -22,6 +22,8 @@ export { default as FooterLink } from "./footer/footerLink";
 export { default as FooterSubmenu } from "./footer/footerSubmenu";
 export { default as FooterSocial } from "./footer/footerSocial";
 
+export { default as RangeInput } from "./range/rangeInput";
+
 export { default as Text } from "./text";
 
 export { default as SlideButton } from "./slider/sliderButton";
