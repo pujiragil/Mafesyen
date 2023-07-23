@@ -5,6 +5,7 @@ import {
   BrandFilter,
   ColorFilter,
   DressFilter,
+  PriceFilter,
   SizeFilter,
 } from "@/components/molecules";
 import { DropdownWrapper } from "@/components/atoms";
@@ -108,6 +109,10 @@ const FilterTab = () => {
         <DropdownWrapper isOpen={isOpen}>
           <ColorFilter data={colors} />
         </DropdownWrapper>
+
+        <DropdownWrapper isOpen={isOpen}>
+          <PriceFilter />
+        </DropdownWrapper>
       </div>
 
       {/* desktop */}
@@ -116,6 +121,7 @@ const FilterTab = () => {
         <DressFilter data={dresses} />
         <SizeFilter data={sizes} />
         <ColorFilter data={colors} />
+        <PriceFilter />
       </div>
     </div>
   );
