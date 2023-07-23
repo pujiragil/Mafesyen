@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  @apply appearance-none cursor-pointer
+}
+
+input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb {
+  @apply bg-black w-1.5 h-5 border-none rounded-none
+}
+
 * {
   padding: 0;
   margin: 0;
