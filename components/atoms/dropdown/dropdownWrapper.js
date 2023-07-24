@@ -7,10 +7,11 @@ const DropdownWrapper = ({ isOpen, children, className }) => {
       className={cn(
         "grid",
         "transition-all duration-300 ease-out",
-        isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+        isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+        className
       )}
     >
-      <div className={cn("overflow-hidden", className)}>{children}</div>
+      <div className="overflow-hidden">{children}</div>
     </div>
   );
 };
