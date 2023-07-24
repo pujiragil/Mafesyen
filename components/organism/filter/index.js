@@ -61,19 +61,21 @@ const FilterTab = () => {
   return (
     <div
       className={cn(
-        "w-full border lg:border-none",
+        "w-full",
+        "border lg:border-none",
         isOpen ? "border-black" : "border-[#C4C4C4]"
       )}
     >
+      {/* dropdown trigger mobile & tab */}
       <div
         onClick={setIsOpen}
         className={cn(
           "p-3",
-          "lg:hidden",
           "cursor-pointer",
           "flex items-center justify-between",
           "transition-colors duration-300 ease-out",
-          isOpen ? "bg-black text-white" : "bg-white text-black"
+          isOpen ? "bg-black text-white" : "bg-white text-black",
+          "lg:hidden"
         )}
       >
         <p className="font-oswald text-sm uppercase md:text-lg">filter</p>
@@ -92,36 +94,37 @@ const FilterTab = () => {
         </svg>
       </div>
 
-      {/* mobile & tab */}
-      <div className="divide-y divide-[#F0F1F2] px-3 lg:hidden">
-        <DropdownWrapper isOpen={isOpen}>
+      {/* filter components */}
+      <div
+        className={cn(isOpen && "divide-y", "divide-[#F0F1F2]", "px-3 lg:px-0")}
+      >
+        <DropdownWrapper isOpen={isOpen} className="lg:grid-rows-[1fr]">
           <BrandFilter data={brands} />
         </DropdownWrapper>
 
-        <DropdownWrapper isOpen={isOpen}>
+        <DropdownWrapper isOpen={isOpen} className="lg:grid-rows-[1fr]">
           <DressFilter data={dresses} />
         </DropdownWrapper>
 
-        <DropdownWrapper isOpen={isOpen}>
+        <DropdownWrapper isOpen={isOpen} className="lg:grid-rows-[1fr]">
           <SizeFilter data={sizes} />
         </DropdownWrapper>
 
-        <DropdownWrapper isOpen={isOpen}>
+        <DropdownWrapper isOpen={isOpen} className="lg:grid-rows-[1fr]">
           <ColorFilter data={colors} />
         </DropdownWrapper>
 
-        <DropdownWrapper isOpen={isOpen}>
+        <DropdownWrapper isOpen={isOpen} className="lg:grid-rows-[1fr]">
           <PriceFilter />
         </DropdownWrapper>
-      </div>
 
-      {/* desktop */}
-      <div className="hidden divide-y divide-[#F0F1F2] lg:block">
-        <BrandFilter data={brands} />
-        <DressFilter data={dresses} />
-        <SizeFilter data={sizes} />
-        <ColorFilter data={colors} />
-        <PriceFilter />
+        <DropdownWrapper isOpen={isOpen} className="lg:grid-rows-[1fr]">
+          <div className="flex justify-end py-3 lg:py-4">
+            <button className="h-8 w-[86px] lg:w-28 lg:h-10 border-2 border-[#C4C4C4] bg-[#F0F2F2] font-oswald text-sm font-medium uppercase text-[#828282]">
+              apply
+            </button>
+          </div>
+        </DropdownWrapper>
       </div>
     </div>
   );
