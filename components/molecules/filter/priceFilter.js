@@ -7,7 +7,7 @@ const PriceFilter = () => {
   const [isOpen, setIsOpen] = useDropdown();
 
   return (
-    <div className={cn(isOpen && "space-y-3", "py-3")}>
+    <div className={cn(isOpen && "space-y-3", "py-3 lg:py-4")}>
       <DropdownTrigger open={isOpen} onOpen={setIsOpen}>
         Price Range
       </DropdownTrigger>
