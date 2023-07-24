@@ -7,7 +7,7 @@ const DropdownTrigger = ({ open, onOpen, children }) => {
       onClick={onOpen}
       className="flex h-full cursor-pointer items-center justify-between"
     >
-      <p className="font-oswald text-sm text-black md:text-lg lg:text-xl">
+      <p className="font-oswald text-sm text-black md:text-lg">
         {children}
       </p>
       
