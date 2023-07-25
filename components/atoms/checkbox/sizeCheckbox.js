@@ -12,7 +12,8 @@ const SizeCheckbox = ({ children }) => {
         "h-10 w-10",
         "uppercase",
         "cursor-pointer",
-        "font-oswald text-sm",
+        "font-oswald",
+        "text-[10px] sm:text-xs lg:text-sm",
         "grid place-items-center",
         isChecked
           ? "border-2 border-[#000000] text-black"
