@@ -29,7 +29,7 @@ export default function Home() {
       <BrandSection />
       <OfferCardSection />
       <CatalogSection />
-      <BannerCardSection {...banners.first} />
+      <BannerCardSection className="mx-3.5" {...banners.first} />
       <CatalogSliderSection title="Featured Items:" />
       <CatalogSliderSection title="Most Popular:" />
       <EventCardSection />
