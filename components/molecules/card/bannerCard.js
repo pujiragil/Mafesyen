@@ -1,5 +1,6 @@
 import SectionLayout from "@/components/Layout/sectionLayout";
 import { BigHead, ButtonLink, Text } from "@/components/atoms";
+import { cn } from "@/utils/utils";
 import Image from "next/image";
 
 const BannerCardSection = ({
@@ -10,10 +11,20 @@ const BannerCardSection = ({
   btnText,
   btnHref,
   blurDataUrl,
+  className,
 }) => {
   return (
     <SectionLayout>
-      <div className="min-h-36 relative z-10 mx-3.5 grid grid-cols-[3fr_1fr] p-7 md:h-56 md:grid-cols-[2fr_1fr] lg:h-72 lg:place-items-center">
+      <div
+        className={cn(
+          "p-7",
+          "relative z-10",
+          "min-h-36 md:h-56 lg:h-72",
+          "grid grid-cols-[3fr_1fr] md:grid-cols-[2fr_1fr]",
+          "lg:place-items-center",
+          className
+        )}
+      >
         <div className="flex flex-col gap-2">
           <BigHead color={color} variant="banner" type="h2">
             {title}
