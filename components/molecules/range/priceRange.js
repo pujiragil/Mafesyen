@@ -15,7 +15,7 @@ const PriceRange = ({ minRange, maxRange }) => {
           color="black"
           weight={400}
           family="roboto"
-          size="xs/sm"
+          size="xxs/xs/sm"
           className="uppercase"
         >
           {range}.00 eur
@@ -24,7 +24,7 @@ const PriceRange = ({ minRange, maxRange }) => {
           color="black"
           weight={400}
           family="roboto"
-          size="xs/sm"
+          size="xxs/xs/sm"
           className="uppercase"
         >
           {maxRange}.00 eur
