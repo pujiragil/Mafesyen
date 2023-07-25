@@ -5,6 +5,7 @@ const text = cva("font-light text-black", {
   variants: {
     size: {
       xs: "text-xs",
+      "xxs/xs/sm": "text-[10px] md:text-xs lg:text-sm",
       "xxs/sm/base": "text-[10px] md:text-sm lg:text-base",
       "xxs/base": "text-[10px] md:text-sm lg:text-base",
       "xs/sm": "text-xs md:text-sm",
