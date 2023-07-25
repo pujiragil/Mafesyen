@@ -1,4 +1,5 @@
 import { cn } from "@/utils/utils";
+import { Text } from "@/components/atoms";
 
 const BaseCheckbox = ({ checked, onChecked, children }) => {
   return (
@@ -27,15 +28,14 @@ const BaseCheckbox = ({ checked, onChecked, children }) => {
         </svg>
       </span>
 
-      <p
-        className={cn(
-          "font-roboto uppercase",
-          "text-[10px] md:text-xs lg:text-sm",
-          checked ? "text-black" : "text-[#828282]"
-        )}
+      <Text
+        family="roboto"
+        weight={400}
+        size="xxs/xs/sm"
+        className={cn("uppercase", checked ? "text-black" : "text-[#828282]")}
       >
         {children}
-      </p>
+      </Text>
     </div>
   );
 };
