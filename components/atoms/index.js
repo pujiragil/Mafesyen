@@ -22,6 +22,11 @@ export { default as FooterLink } from "./footer/footerLink";
 export { default as FooterSubmenu } from "./footer/footerSubmenu";
 export { default as FooterSocial } from "./footer/footerSocial";
 
+export { default as ProductLabel } from "./product/productLabel";
+export { default as ProductPrice } from "./product/productPrice";
+export { default as ProductTag } from "./product/productTag";
+export { default as ProductTitle } from "./product/productTitle";
+
 export { default as RangeInput } from "./range/rangeInput";
 
 export { default as Text } from "./text";
