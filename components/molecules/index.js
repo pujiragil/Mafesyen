@@ -28,6 +28,11 @@ export { default as FooterSubscription } from "./footer/footerSubscription";
 export { default as Navbar } from "./navbar/";
 export { default as NavMobile } from "./navbar/navMobile";
 
+export { default as ProductHead } from "./product/productHead";
+export { default as ProductInputColor } from "./product/productInputColor";
+export { default as ProductInputQuantity } from "./product/productInputQuantity";
+export { default as ProductInputSize } from "./product/productInputSize";
+
 export { default as PriceRange } from "./range/priceRange";
 
 export { default as SliderItem } from "./slider/sliderItem";
