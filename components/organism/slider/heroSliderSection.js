@@ -1,4 +1,4 @@
-import { Autoplay } from "swiper";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SliderItem, SliderWrapper } from "@/components/molecules";
 import { SlideBackground } from "@/components/atoms";
