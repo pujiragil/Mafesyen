@@ -1,8 +1,9 @@
+import { cn } from "@/utils/utils";
 import { ProductTag, ProductTitle } from "@/components/atoms";
 
-const ProductHead = ({ tag, title }) => {
+const ProductHead = ({ tag, title, className }) => {
   return (
-    <div className="space-y-1">
+    <div className={cn("space-y-1", className)}>
       <ProductTag>{tag}</ProductTag>
       <ProductTitle>{title}</ProductTitle>
     </div>
