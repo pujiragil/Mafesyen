@@ -23,6 +23,7 @@ const ProductInputSize = ({ label }) => {
           className={cn(
             "h-12",
             "px-2.5",
+            "md:hidden",
             "cursor-pointer",
             "border border-[#C4C4C4]",
             "flex items-center justify-between"
@@ -57,23 +58,25 @@ const ProductInputSize = ({ label }) => {
             "bg-white",
             "border border-t-0",
             "transition-all duration-500 ease-in-out",
+            "md:grid-rows-[1fr]",
             isOpen
               ? "grid-rows-[1fr] border-[#C4C4C4]"
               : "grid-rows-[0fr] border-transparent"
           )}
         >
           <div className="overflow-hidden">
-            <div className="divide-y divide-[#C4C4C4]">
+            <div className="grid grid-cols-[repeat(auto-fit,_40px)] md:grid-cols-[repeat(auto-fit,_48px)] gap-2">
               {sizes.map((size) => (
                 <p
                   key={size}
                   onClick={() => handleSelectSize(size)}
                   className={cn(
                     "px-2",
-                    "h-12",
+                    "text-[#828282] hover:text-black",
+                    "h-10 w-10 border border-[#C4C4C4] md:h-12 md:w-12",
                     "cursor-pointer",
-                    "flex items-center",
-                    "font-roboto text-xs uppercase",
+                    "flex items-center justify-center",
+                    "font-roboto text-xs uppercase md:text-sm",
                     "hover:bg-[#F0F1F2]"
                   )}
                 >
