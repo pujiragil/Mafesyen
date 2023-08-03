@@ -32,6 +32,9 @@ export { default as ProductHead } from "./product/productHead";
 export { default as ProductInputColor } from "./product/productInputColor";
 export { default as ProductInputQuantity } from "./product/productInputQuantity";
 export { default as ProductInputSize } from "./product/productInputSize";
+export { default as ProductSliderImage } from "./product/productSliderImage";
+export { default as ProductSliderPagination } from "./product/productSliderPagination";
+export { default as ProductSliderThumb } from "./product/productSliderThumb";
 
 export { default as PriceRange } from "./range/priceRange";
 
