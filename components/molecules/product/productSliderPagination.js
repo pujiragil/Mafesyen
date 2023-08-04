@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSwiper } from "swiper/react";
 
 import { cn } from "@/utils/utils";
@@ -34,4 +34,4 @@ const ProductSliderPagination = () => {
   );
 };
 
-export default memo(ProductSliderPagination);
+export default ProductSliderPagination;
