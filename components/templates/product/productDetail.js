@@ -1,44 +1,48 @@
 import { useState } from "react";
+import Image from "next/image";
 
 import { cn } from "@/utils/utils";
 
 import { ProductSlider } from "@/components/organism";
-import { ProductHead, ProductInputQuantity, ProductInputSize } from "@/components/molecules";
+import {
+  ProductHead,
+  ProductInputQuantity,
+  ProductInputSize,
+} from "@/components/molecules";
 import { Button, ProductPrice } from "@/components/atoms";
 import SectionLayout from "@/components/Layout/sectionLayout";
 
 const ProductDetail = ({ data }) => {
-  const [product, setProduct] = useState("navy");
+  const [product, setProduct] = useState(0);
 
   return (
     <SectionLayout>
       <div className="mx-3.5 grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:gap-10">
-        <ProductSlider key={product} productImages={data[product]} />
+        <ProductSlider key={product} productImages={data?.images[product]} />
 
         <div className="grid place-items-center">
           <div className="grid w-full gap-4 sm:w-2/3 md:w-full">
-            <ProductHead
-              tag="fendi"
-              title="Women Black Checked Fit and Flare Dress"
-              className="md:w-4/5"
-            />
+            <ProductHead tag="fendi" title={data.title} className="md:w-4/5" />
             <ProductPrice value="90,00 eur" />
             <div className="grid gap-4 sm:grid-cols-2 md:flex md:gap-8 lg:flex-col lg:gap-4">
               {/* <ProductInputColor label="select color" /> */}
               <div className="flex gap-2">
-                {Object.keys(data).map((type) => (
+                {data?.images?.map((image, idx) => (
                   <div
-                    key={type}
-                    onClick={() => setProduct(type)}
+                    key={idx}
+                    onClick={() => setProduct(idx)}
                     className={cn(
                       "h-16 w-16 cursor-pointer border p-1",
-                      product === type ? "border-black" : "border-transparent"
+                      product === idx ? "border-black" : "border-transparent"
                     )}
                   >
-                    <img
+                    <Image
+                      width={1920}
+                      height={1280}
+                      src={`/images/dress/${image[0].link}`}
+                      alt={image[0].alt}
+                      blurDataURL={image[0].blurDataUrl}
                       className="h-full w-full object-cover object-center"
-                      src={`/images/dress/${data[type][0]}`}
-                      alt={data[type][0].replace(".webp", "")}
                     />
                   </div>
                 ))}
