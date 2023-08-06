@@ -23,7 +23,7 @@ const ProductDetail = ({ data }) => {
         <div className="grid place-items-center">
           <div className="grid w-full gap-4 sm:w-2/3 md:w-full">
             <ProductHead tag="fendi" title={data.title} className="md:w-4/5" />
-            <ProductPrice value="90,00 eur" />
+            <ProductPrice value={data.price} />
             <div className="grid gap-4 sm:grid-cols-2 md:flex md:gap-8 lg:flex-col lg:gap-4">
               {/* <ProductInputColor label="select color" /> */}
               <div className="flex gap-2">
