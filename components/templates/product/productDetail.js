@@ -42,6 +42,7 @@ const ProductDetail = ({ data }) => {
                       src={`/images/dress/${image[0].link}`}
                       alt={image[0].alt}
                       blurDataURL={image[0].blurDataUrl}
+                      placeholder="blur"
                       className="h-full w-full object-cover object-center"
                     />
                   </div>

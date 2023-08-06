@@ -23,6 +23,7 @@ const ProductSliderImage = ({ thumb, data }) => {
             src={`/images/dress/${image.link}`}
             alt={image.alt}
             blurDataURL={image.blurDataUrl}
+            placeholder="blur"
             className="aspect-square w-full object-cover object-top"
           />
         </SwiperSlide>
