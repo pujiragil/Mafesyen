@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import {
   ProductCardContext,
@@ -24,21 +25,23 @@ export const ProductImage = () => {
   const data = useProductCardContext();
 
   return (
-    <div className="w-full overflow-hidden">
-      <Image
-        width={344}
-        height={450}
-        src={data?.imgLink}
-        alt={data?.imgAlt}
-        blurDataURL={data?.blurDataUrl}
-        placeholder="blur"
-        className={cn(
-          "h-56 w-full md:h-64 lg:h-72",
-          "cursor-pointer object-cover",
-          "transition-transform duration-200 ease-in-out hover:scale-110"
-        )}
-      />
-    </div>
+    <Link href="/product/navy-polkadot-flare-dress">
+      <div className="w-full overflow-hidden">
+        <Image
+          width={344}
+          height={450}
+          src={data?.imgLink}
+          alt={data?.imgAlt}
+          blurDataURL={data?.blurDataUrl}
+          placeholder="blur"
+          className={cn(
+            "h-56 w-full md:h-64 lg:h-72",
+            "cursor-pointer object-cover",
+            "transition-transform duration-200 ease-in-out hover:scale-110"
+          )}
+        />
+      </div>
+    </Link>
   );
 };
 
@@ -48,9 +51,11 @@ export const ProductInfo = () => {
   return (
     <div className="space-y-1">
       <Category intent="primary" value={data?.category} />
-      <Text family="oswald" size="xs/lg">
-        {data?.name}
-      </Text>
+      <Link className="block" href="/product/navy-polkadot-flare-dress">
+        <Text family="oswald" size="xs/lg">
+          {data?.name}
+        </Text>
+      </Link>
     </div>
   );
 };
