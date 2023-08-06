@@ -2,6 +2,7 @@ const dress = [
   {
     id: "navy-polkadot-flare-dress",
     title: "Navy Polkadot Flare Dress",
+    price: "200.000 IDR",
     images: [
       [
         {
@@ -54,6 +55,7 @@ const dress = [
   {
     id: "summer-fashion-top-lace",
     title: "Summer Fashion Top Lace",
+    price: "150.000 IDR",
     images: [
       [
         {
