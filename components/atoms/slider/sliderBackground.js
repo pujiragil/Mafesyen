@@ -11,6 +11,8 @@ const SlideBackground = () => {
       fill={true}
       priority={true}
       src={heroSlider.bgImg}
+      placeholder="blur"
+      blurDataURL={heroSlider.blurDataUrl}
       sizes="100vw"
       alt="swiper-background"
     />
