@@ -24,7 +24,7 @@ const ProductSliderImage = ({ thumb, data }) => {
             alt={image.alt}
             blurDataURL={image.blurDataUrl}
             placeholder="blur"
-            className="aspect-square w-full object-cover object-top"
+            className="aspect-square w-full object-cover object-top md:aspect-auto md:h-full lg:aspect-square"
           />
         </SwiperSlide>
       ))}

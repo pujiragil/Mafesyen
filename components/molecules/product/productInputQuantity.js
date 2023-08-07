@@ -15,7 +15,7 @@ const ProductInputQuantity = ({ label }) => {
   };
 
   return (
-    <div className="space-y-2 sm:place-self-end md:place-self-auto">
+    <div className="space-y-2 sm:justify-self-end md:place-self-auto md:justify-self-auto">
       <ProductLabel>{label}</ProductLabel>
 
       <div className="grid h-12 w-[150px] grid-cols-3 border border-[#C4C4C4]">
