@@ -14,7 +14,7 @@ const ProductInputSize = ({ label }) => {
   };
 
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 lg:w-2/3">
       <ProductLabel>{label}</ProductLabel>
 
       <div className="relative">
@@ -57,7 +57,7 @@ const ProductInputSize = ({ label }) => {
             "w-full",
             "bg-white",
             "border border-t-0",
-            "transition-all duration-500 ease-in-out",
+            "transition-all duration-500 ease-out",
             "md:grid-rows-[1fr]",
             isOpen
               ? "grid-rows-[1fr] border-[#C4C4C4]"
@@ -65,19 +65,22 @@ const ProductInputSize = ({ label }) => {
           )}
         >
           <div className="overflow-hidden">
-            <div className="grid grid-cols-[repeat(auto-fit,_40px)] md:grid-cols-[repeat(auto-fit,_48px)] gap-2">
+            <div className="grid grid-cols-[repeat(auto-fit,_40px)] gap-2 p-2 md:grid-cols-[repeat(auto-fit,_48px)] md:p-0">
               {sizes.map((size) => (
                 <p
                   key={size}
                   onClick={() => handleSelectSize(size)}
                   className={cn(
                     "px-2",
-                    "text-[#828282] hover:text-black",
-                    "h-10 w-10 border border-[#C4C4C4] md:h-12 md:w-12",
+                    "border",
                     "cursor-pointer",
+                    "h-10 w-10 md:h-12 md:w-12",
                     "flex items-center justify-center",
                     "font-roboto text-xs uppercase md:text-sm",
-                    "hover:bg-[#F0F1F2]"
+                    "hover:bg-[#F0F1F2] hover:text-black",
+                    selectedSize === size
+                      ? "border-black bg-[#F0F1F2] text-black"
+                      : "border-[#C4C4C4] text-[#828282]"
                   )}
                 >
                   {size}
