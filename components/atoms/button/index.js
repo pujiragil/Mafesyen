@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 import { cn } from "@/utils/utils";
 
-const button = cva("py-2.5 font-oswald text-sm font-medium uppercase", {
+const button = cva("h-12 font-oswald text-sm font-medium uppercase transition-colors duration-200 ease-in-out", {
   variants: {
     variant: {
       primary: "bg-black text-white active:bg-[#EB5757]",
