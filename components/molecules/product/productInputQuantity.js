@@ -15,10 +15,10 @@ const ProductInputQuantity = ({ label }) => {
   };
 
   return (
-    <div className="space-y-2 sm:justify-self-end md:place-self-auto md:justify-self-auto">
+    <div className="space-y-2 sm:justify-self-end">
       <ProductLabel>{label}</ProductLabel>
 
-      <div className="grid h-12 w-[150px] grid-cols-3 border border-[#C4C4C4]">
+      <div className="grid h-12 w-[150px] grid-cols-3 border border-[#C4C4C4] md:h-14">
         <div
           className="grid cursor-pointer place-items-center"
           onClick={handleDecrement}
