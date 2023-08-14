@@ -24,7 +24,7 @@ const ProductSliderThumb = ({ onSlide, data }) => {
             alt={image.alt}
             blurDataURL={image.blurDataUrl}
             placeholder="blur"
-            className="h-24 w-20 cursor-pointer object-cover object-center"
+            className="h-24 w-full cursor-pointer object-cover object-center"
           />
         </SwiperSlide>
       ))}
