@@ -1,6 +1,6 @@
 import dress from "@/utils/dress";
 
-import { ProductDetail } from "@/components/templates";
+import { ProductSection } from "@/components/templates";
 import BaseLayout from "@/components/Layout/baseLayout";
 
 import "swiper/css";
@@ -9,7 +9,7 @@ import "swiper/css/thumbs";
 export default function DetailProduct(props) {
   return (
     <BaseLayout title={props.productData.title}>
-      <ProductDetail data={props.productData} />
+      <ProductSection data={props.productData} />
     </BaseLayout>
   );
 }
