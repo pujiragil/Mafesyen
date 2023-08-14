@@ -29,6 +29,8 @@ export { default as Navbar } from "./navbar/";
 export { default as NavMobile } from "./navbar/navMobile";
 
 export { default as ProductAdditionalTags } from "./product/productAdditionalTags";
+export { default as ProductCheckoutButtons } from "./product/productCheckoutButtons";
+export { default as ProductDetail } from "./product/productDetail";
 export { default as ProductHead } from "./product/productHead";
 export { default as ProductInputImage } from "./product/productInputImage";
 export { default as ProductInputQuantity } from "./product/productInputQuantity";
