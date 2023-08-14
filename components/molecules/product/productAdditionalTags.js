@@ -1,7 +1,7 @@
 const ProductAdditionalTags = () => {
   return (
     <div className="space-y-4">
-      <div className="grid grid-cols-2 gap-3 lg:w-2/3">
+      <div className="grid grid-cols-2 gap-3">
         <div className="flex items-center gap-2">
           <p className="font-oswald text-xs font-medium uppercase text-[#828282]">
             share:
