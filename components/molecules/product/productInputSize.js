@@ -14,7 +14,7 @@ const ProductInputSize = ({ label }) => {
   };
 
   return (
-    <div className="space-y-2 lg:w-2/3">
+    <div className="space-y-2">
       <ProductLabel>{label}</ProductLabel>
 
       <div className="relative">
