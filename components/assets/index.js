@@ -4,3 +4,4 @@ export * from "./footer";
 export * from "./navbar";
 export * from "./mafesyen";
 export * from "./social";
+export * from "./catalog";
