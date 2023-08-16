@@ -9,10 +9,10 @@ const ProductDetail = () => {
     <div
       className={cn(
         isOpen && "space-y-3 lg:space-y-4",
-        "w-full bg-[#F8F9FB] p-3 lg:p-4 lg:w-11/12"
+        "w-full bg-[#F8F9FB] p-3 lg:p-4"
       )}
     >
-      <DropdownTrigger open={isOpen} onOpen={setIsOpen}>
+      <DropdownTrigger open={isOpen} onOpen={setIsOpen} className="text-xl lg:text-2xl">
         Details
       </DropdownTrigger>
 
