@@ -1,30 +1,31 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import {
   ProductCard,
   ProductImage,
   ProductInfo,
   ProductPrice,
+  CatalogSliderNavigation,
 } from "@/components/molecules";
 import SectionLayout from "@/components/Layout/sectionLayout";
+
 import data from "@/utils/data.json";
 
 import "swiper/css";
-import "swiper/css/navigation";
 
 const CatalogSliderSection = ({ title }) => {
   const products = data.products;
 
   return (
     <SectionLayout>
-      <div className="relative mx-3.5 mb-3.5 lg:mb-8">
-        <h3 className="mb-4 font-oswald text-lg md:text-xl lg:text-2xl">
-          {title}
-        </h3>
+      <div className="relative grid gap-4 p-2">
+        <div className="flex h-8 items-center md:h-10">
+          <h3 className="font-oswald text-xl font-normal text-black lg:text-2xl">
+            {title}
+          </h3>
+        </div>
+
         <Swiper
-          className="catalog"
-          modules={[Navigation]}
-          navigation={true}
+          className="static w-full"
           slidesPerView={2}
           spaceBetween={14}
           breakpoints={{
@@ -43,6 +44,7 @@ const CatalogSliderSection = ({ title }) => {
               />
             </SwiperSlide>
           ))}
+          <CatalogSliderNavigation />
         </Swiper>
       </div>
     </SectionLayout>
