@@ -19,7 +19,7 @@ const CatalogSliderSection = ({ title }) => {
     <SectionLayout>
       <div className="relative grid gap-4 p-2">
         <div className="flex h-8 items-center md:h-10">
-          <h3 className="font-oswald text-xl font-normal text-black lg:text-2xl">
+          <h3 className="font-oswald text-xl font-normal text-black md:text-2xl">
             {title}
           </h3>
         </div>
