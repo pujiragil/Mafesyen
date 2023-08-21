@@ -76,7 +76,7 @@ const ProductInputSize = ({ label }) => {
                     "cursor-pointer",
                     "h-10 w-10 md:h-12 md:w-12",
                     "flex items-center justify-center",
-                    "font-roboto text-xs uppercase md:text-sm",
+                    "font-roboto text-xs uppercase",
                     "hover:bg-[#F0F1F2] hover:text-black",
                     selectedSize === size
                       ? "border-black bg-[#F0F1F2] text-black"
