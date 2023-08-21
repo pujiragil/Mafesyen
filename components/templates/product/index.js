@@ -42,9 +42,8 @@ const ProductSection = ({ data }) => {
                 <ProductHead
                   tag="fendi"
                   title={data.title}
-                  className="md:w-4/5"
                 />
-                <ProductPrice value={data.price} />
+                <ProductPrice isDiscount={true} originalPrice="250.000 idr" discountedPrice="150.000 idr" />
 
                 <div className="space-y-4 lg:w-9/12">
                   <div className="grid gap-4 sm:grid-cols-2 sm:content-start">
