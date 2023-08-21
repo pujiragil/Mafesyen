@@ -32,24 +32,30 @@ const CatalogSliderNavigation = () => {
       <button
         onClick={handlePrevSlide}
         className={cn(
+          "group",
           "h-8 w-8 md:h-10 md:w-10",
           "flex items-center justify-center",
           "border border-[#C4C4C4] md:border-2",
-          isBegin ? "opacity-50" : "opacity-100"
+          isBegin ? "opacity-50" : "opacity-100 active:border-black"
         )}
       >
-        <CatalogArrowLeft />
+        <CatalogArrowLeft
+          className={cn(!isBegin && "group-active:stroke-black")}
+        />
       </button>
       <button
         onClick={handleNextSlide}
         className={cn(
+          "group",
           "h-8 w-8 md:h-10 md:w-10",
           "flex items-center justify-center",
           "border border-[#C4C4C4] md:border-2",
-          isEnd ? "opacity-50" : "opacity-100"
+          isEnd ? "opacity-50" : "opacity-100 active:border-black"
         )}
       >
-        <CatalogArrowRight />
+        <CatalogArrowRight
+          className={cn(!isEnd && "group-active:stroke-black")}
+        />
       </button>
     </div>
   );
