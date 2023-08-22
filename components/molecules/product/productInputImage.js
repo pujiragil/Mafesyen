@@ -21,10 +21,11 @@ const ProductInputImage = ({ label, images, onSelectImage, selectImage}) => {
             <Image
               width={1920}
               height={1280}
-              src={`/images/dress/${image[0].link}`}
-              alt={image[0].alt}
-              blurDataURL={image[0].blurDataUrl}
+              loading="lazy"
               placeholder="blur"
+              blurDataURL={image[0].blurDataUrl}
+              alt={image[0].alt}
+              src={`/images/dress/${image[0].link}`}
               className="h-full w-full object-cover object-center"
             />
           </div>

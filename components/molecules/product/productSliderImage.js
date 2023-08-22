@@ -20,10 +20,11 @@ const ProductSliderImage = ({ thumb, data }) => {
           <Image
             width={1920}
             height={1280}
-            src={`/images/dress/${image.link}`}
-            alt={image.alt}
-            blurDataURL={image.blurDataUrl}
+            loading="lazy"
             placeholder="blur"
+            blurDataURL={image.blurDataUrl}
+            alt={image.alt}
+            src={`/images/dress/${image.link}`}
             className="aspect-square w-full object-cover object-top md:aspect-auto md:h-full lg:aspect-square"
           />
         </SwiperSlide>
