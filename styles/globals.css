@@ -5,20 +5,20 @@
 input[type="range"] {
   -webkit-appearance: none;
   -moz-appearance: none;
-  @apply appearance-none cursor-pointer
+  @apply appearance-none cursor-pointer;
 }
 
 input[type="range"]:focus {
-  @apply outline-none border-none
+  @apply outline-none border-none;
 }
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  @apply bg-black w-1.5 h-5 border-none rounded-none
+  @apply bg-black w-1.5 h-5 border-none rounded-none;
 }
 
 input[type="range"]::-moz-range-thumb {
-  @apply bg-black w-1.5 h-5 border-none rounded-none
+  @apply bg-black w-1.5 h-5 border-none rounded-none;
 }
 
 .hero-slide {
@@ -26,13 +26,13 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .thumbs-swiper {
-  @apply h-full overflow-hidden
+  @apply h-full overflow-hidden;
 }
 
 .thumbs-swiper .swiper-slide {
-  @apply h-fit
+  @apply h-fit;
 }
 
 .thumbs-swiper .swiper-slide-thumb-active {
-  @apply p-1 border border-black
+  @apply p-1 border border-black;
 }
