@@ -9,8 +9,8 @@ const EventCardSection = () => {
 
   return (
     <SectionLayout>
-      <div className="relative z-10 mx-3.5 flex h-72 items-end justify-center p-4 lg:grid lg:grid-cols-[3fr_2fr] lg:gap-8 lg:p-0">
-        <div className="flex w-full flex-col items-center justify-center gap-4 bg-white p-4 text-center text-black lg:order-2 lg:h-full lg:items-start lg:text-left">
+      <div className="relative mx-3.5 z-0 grid h-72 place-items-center   p-4 lg:grid-cols-[3fr_2fr] lg:gap-8 lg:p-0">
+        <div className="grid place-items-center bg-white p-4 h-fit lg:h-full text-center lg:text-left text-black lg:order-2 lg:h-full">
           <div className="space-y-2.5 md:space-y-4">
             <BigHead
               type="h2"
@@ -22,18 +22,22 @@ const EventCardSection = () => {
             <Text weight={300} family="roboto" size="xs/sm/base">
               {second.desc}
             </Text>
+
+            <div className="flex justify-center lg:justify-start">
+              <ButtonLink href={second.btnHref} variant="secondary">
+                {second.btnText}
+              </ButtonLink>
+            </div>
           </div>
-          <ButtonLink href={second.btnHref} variant="secondary">
-            {second.btnText}
-          </ButtonLink>
         </div>
+
         <Image
           width={584}
           height={504}
           src={second.imgBg}
           blurDataURL={second.blurDataUrl}
           placeholder="blur"
-          className="absolute top-0 left-0 -z-10 h-full w-full object-cover md:object-top lg:static lg:order-1"
+          className="absolute inset-0 -z-10 h-full lg:h-72 lg:static w-full object-cover"
           alt="event-card"
         />
       </div>
