@@ -105,6 +105,12 @@ const NavLinks = ({ onClick }) => {
           {link.name}
         </NavLinkItem>
       ))}
+      <NavLinkItem to="/login">
+        sign in
+      </NavLinkItem>
+      <NavLinkItem to="/register">
+        create an account
+      </NavLinkItem>
     </div>
   );
 };
