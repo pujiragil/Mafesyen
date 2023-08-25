@@ -38,8 +38,8 @@ const Navbar = () => {
           </div>
 
           <div className="flex basis-1/4 justify-end gap-3 lg:gap-4">
-            <NavLinkItem to="/signin">sign in</NavLinkItem>
-            <NavLinkItem to="/signup">create an account</NavLinkItem>
+            <NavLinkItem to="/login">sign in</NavLinkItem>
+            <NavLinkItem to="/register">create an account</NavLinkItem>
           </div>
         </div>
       </div>
