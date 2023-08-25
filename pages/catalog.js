@@ -13,7 +13,7 @@ import SectionLayout from "@/components/Layout/sectionLayout";
 
 export default function Catalog() {
   return (
-    <BaseLayout title={"Mafesyen - Catalog Page"}>
+    <BaseLayout title="Mafesyen - Catalog Page">
       <BannerCardSection
         title="shoping without limits."
         desc="You can choose the best option for you, and it does not matter whether you are in Prague or San Francisco. We will deliver your purchase anywhere!"
