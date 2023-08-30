@@ -24,7 +24,7 @@ export default function Register() {
               </button>
 
               <div className="flex items-center justify-center text-center before:mr-4 before:flex-1 before:border-b before:border-[#3F3F3F] after:ml-4 after:flex-1 after:border-b after:border-[#3F3F3F]">
-                <p className="font-roboto text-xs text-xs text-[#3F3F3F] md:text-sm">
+                <p className="font-roboto text-xs text-[#3F3F3F] md:text-sm">
                   or register with
                 </p>
               </div>
