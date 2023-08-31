@@ -12,7 +12,7 @@ const Input = ({ id, value, placeholder, className, ...props }) => {
         "h-10 md:h-11",
         "outline-none",
         "text-black",
-        "focus:border-black",
+        "focus:border-[#828282]",
         "border border-[#C4C4C4]",
         className
       )}
