@@ -1,5 +1,5 @@
 import BaseLayout from "@/components/Layout/baseLayout";
-import { Input, Label } from "@/components/atoms";
+import { Button, Input, Label } from "@/components/atoms";
 
 export default function Login() {
   return (
@@ -12,7 +12,7 @@ export default function Login() {
             </h3>
 
             <div className="space-y-4">
-              <button className="flex h-10 w-full items-center justify-center gap-2 border border-[#C4C4C4] hover:border-black md:h-11">
+              <button className="flex h-10 w-full items-center justify-center gap-2 border border-[#C4C4C4] hover:border-[#828282] md:h-11">
                 <img
                   className="h-auto w-5 object-cover"
                   src="/google.svg"
@@ -41,12 +41,20 @@ export default function Login() {
                 </div>
 
                 <div className="flex gap-2">
-                  <button className="h-10 w-full bg-black font-oswald text-xs font-medium uppercase text-white active:bg-[#EB5757] md:h-11 md:text-sm">
+                  <Button
+                    variant="primary"
+                    width="full"
+                    className="h-10 md:h-12"
+                  >
                     login
-                  </button>
-                  <button className="h-10 w-full border border-[#C4C4C4] bg-white font-oswald text-xs font-medium uppercase text-[#828282] active:border-black active:text-black md:h-11 md:text-sm">
+                  </Button>
+                  <Button
+                    variant="secondary"
+                    width="full"
+                    className="h-10 md:h-12"
+                  >
                     back
-                  </button>
+                  </Button>
                 </div>
               </div>
             </div>
