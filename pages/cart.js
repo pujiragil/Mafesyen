@@ -3,7 +3,7 @@ import { ProductCart } from "@/components/organism";
 
 export default function Cart() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Mafesyen - Cart">
       <div className="container mx-auto">
         <div className="mx-3.5 space-y-6 py-3.5">
           <h1 className="border-b border-[#C4C4C4] pb-2.5 font-oswald text-lg font-normal text-black">
