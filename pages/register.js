@@ -1,11 +1,12 @@
 import BaseLayout from "@/components/Layout/baseLayout";
 import { Button, Input, Label } from "@/components/atoms";
+import Link from "next/link";
 
 export default function Register() {
   return (
     <BaseLayout title="Mafesyen - Create an Account">
       <div className="container mx-auto">
-        <div className="mx-3.5 grid min-h-[60vh] place-items-center py-8 lg:py-16">
+        <div className="mx-3.5 grid min-h-[60vh] place-items-center py-16">
           <div className="w-full max-w-xs space-y-8 md:max-w-sm">
             <h3 className="font-oswald text-2xl font-medium text-black md:text-3xl">
               Create New Account
@@ -40,24 +41,28 @@ export default function Register() {
                   <Input id="password" placeholder="********" />
                 </div>
 
-                <div className="flex gap-2">
-                  <Button
-                    variant="primary"
-                    width="full"
-                    className="h-10 md:h-12"
-                  >
-                    register
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    width="full"
-                    className="h-10 md:h-12"
-                  >
-                    back
+                <div className="space-x-2">
+                  <div className="inline-block h-3 w-3 border border-[#828282]"></div>
+                  <p className="inline w-full font-roboto text-xs font-normal leading-5 text-[#828282] md:text-sm">
+                    By using this form you agree with the storage and handling
+                    of your data by this website.
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-3 md:flex-row">
+                  <Button variant="primary" width="full">
+                    create an account
                   </Button>
                 </div>
               </div>
             </div>
+
+            <p className="text-center font-roboto text-xs text-[#3F3F3F] md:text-sm">
+              Already have an account?{" "}
+              <Link href="/login">
+                <span className="text-black underline">Login</span>
+              </Link>
+            </p>
           </div>
         </div>
       </div>
