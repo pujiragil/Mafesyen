@@ -1,11 +1,12 @@
 import BaseLayout from "@/components/Layout/baseLayout";
 import { Button, Input, Label } from "@/components/atoms";
+import Link from "next/link";
 
 export default function Login() {
   return (
-    <BaseLayout title="Mafesyen - Create an Account">
+    <BaseLayout title="Mafesyen - Login to Your Account">
       <div className="container mx-auto">
-        <div className="mx-3.5 grid min-h-[60vh] place-items-center py-8 lg:py-16">
+        <div className="mx-3.5 grid min-h-[60vh] place-items-center py-16">
           <div className="w-full max-w-xs space-y-8 md:max-w-sm">
             <h3 className="font-oswald text-2xl font-medium text-black md:text-3xl">
               Login to Your Account
@@ -40,24 +41,20 @@ export default function Login() {
                   <Input id="password" placeholder="********" />
                 </div>
 
-                <div className="flex gap-2">
-                  <Button
-                    variant="primary"
-                    width="full"
-                    className="h-10 md:h-12"
-                  >
-                    login
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    width="full"
-                    className="h-10 md:h-12"
-                  >
-                    back
+                <div className="flex flex-col gap-3 md:flex-row">
+                  <Button variant="primary" width="full">
+                    sign in
                   </Button>
                 </div>
               </div>
             </div>
+
+            <p className="text-center font-roboto text-xs text-[#3F3F3F] md:text-sm">
+              New to Mafesyen?{" "}
+              <Link href="/register">
+                <span className="text-black underline">Create an account</span>
+              </Link>
+            </p>
           </div>
         </div>
       </div>
