@@ -9,7 +9,7 @@ const Input = ({ id, value, placeholder, className, ...props }) => {
       className={cn(
         "px-4",
         "w-full",
-        "h-10 md:h-11",
+        "h-12",
         "outline-none",
         "text-black",
         "focus:border-[#828282]",
