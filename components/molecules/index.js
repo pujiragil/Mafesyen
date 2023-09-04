@@ -1,4 +1,17 @@
+export { default as BlogItem } from "./blog/blogItem";
+
+export { default as BrandSection } from "./brand";
+
 export * from "./card/productCard";
+export { default as BannerCardSection } from "./card/bannerCard";
+export { default as EventCardSection } from "./card/eventCard";
+export { default as OfferCard } from "./card/offerCard";
+export { default as ProductCardSkeleton } from "./card/productCardSkeleton";
+
+export { default as CartInformation } from "./cart/cartInformation";
+export { default as CartQuantity } from "./cart/cartQuantity";
+
+export { default as CatalogSliderNavigation } from "./catalog/catalogSliderNavigation";
 
 export { default as BrandsCheckbox } from "./checkbox/brandsCheckbox";
 export { default as ColorsCheckbox } from "./checkbox/colorsCheckbox";
@@ -10,16 +23,6 @@ export { default as ColorFilter } from "./filter/colorFilter";
 export { default as DressFilter } from "./filter/dressFilter";
 export { default as PriceFilter } from "./filter/priceFilter";
 export { default as SizeFilter } from "./filter/sizeFilter";
-
-export { default as BrandSection } from "./brand";
-export { default as BlogItem } from "./blog/blogItem";
-
-export { default as BannerCardSection } from "./card/bannerCard";
-export { default as EventCardSection } from "./card/eventCard";
-export { default as OfferCard } from "./card/offerCard";
-export { default as ProductCardSkeleton } from "./card/productCardSkeleton";
-
-export { default as CatalogSliderNavigation } from "./catalog/catalogSliderNavigation"
 
 export { default as FooterHighlight } from "./footer/footerHighlight";
 export { default as FooterHighlightItem } from "./footer/footerHighlightItem";
