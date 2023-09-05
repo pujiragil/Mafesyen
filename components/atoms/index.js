@@ -26,6 +26,7 @@ export { default as Input } from "./input";
 
 export { default as Label } from "./label";
 
+export { default as ProductCartChecked } from "./product/ProductCartChecked";
 export { default as ProductLabel } from "./product/productLabel";
 export { default as ProductPrice } from "./product/productPrice";
 export { default as ProductTag } from "./product/productTag";
