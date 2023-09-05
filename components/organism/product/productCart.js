@@ -1,9 +1,10 @@
+import { ProductCartChecked } from "@/components/atoms";
 import { CartInformation, CartQuantity } from "@/components/molecules";
 
-const ProductCart = ({image}) => {
+const ProductCart = ({ image }) => {
   return (
     <div className="space-y-2 border-b border-[#C4C4C4] py-3.5">
-      <div className="grid h-28 grid-cols-[80px_1fr_20px]  gap-3">
+      <div className="grid h-32 grid-cols-[100px_1fr_20px] md:grid-cols-[100px_1fr_24px] gap-3">
         <img
           className="h-full w-full object-cover"
           src={image}
@@ -17,28 +18,17 @@ const ProductCart = ({image}) => {
           price="250.000"
         />
 
-        <div className="grid h-5 w-full cursor-pointer place-items-center border border-black">
-          <svg
-            className="h-full w-full"
-            width="30"
-            height="30"
-            viewBox="0 0 30 30"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M8 14.6L13.25 20L22 11" stroke="black" strokeWidth="2" />
-          </svg>
-        </div>
+        <ProductCartChecked />
       </div>
 
-      <div className="flex items-center justify-between">
-        <p className="font-roboto text-xs font-normal text-[#C4C4C4] underline">
+      <div className="flex items-end justify-between">
+        <p className="font-roboto text-xs font-normal text-[#C4C4C4] underline md:text-sm">
           Move to wishlist
         </p>
 
         <div className="flex items-center gap-2">
           <svg
-            className="h-6 w-6 cursor-pointer"
+            className="h-6 w-6 md:w-8 md:h-8 cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
