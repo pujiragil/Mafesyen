@@ -9,7 +9,7 @@ const CartQuantity = () => {
 
   const handleSubtractQuantity = useCallback(() => {
     setQuantity((prev) => {
-      if (prev > 0) {
+      if (prev > 1) {
         return (prev -= 1);
       }
 
@@ -18,8 +18,11 @@ const CartQuantity = () => {
   }, []);
 
   return (
-    <div className="grid h-6 w-20 grid-cols-3 border border-black">
-      <div className="grid place-items-center cursor-pointer" onClick={handleSubtractQuantity}>
+    <div className="grid h-8 w-24 grid-cols-3 border border-black md:h-10 md:w-28">
+      <div
+        className="grid cursor-pointer place-items-center"
+        onClick={handleSubtractQuantity}
+      >
         <svg
           className="h-1 w-2.5"
           viewBox="0 0 10 2"
@@ -34,7 +37,10 @@ const CartQuantity = () => {
         {quantity}
       </p>
 
-      <div className="grid place-items-center cursor-pointer" onClick={handleAddQuantity}>
+      <div
+        className="grid cursor-pointer place-items-center"
+        onClick={handleAddQuantity}
+      >
         <svg
           className="h-2.5 w-2.5"
           viewBox="0 0 12 12"
