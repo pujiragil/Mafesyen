@@ -55,7 +55,7 @@ const NavMobile = () => {
         <div className="full flex h-14 items-center bg-black p-3.5">
           <CloseIcon
             onClick={() => setIsOpen(false)}
-            className="h-5 w-5 cursor-pointer"
+            className="h-5 w-5 cursor-pointer stroke-white"
           />
         </div>
 
