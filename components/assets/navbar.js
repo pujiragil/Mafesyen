@@ -54,7 +54,7 @@ export const CloseIcon = ({ onClick, className }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M1 1L16 16M16 1L1 16" stroke="white" strokeWidth="2.4" />
+      <path d="M1 1L16 16M16 1L1 16" strokeWidth="2.4" />
     </svg>
   );
 };
