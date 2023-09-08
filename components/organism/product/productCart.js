@@ -1,10 +1,18 @@
-import { ProductCartChecked } from "@/components/atoms";
+// import { ProductCartChecked } from "@/components/atoms";
+import { CartClose, CloseIcon, Heart } from "@/components/assets";
 import { CartInformation, CartQuantity } from "@/components/molecules";
+
+const dataProduct = {
+  title: "Floral Women Sundress",
+  color: "Light Blue",
+  size: "M",
+  price: "250.000",
+};
 
 const ProductCart = ({ image }) => {
   return (
     <div className="space-y-2 border-b border-[#C4C4C4] py-3.5">
-      <div className="grid h-32 grid-cols-[100px_1fr_20px] md:grid-cols-[100px_1fr_24px] gap-3">
+      <div className="grid h-32 grid-cols-[100px_1fr_50px] gap-3 md:grid-cols-[100px_1fr_58px]">
         <img
           className="h-full w-full object-cover"
           src={image}
@@ -12,13 +20,22 @@ const ProductCart = ({ image }) => {
         />
 
         <CartInformation
-          title="Floral Women Sundress"
-          color="Blue Ocean"
-          size="XL"
-          price="250.000"
+          data={dataProduct}
+          title={<CartInformation.Title />}
+          type={<CartInformation.Type />}
+          price={<CartInformation.Price />}
         />
 
-        <ProductCartChecked />
+        {/* <ProductCartChecked /> */}
+
+        <div className="flex gap-2.5">
+          <div className="flex h-5 w-5 cursor-pointer items-center justify-center bg-[#E6F1FA] md:h-6 md:w-6">
+            <Heart />
+          </div>
+          <div className="flex h-5 w-5 cursor-pointer items-center justify-center bg-[#E6F1FA] md:h-6 md:w-6">
+            <CloseIcon className="w-3 stroke-black" />
+          </div>
+        </div>
       </div>
 
       <div className="flex items-end justify-between">
@@ -28,7 +45,7 @@ const ProductCart = ({ image }) => {
 
         <div className="flex items-center gap-2">
           <svg
-            className="h-6 w-6 md:w-8 md:h-8 cursor-pointer"
+            className="h-6 w-6 cursor-pointer md:h-8 md:w-8"
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
