@@ -1,6 +1,7 @@
+import { cn } from "@/utils/utils";
 import { useCallback, useState } from "react";
 
-const ProductCartChecked = () => {
+const ProductCartChecked = ({ className }) => {
   const [checked, setChecked] = useState(true);
 
   const handleChecked = useCallback(
@@ -11,7 +12,15 @@ const ProductCartChecked = () => {
   return (
     <div
       onClick={handleChecked}
-      className="grid h-5 w-full cursor-pointer place-items-center border border-black md:h-6"
+      className={cn(
+        "grid",
+        "w-full",
+        "h-5 md:h-6",
+        "cursor-pointer",
+        "place-items-center",
+        "border border-black",
+        className
+      )}
     >
       {checked && (
         <svg
