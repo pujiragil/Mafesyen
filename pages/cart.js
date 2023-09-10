@@ -12,6 +12,12 @@ export default function Cart() {
             </h1>
 
             <div className="grid grid-cols-1 gap-3">
+              <div className="hidden grid-cols-[3fr_1fr_58px] lg:grid-cols-[3fr_1fr_1fr_58px] gap-3 border-b border-[#C4C4C4] pb-4 font-oswald font-medium text-[#828282] md:grid">
+                <p>Product</p>
+                <p className="hidden lg:block">Price</p>
+                <p>Quantity</p>
+                <p>Actions</p>
+              </div>
               <ProductCart image="/images/dress/floral-women-sundress-blue-1.webp" />
               <ProductCart image="/images/dress/floral-women-sundress-dark-1.webp" />
               <ProductCart image="/images/dress/floral-women-sundress-purple-1.webp" />
@@ -20,8 +26,8 @@ export default function Cart() {
           </div>
 
           <div className="space-y-3.5">
-            <div className="space-y-2.5">
-              <p className="font-oswald text-sm font-normal text-[#828282] md:text-lg">
+            <div className="space-y-4">
+              <p className="font-oswald text-sm md:text-base font-medium text-[#828282]">
                 Apply Discount Code
               </p>
 
@@ -37,7 +43,7 @@ export default function Cart() {
             </div>
 
             <div className="space-y-2.5">
-              <p className="font-oswald text-sm font-normal text-[#828282] md:text-lg">
+              <p className="font-oswald text-sm md:text-base font-medium text-[#828282]">
                 Total Estimate
               </p>
 
