@@ -7,7 +7,7 @@ const useCartInformationContext = () => useContext(CartInformationContext);
 const CartInformation = ({ title, type, price, data }) => {
   return (
     <CartInformationContext.Provider value={data}>
-      <div className="space-y-1">
+      <div className="space-y-1 overflow-hidden">
         {title}
         {type}
         {price}
@@ -20,7 +20,7 @@ const Title = () => {
   const data = useCartInformationContext();
 
   return (
-    <p className="font-oswald text-lg font-normal text-black md:text-xl">
+    <p className="font-oswald text-lg font-normal truncate text-black md:text-xl">
       {data.title}
     </p>
   );
@@ -40,8 +40,8 @@ const Price = () => {
   const data = useCartInformationContext();
 
   return (
-    <p className="font-oswald text-sm font-normal uppercase text-black md:text-base">
-      IDR {data.price}
+    <p className="font-oswald text-sm font-normal uppercase lg:hidden text-black md:text-base">
+      IDR {data.price.toLocaleString("id-ID")}
     </p>
   );
 };
