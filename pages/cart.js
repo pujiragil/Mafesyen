@@ -60,7 +60,7 @@ const productCartItems = [
 
 export default function Cart() {
   return (
-    <BaseLayout title="Mafesyen - Cart">
+    <BaseLayout title="Mafesyen - My Orders">
       <div className="container mx-auto max-w-md sm:max-w-lg lg:max-w-6xl">
         <div className="mx-3.5 grid gap-8 py-3.5 md:py-8 lg:gap-12 lg:py-12">
           <h1 className="hidden text-center font-oswald text-2xl font-medium text-[#000] md:block lg:text-3xl">

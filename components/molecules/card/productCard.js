@@ -49,10 +49,10 @@ export const ProductInfo = () => {
   const data = useProductCardContext();
 
   return (
-    <div className="space-y-1">
+    <div className="space-y-1 overflow-hidden">
       <Category intent="primary" value={data?.category} />
       <Link className="block" href="/product/navy-polkadot-flare-dress">
-        <Text family="oswald" size="xs/lg">
+        <Text family="oswald" size="xs/lg" className="truncate">
           {data?.name}
         </Text>
       </Link>
