@@ -7,13 +7,13 @@ const ProductCartTable = () => {
     <div
       className={cn(
         "pb-4",
-        "gap-3",
+        "gap-3 md:gap-5",
         "hidden",
         "md:grid",
-        "text-[#828282]",
+        "text-[#828282] text-lg",
         "font-oswald font-medium",
         "border-b border-[#C4C4C4]",
-        "grid-cols-[3fr_1fr_58px] lg:grid-cols-[3fr_1fr_1fr_58px]"
+        "grid-cols-[5fr_2fr_58px] lg:grid-cols-[3fr_1fr_1fr_58px]"
       )}
     >
       {tables.map((table) => (
