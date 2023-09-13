@@ -2,7 +2,7 @@ const ProductCartDiscount = () => {
   return (
     <div className="space-y-3.5">
       <div className="space-y-4">
-        <p className="font-oswald text-sm font-medium text-[#828282] md:text-base">
+        <p className="font-oswald font-medium text-[#828282] md:text-lg">
           Apply Discount Code
         </p>
 
@@ -18,14 +18,14 @@ const ProductCartDiscount = () => {
       </div>
 
       <div className="space-y-2.5">
-        <p className="font-oswald text-sm font-medium text-[#828282] md:text-base">
+        <p className="font-oswald font-medium text-[#828282] md:text-lg">
           Total Estimate
         </p>
 
         <div>
           <div className="space-y-4 border-2 border-b-0 border-[#C4C4C4] bg-[#f0f1f2] p-3.5">
             <div className="space-y-2 border-b border-[#C4C4C4] pb-4">
-              <p className="font-oswald text-sm font-medium text-black md:text-lg">
+              <p className="font-oswald text-sm font-medium text-black md:text-base">
                 Order summary
               </p>
 
@@ -41,12 +41,12 @@ const ProductCartDiscount = () => {
               </div>
             </div>
 
-            <div className="flex justify-between font-oswald text-sm font-medium text-black md:text-lg">
+            <div className="flex justify-between font-oswald text-sm font-medium text-black md:text-base">
               <p>Order Total</p>
               <p>IDR 900.000</p>
             </div>
           </div>
-          <button className="h-10 w-full bg-black text-center font-oswald text-xs font-medium uppercase text-white md:h-12 md:text-sm">
+          <button className="h-10 w-full bg-black text-center font-oswald text-xs font-medium uppercase text-white transition-colors duration-200 hover:bg-[#eb5757] md:h-12 md:text-sm">
             proceed to checkout
           </button>
         </div>
