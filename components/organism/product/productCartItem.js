@@ -1,11 +1,10 @@
-// import { ProductCartChecked } from "@/components/atoms";
 import { CloseIcon, Heart } from "@/components/assets";
 import { CartInformation, CartQuantity } from "@/components/molecules";
 
 const ProductCartItem = ({ data }) => {
   return (
     <div className="space-y-1.5 border-b border-[#C4C4C4] py-3.5 lg:last:border-b-0">
-      <div className="grid h-32 grid-cols-[1fr_50px] gap-3 md:grid-cols-[3fr_1fr_58px] lg:grid-cols-[3fr_1fr_1fr_58px]">
+      <div className="grid h-32 grid-cols-[1fr_50px] gap-3 md:gap-5 md:grid-cols-[5fr_2fr_58px] lg:grid-cols-[3fr_1fr_1fr_58px]">
         <div className="grid grid-cols-[100px_1fr] gap-3">
           <img
             className="h-full object-cover"
@@ -21,10 +20,9 @@ const ProductCartItem = ({ data }) => {
           />
         </div>
 
-        <p className="hidden lg:block font-oswald font-normal truncate uppercase text-black md:text-base">
+        <p className="hidden truncate font-oswald font-normal uppercase text-black md:text-base lg:block">
           IDR {data.price.toLocaleString("id-ID")}
         </p>
-        {/* <ProductCartChecked /> */}
 
         <div className="hidden md:block">
           <CartQuantity />
@@ -41,7 +39,7 @@ const ProductCartItem = ({ data }) => {
       </div>
 
       <div className="flex items-end justify-between">
-        <p className="font-roboto text-xs font-normal text-[#C4C4C4] underline md:text-sm">
+        <p className="cursor-pointer font-roboto text-xs font-normal text-[#C4C4C4] underline md:text-sm">
           Move to wishlist
         </p>
 
