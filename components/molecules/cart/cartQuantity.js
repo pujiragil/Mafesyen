@@ -18,7 +18,7 @@ const CartQuantity = () => {
   }, []);
 
   return (
-    <div className="grid h-8 w-24 grid-cols-3 border border-black md:h-10 md:w-28">
+    <div className="grid h-8 w-24 grid-cols-3 border border-black md:h-10 md:w-full">
       <div
         className="grid cursor-pointer place-items-center"
         onClick={handleSubtractQuantity}
