@@ -9,12 +9,13 @@ import {
 import { cn } from "@/utils/utils";
 
 import data from "@/utils/data.json";
+import { Button } from "@/components/atoms";
 
 export default function Wishlist() {
   return (
     <BaseLayout title="Mafesyen - My Wishlist">
       <SectionLayout>
-        <div className="mx-3.5 grid place-items-center py-3.5 md:gap-6">
+        <div className="mx-3.5 grid place-items-center py-3.5 md:gap-6 lg:gap-16 lg:py-10">
           <h3 className="hidden font-oswald text-2xl font-normal text-black md:block lg:text-3xl">
             My Wishlist
           </h3>
@@ -59,15 +60,24 @@ const ProductWishlist = () => {
   const products = data.products;
 
   return (
-    <div className="grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-4">
+    <div className="grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
       {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          data={product}
-          image={<ProductImage />}
-          info={<ProductInfo />}
-          price={<ProductPrice />}
-        />
+        <div key={product.id} className="space-y-2.5">
+          <ProductCard
+            data={product}
+            image={<ProductImage />}
+            info={<ProductInfo />}
+            price={<ProductPrice />}
+          />
+
+          <Button
+            variant="primary"
+            width="full"
+            className="h-10 text-xs md:h-12 md:text-sm"
+          >
+            add to cart
+          </Button>
+        </div>
       ))}
     </div>
   );
