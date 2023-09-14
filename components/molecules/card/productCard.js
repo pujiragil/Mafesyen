@@ -52,7 +52,7 @@ export const ProductInfo = () => {
     <div className="space-y-1 overflow-hidden">
       <Category intent="primary" value={data?.category} />
       <Link className="block" href="/product/navy-polkadot-flare-dress">
-        <Text family="oswald" size="xs/lg" className="truncate">
+        <Text family="oswald" size="sm/lg" className="truncate">
           {data?.name}
         </Text>
       </Link>
@@ -64,7 +64,7 @@ export const ProductPrice = () => {
   const data = useProductCardContext();
 
   return (
-    <Text family="oswald" size="sm/2xl">
+    <Text family="oswald" size="sm/xl" weight={500}>
       {data?.price}
     </Text>
   );
